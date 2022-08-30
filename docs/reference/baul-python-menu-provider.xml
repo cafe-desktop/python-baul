@@ -152,7 +152,7 @@ class ColumnExtension(GObject.GObject, Baul.MenuProvider):
           <variablelist>
             <varlistentry>
                 <term><parameter role="keyword">window</parameter>&nbsp;:</term>
-                <listitem><simpara>the current <link linkend="class-gtkwindow"><classname>gtk.Window</classname></link> instance</simpara></listitem>
+                <listitem><simpara>the current <link linkend="class-ctkwindow"><classname>ctk.Window</classname></link> instance</simpara></listitem>
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">menu</parameter>&nbsp;:</term>
@@ -187,7 +187,7 @@ class ColumnExtension(GObject.GObject, Baul.MenuProvider):
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">window</parameter>&nbsp;:</term>
-                <listitem><simpara>the current <link linkend="class-gtkwindow"><classname>gtk.Window</classname></link> instance</simpara></listitem>
+                <listitem><simpara>the current <link linkend="class-ctkwindow"><classname>ctk.Window</classname></link> instance</simpara></listitem>
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">files</parameter>&nbsp;:</term>
@@ -226,7 +226,7 @@ class ColumnExtension(GObject.GObject, Baul.MenuProvider):
           <variablelist>
             <varlistentry>
                 <term><parameter role="keyword">window</parameter>&nbsp;:</term>
-                <listitem><simpara>the current <link linkend="class-gtkwindow"><classname>gtk.Window</classname></link> instance</simpara></listitem>
+                <listitem><simpara>the current <link linkend="class-ctkwindow"><classname>ctk.Window</classname></link> instance</simpara></listitem>
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">folder</parameter>&nbsp;:</term>
@@ -261,7 +261,7 @@ class ColumnExtension(GObject.GObject, Baul.MenuProvider):
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">window</parameter>&nbsp;:</term>
-                <listitem><simpara>the current <link linkend="class-gtkwindow"><classname>gtk.Window</classname></link> instance</simpara></listitem>
+                <listitem><simpara>the current <link linkend="class-ctkwindow"><classname>ctk.Window</classname></link> instance</simpara></listitem>
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">folder</parameter>&nbsp;:</term>

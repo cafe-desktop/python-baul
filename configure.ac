@@ -29,7 +29,7 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [GetText Package])
 
 AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
-dnl Check for gtk-doc
+dnl Check for ctk-doc
 GTK_DOC_CHECK(1.9)
 
 dnl **************************************************
@@ -91,14 +91,14 @@ AC_MSG_NOTICE([installing baul plugin in ${ac_with_bauldir}])
 AC_SUBST([BAUL_EXTENSION_DIR], [${ac_with_bauldir}])
 
 dnl ---------------------------------
-dnl Check for gtk-doc dependencies
+dnl Check for ctk-doc dependencies
 dnl ---------------------------------
-AS_IF([test "${enable_gtk_doc}" != no],[
+AS_IF([test "${enable_ctk_doc}" != no],[
     dnl Check for xsltproc
     AC_PATH_PROG([XSLTPROC], [xsltproc])
     AS_IF([test -z "$XSLTPROC"],[
         echo " disabling generation of docs"
-        enable_gtk_doc=no
+        enable_ctk_doc=no
     ])
 ])
 
@@ -119,5 +119,5 @@ echo
 echo "      Baul Prefix:             ${prefix}"
 echo "      Python version:          ${PYTHON_VERSION}"
 echo "      Python library location: ${PYTHON_LIB_LOC}"
-echo "      Documentation:           ${enable_gtk_doc}"
+echo "      Documentation:           ${enable_ctk_doc}"
 echo

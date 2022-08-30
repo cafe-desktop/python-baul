@@ -14,7 +14,7 @@ requires:
     - expect #required for unbuffer
     - gcc
     - git
-    - gtk-doc-tools
+    - ctk-doc-tools
     - libgirepository1.0-dev
     - libtool
     - make
@@ -26,7 +26,7 @@ requires:
     - autoconf-archive
     - gla11y
     - gobject-introspection
-    - gtk-doc-tools
+    - ctk-doc-tools
     - intltool
     - iso-codes
     - libdconf-dev

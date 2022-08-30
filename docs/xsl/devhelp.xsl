@@ -8,8 +8,8 @@
     <xsl:call-template name="write.chunk">
       <xsl:with-param name="filename">
         <xsl:choose>
-          <xsl:when test="$gtkdoc.bookname">
-            <xsl:value-of select="$gtkdoc.bookname"/>
+          <xsl:when test="$ctkdoc.bookname">
+            <xsl:value-of select="$ctkdoc.bookname"/>
           </xsl:when>
           <xsl:otherwise>
             <xsl:text>book</xsl:text>
@@ -44,7 +44,7 @@
                                            glossary|index|refentry|
                                            bridgehead|sect1"/>
 
-    <book title="{$title}" link="{$link}" author="{$author}" name="{$gtkdoc.bookname}" language="python">
+    <book title="{$title}" link="{$link}" author="{$author}" name="{$ctkdoc.bookname}" language="python">
       <xsl:if test="$toc.nodes">
         <chapters>
           <xsl:apply-templates select="$toc.nodes"
