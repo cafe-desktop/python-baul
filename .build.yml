@@ -17,13 +17,13 @@ requires:
     - libcaja-extension-dev
     - libgirepository1.0-dev
     - make
-    - cafe-common
     - python3-dev
     - python-gi-dev
     - quilt
 
 before_scripts:
   - ./html-cppcheck
+  - ./install-from-git https://github.com/cafe-desktop/cafe-common master
 
 build_scripts:
   - ./before-build
