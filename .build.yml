@@ -6,6 +6,7 @@ requires:
     # Useful URL: https://github.com/cafe-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-cafe-team/python-caja
     - aptitude
+    - autoconf
     - autopoint
     - clang
     - clang-tools
