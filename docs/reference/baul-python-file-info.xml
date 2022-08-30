@@ -2,7 +2,7 @@
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
 
-<refentry id="class-caja-python-file-info">
+<refentry id="class-baul-python-file-info">
   <refnamediv>
     <refname>Caja.FileInfo</refname>
     <refpurpose>Caja.FileInfo Reference</refpurpose>
@@ -20,98 +20,98 @@
         <ooclass><classname><link linkend="class-ginterface">gobject.GInterface</link></classname></ooclass>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--is-gone">is_gone</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--is-gone">is_gone</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-file-type">get_file_type</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-file-type">get_file_type</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-location">get_location</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-location">get_location</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-name">get_name</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-name">get_name</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-uri">get_uri</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-uri">get_uri</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-activation-uri">get_activation_uri</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-activation-uri">get_activation_uri</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-parent-info">get_parent_info</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-parent-info">get_parent_info</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-parent-location">get_parent_location</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-parent-location">get_parent_location</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-parent-uri">get_parent_uri</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-parent-uri">get_parent_uri</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-mount">get_mount</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-mount">get_mount</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-uri-scheme">get_uri_scheme</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-uri-scheme">get_uri_scheme</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-mime-type">get_mime_type</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-mime-type">get_mime_type</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--is-mime-type">is_mime_type</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--is-mime-type">is_mime_type</link></methodname>
             <methodparam><parameter role="keyword">mime_type</parameter></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--is-directory">is_directory</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--is-directory">is_directory</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--can-write">can_write</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--can-write">can_write</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--add-emblem">add_emblem</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--add-emblem">add_emblem</link></methodname>
             <methodparam><parameter role="keyword">emblem_name</parameter></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--get-string-attribute">get_string_attribute</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--get-string-attribute">get_string_attribute</link></methodname>
             <methodparam><parameter role="keyword">attribute_name</parameter></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--add-string-attribute">add_string_attribute</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--add-string-attribute">add_string_attribute</link></methodname>
             <methodparam><parameter role="keyword">attribute_name</parameter></methodparam>
             <methodparam><parameter role="keyword">value</parameter></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-file-info--invalidate-extension-info">invalidate_extension_info</link></methodname>
+            <methodname><link linkend="method-baul-python-file-info--invalidate-extension-info">invalidate_extension_info</link></methodname>
             <methodparam></methodparam>
         </methodsynopsis>
 
@@ -126,7 +126,7 @@
     <title>Ancestry</title>
 
 <synopsis>+-- <link linkend="class-ginterface">gobject.GInterface</link>
-    +-- <link linkend="class-caja-python-file-info">Caja.FileInfo</link>
+    +-- <link linkend="class-baul-python-file-info">Caja.FileInfo</link>
 </synopsis>
 </refsect1>
 
@@ -139,8 +139,8 @@
     <title>Description</title>
 
       <para>
-        <link linkend="class-caja-python-file-info"><classname>Caja.FileInfo</classname></link> objects are passed
-        to extensions by the <link linkend="class-caja-python-info-provider"><classname>Caja.InfoProvider</classname></link>.
+        <link linkend="class-baul-python-file-info"><classname>Caja.FileInfo</classname></link> objects are passed
+        to extensions by the <link linkend="class-baul-python-info-provider"><classname>Caja.InfoProvider</classname></link>.
       </para>
 
   </refsect1>
@@ -153,7 +153,7 @@
 <refsect1>
     <title>Public Methods</title>
 
-  <refsect2 id="method-caja-python-file-info--is-gone">
+  <refsect2 id="method-baul-python-file-info--is-gone">
     <title>Caja.FileInfo.is_gone</title>
     <programlisting><methodsynopsis language="python">
         <methodname>is_gone</methodname>
@@ -166,7 +166,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-file-type">
+  <refsect2 id="method-baul-python-file-info--get-file-type">
     <title>Caja.FileInfo.get_file_type</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_file_type</methodname>
@@ -179,7 +179,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-location">
+  <refsect2 id="method-baul-python-file-info--get-location">
     <title>Caja.FileInfo.get_location</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_location</methodname>
@@ -192,7 +192,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-name">
+  <refsect2 id="method-baul-python-file-info--get-name">
     <title>Caja.FileInfo.get_name</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_name</methodname>
@@ -205,7 +205,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-uri">
+  <refsect2 id="method-baul-python-file-info--get-uri">
     <title>Caja.FileInfo.get_uri</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_uri</methodname>
@@ -218,7 +218,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-activation-uri">
+  <refsect2 id="method-baul-python-file-info--get-activation-uri">
     <title>Caja.FileInfo.get_activation_uri</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_activation_uri</methodname>
@@ -231,7 +231,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-parent-info">
+  <refsect2 id="method-baul-python-file-info--get-parent-info">
     <title>Caja.FileInfo.get_parent_info</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_parent_info</methodname>
@@ -239,12 +239,12 @@
     <variablelist>
         <varlistentry>
           <term><emphasis>Returns</emphasis>&nbsp;:</term>
-          <listitem><simpara>the <link linkend="class-caja-python-file-info"><classname>Caja.FileInfo</classname></link> object associated with the file's parent</simpara></listitem>
+          <listitem><simpara>the <link linkend="class-baul-python-file-info"><classname>Caja.FileInfo</classname></link> object associated with the file's parent</simpara></listitem>
         </varlistentry>
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-parent-location">
+  <refsect2 id="method-baul-python-file-info--get-parent-location">
     <title>Caja.FileInfo.get_parent_location</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_parent_location</methodname>
@@ -257,7 +257,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-parent-uri">
+  <refsect2 id="method-baul-python-file-info--get-parent-uri">
     <title>Caja.FileInfo.get_parent_uri</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_parent_uri</methodname>
@@ -270,7 +270,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-mount">
+  <refsect2 id="method-baul-python-file-info--get-mount">
     <title>Caja.FileInfo.get_mount</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_mount</methodname>
@@ -283,7 +283,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-uri-scheme">
+  <refsect2 id="method-baul-python-file-info--get-uri-scheme">
     <title>Caja.FileInfo.get_uri_scheme</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_uri_scheme</methodname>
@@ -296,7 +296,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-mime-type">
+  <refsect2 id="method-baul-python-file-info--get-mime-type">
     <title>Caja.FileInfo.get_mime_type</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_mime_type</methodname>
@@ -309,7 +309,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--is-mime-type">
+  <refsect2 id="method-baul-python-file-info--is-mime-type">
     <title>Caja.FileInfo.is_mime_type</title>
     <programlisting><methodsynopsis language="python">
         <methodname>is_mime_type</methodname>
@@ -327,7 +327,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--is-directory">
+  <refsect2 id="method-baul-python-file-info--is-directory">
     <title>Caja.FileInfo.is_directory</title>
     <programlisting><methodsynopsis language="python">
         <methodname>is_directory</methodname>
@@ -340,7 +340,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--can-write">
+  <refsect2 id="method-baul-python-file-info--can-write">
     <title>Caja.FileInfo.can_write</title>
     <programlisting><methodsynopsis language="python">
         <methodname>can_write</methodname>
@@ -353,7 +353,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--add-emblem">
+  <refsect2 id="method-baul-python-file-info--add-emblem">
     <title>Caja.FileInfo.add_emblem</title>
     <programlisting><methodsynopsis language="python">
         <methodname>add_emblem</methodname>
@@ -367,7 +367,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--get-string-attribute">
+  <refsect2 id="method-baul-python-file-info--get-string-attribute">
     <title>Caja.FileInfo.get_string_attribute</title>
     <programlisting><methodsynopsis language="python">
         <methodname>get_string_attribute</methodname>
@@ -385,7 +385,7 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--add-string-attribute">
+  <refsect2 id="method-baul-python-file-info--add-string-attribute">
     <title>Caja.FileInfo.add_string_attribute</title>
     <programlisting><methodsynopsis language="python">
         <methodname>add_string_attribute</methodname>
@@ -404,13 +404,13 @@
       </variablelist>
   </refsect2>
 
-  <refsect2 id="method-caja-python-file-info--invalidate-extension-info">
+  <refsect2 id="method-baul-python-file-info--invalidate-extension-info">
     <title>Caja.FileInfo.invalidate_extension_info</title>
     <programlisting><methodsynopsis language="python">
         <methodname>invalidate_extension_info</methodname>
     </methodsynopsis></programlisting>
     <para>Invalidates the information Caja has about this file, which causes it to request new information
-    from its <link linkend="class-caja-python-info-provider"><classname>Caja.InfoProvider</classname></link> providers.</para>
+    from its <link linkend="class-baul-python-info-provider"><classname>Caja.InfoProvider</classname></link> providers.</para>
   </refsect2>
 
 </refsect1>

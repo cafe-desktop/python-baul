@@ -1,5 +1,5 @@
 /*
- *  caja-python-object.h - Generation of wrapper objects for caja
+ *  baul-python-object.h - Generation of wrapper objects for baul
  *                           extension objects in python.
  *
  *  Copyright (C) 2003 Novell, Inc.
@@ -43,7 +43,7 @@ struct _CajaPythonObjectClass {
     PyObject *type;
 };
 
-GType caja_python_object_get_type (GTypeModule *module, PyObject *type);
+GType baul_python_object_get_type (GTypeModule *module, PyObject *type);
 
 G_END_DECLS
 

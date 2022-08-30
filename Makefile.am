@@ -7,20 +7,20 @@ endif
 ACLOCAL_AMFLAGS = -I m4 -I . ${ACLOCAL_FLAGS}
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = caja-python.pc
+pkgconfig_DATA = baul-python.pc
 
-extensiondir = $(datadir)/caja/extensions
-extension_in_files = libcaja-python.caja-extension.desktop.in
-extension_DATA = $(extension_in_files:.caja-extension.desktop.in=.caja-extension)
+extensiondir = $(datadir)/baul/extensions
+extension_in_files = libbaul-python.baul-extension.desktop.in
+extension_DATA = $(extension_in_files:.baul-extension.desktop.in=.baul-extension)
 $(extension_DATA): $(extension_in_files)
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
 
-EXTRA_DIST = autogen.sh caja-python.pc.in libcaja-python.caja-extension.desktop.in
-CLEANFILES = libcaja-python.caja-extension
+EXTRA_DIST = autogen.sh baul-python.pc.in libbaul-python.baul-extension.desktop.in
+CLEANFILES = libbaul-python.baul-extension
 
 DISTCHECK_CONFIGURE_FLAGS= \
 	--enable-gtk-doc \
-	--with-cajadir='$${libdir}/caja/extensions-2.0-distcheck' \
+	--with-bauldir='$${libdir}/baul/extensions-2.0-distcheck' \
 	CFLAGS='-Wno-deprecated-declarations'
 
 # Build ChangeLog from GIT  history

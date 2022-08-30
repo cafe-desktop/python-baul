@@ -1,4 +1,4 @@
-# This Python caja extension only consider files/folders with a mixed
+# This Python baul extension only consider files/folders with a mixed
 # upper/lower case name. For those, the following is featured:
 # - an emblem on the icon,
 # - contextual menu entry.
@@ -22,19 +22,19 @@ class Mixed(GObject.GObject,
 
     # Private methods.
 
-    def _file_has_mixed_name(self, cajafile):
-        name = cajafile.get_name()
+    def _file_has_mixed_name(self, baulfile):
+        name = baulfile.get_name()
         if name.upper() != name and name.lower() != name:
             return 'mixed'
         return ''
 
     # Caja.InfoProvider implementation.
 
-    def update_file_info(self, cajafile):
-        mixed = self._file_has_mixed_name(cajafile)
-        cajafile.add_string_attribute('mixed', mixed)
+    def update_file_info(self, baulfile):
+        mixed = self._file_has_mixed_name(baulfile)
+        baulfile.add_string_attribute('mixed', mixed)
         if mixed:
-            cajafile.add_emblem(self.emblem)
+            baulfile.add_emblem(self.emblem)
 
     # Caja.ColumnProvider implementation.
 
@@ -50,13 +50,13 @@ class Mixed(GObject.GObject,
 
     # Caja.MenuProvider implementation.
 
-    def get_file_items(self, window, cajafiles):
+    def get_file_items(self, window, baulfiles):
         menuitems = []
-        if len(cajafiles) == 1:
-            for cajafile in cajafiles:
-                mixed = cajafile.get_string_attribute('mixed')
+        if len(baulfiles) == 1:
+            for baulfile in baulfiles:
+                mixed = baulfile.get_string_attribute('mixed')
                 if mixed:
-                    filename = cajafile.get_name()
+                    filename = baulfile.get_name()
                     menuitem = Caja.MenuItem(
                         name  = 'Mixed::FileMenu',
                         label = 'Mixed: %s has a mixed case name' % filename,
@@ -82,16 +82,16 @@ class Mixed(GObject.GObject,
 
     # Caja.PropertyPageProvider implementation.
 
-    def get_property_pages(self, cajafiles):
+    def get_property_pages(self, baulfiles):
         pages = []
-        if len(cajafiles) == 1:
-            for cajafile in cajafiles:
-                if self._file_has_mixed_name(cajafile):
+        if len(baulfiles) == 1:
+            for baulfile in baulfiles:
+                if self._file_has_mixed_name(baulfile):
                     page_label = Gtk.Label('Mixed')
                     page_label.show()
                     hbox = Gtk.HBox(homogeneous = False, spacing = 4)
                     hbox.show()
-                    name_label = Gtk.Label(cajafile.get_name())
+                    name_label = Gtk.Label(baulfile.get_name())
                     name_label.show()
                     comment_label = Gtk.Label('has a mixed-case name')
                     comment_label.show()
@@ -110,9 +110,9 @@ class Mixed(GObject.GObject,
     # Caja.LocationWidgetProvider implementation.
 
     def get_widget(self, uri, window):
-        cajafile = Caja.FileInfo.create_for_uri(uri)
-        if not self._file_has_mixed_name(cajafile):
+        baulfile = Caja.FileInfo.create_for_uri(uri)
+        if not self._file_has_mixed_name(baulfile):
             return None
-        label = Gtk.Label('In mixed-case directory ' + cajafile.get_name())
+        label = Gtk.Label('In mixed-case directory ' + baulfile.get_name())
         label.show()
         return label

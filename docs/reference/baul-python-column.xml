@@ -2,7 +2,7 @@
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
 
-<refentry id="class-caja-python-column">
+<refentry id="class-baul-python-column">
   <refnamediv>
     <refname>Caja.Column</refname>
     <refpurpose>Caja.Column Reference</refpurpose>
@@ -20,7 +20,7 @@
         <ooclass><classname><link linkend="class-gobject">gobject.GObject</link></classname></ooclass>
 
         <constructorsynopsis language="python">
-            <methodname><link linkend="constructor-caja-column">Caja.Column</link></methodname>
+            <methodname><link linkend="constructor-baul-column">Caja.Column</link></methodname>
             <methodparam><parameter role="keyword">name</parameter></methodparam>
             <methodparam><parameter role="keyword">attribute</parameter></methodparam>
             <methodparam><parameter role="keyword">label</parameter></methodparam>
@@ -37,7 +37,7 @@
     <title>Ancestry</title>
 
 <synopsis>+-- <link linkend="class-gobject">gobject.GObject</link>
-    +-- <link linkend="class-caja-python-column">Caja.Column</link>
+    +-- <link linkend="class-baul-python-column">Caja.Column</link>
 </synopsis>
 </refsect1>
 
@@ -50,7 +50,7 @@
     <title>Description</title>
 
       <para>
-        A list of <link linkend="class-caja-python-column"><classname>Caja.Column</classname></link> objects is returned by <link linkend="class-caja-python-column-provider"><classname>Caja.ColumnProvider</classname></link> extensions.
+        A list of <link linkend="class-baul-python-column"><classname>Caja.Column</classname></link> objects is returned by <link linkend="class-baul-python-column-provider"><classname>Caja.ColumnProvider</classname></link> extensions.
       </para>
 
   </refsect1>
@@ -118,7 +118,7 @@
 <!-- BEGIN OF CONSTRUCTOR -->
 <!-- ************************************ -->
 
-<refsect1 id="constructor-caja-column">
+<refsect1 id="constructor-baul-column">
   <title>Constructor</title>
 
   <programlisting><constructorsynopsis language="python">
@@ -149,7 +149,7 @@
   </variablelist>
 
   <para>
-    Creates a new <link linkend="class-caja-python-column"><classname>Caja.Column</classname></link> object.
+    Creates a new <link linkend="class-baul-python-column"><classname>Caja.Column</classname></link> object.
   </para>
 </refsect1>
 

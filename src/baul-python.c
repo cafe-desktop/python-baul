@@ -27,18 +27,18 @@
 #include <gmodule.h>
 #include <gtk/gtk.h>
 
-#include "caja-python.h"
-#include "caja-python-object.h"
+#include "baul-python.h"
+#include "baul-python-object.h"
 
-#include <libcaja-extension/caja-extension-types.h>
+#include <libbaul-extension/baul-extension-types.h>
 
-static const GDebugKey caja_python_debug_keys[] = {
+static const GDebugKey baul_python_debug_keys[] = {
 	{"misc", CAJA_PYTHON_DEBUG_MISC},
 };
-static const guint caja_python_ndebug_keys = sizeof (caja_python_debug_keys) / sizeof (GDebugKey);
-CajaPythonDebug caja_python_debug;
+static const guint baul_python_ndebug_keys = sizeof (baul_python_debug_keys) / sizeof (GDebugKey);
+CajaPythonDebug baul_python_debug;
 
-static gboolean caja_python_init_python(void);
+static gboolean baul_python_init_python(void);
 
 static GArray *all_types = NULL;
 static GList *all_pyfiles = NULL;
@@ -46,13 +46,13 @@ static GList *all_pyfiles = NULL;
 
 /* Caja.OperationHandle value access. */
 static PyObject *
-caja_operationhandle_get_handle(PyGBoxed *self, void *closure)
+baul_operationhandle_get_handle(PyGBoxed *self, void *closure)
 {
 	return PyLong_FromSsize_t((Py_ssize_t) (size_t) self->boxed);
 }
 
 static int
-caja_operationhandle_set_handle(PyGBoxed *self, PyObject *value, void *closure)
+baul_operationhandle_set_handle(PyGBoxed *self, PyObject *value, void *closure)
 {
 	Py_ssize_t val = PyLong_AsSsize_t(value);
 
@@ -66,10 +66,10 @@ caja_operationhandle_set_handle(PyGBoxed *self, PyObject *value, void *closure)
 	return -1;
 }
 
-static PyGetSetDef caja_operationhandle_handle = {
+static PyGetSetDef baul_operationhandle_handle = {
 	"handle",
-	(getter) caja_operationhandle_get_handle,
-	(setter) caja_operationhandle_set_handle,
+	(getter) baul_operationhandle_get_handle,
+	(setter) baul_operationhandle_set_handle,
 	"Operation handle value",
 	NULL
 };
@@ -89,7 +89,7 @@ np_init_pygobject(void)
 }
 
 static void
-caja_python_load_file(GTypeModule *type_module,
+baul_python_load_file(GTypeModule *type_module,
 						  const gchar *filename)
 {
 	PyObject *main_module, *main_locals, *locals, *key, *value;
@@ -127,7 +127,7 @@ caja_python_load_file(GTypeModule *type_module,
 			PyObject_IsSubclass(value, (PyObject*)&PyCajaMenuProvider_Type) ||
 			PyObject_IsSubclass(value, (PyObject*)&PyCajaPropertyPageProvider_Type))
 		{
-			gtype = caja_python_object_get_type(type_module, value);
+			gtype = baul_python_object_get_type(type_module, value);
 			g_array_append_val(all_types, gtype);
 
 			all_pyfiles = g_list_append(all_pyfiles, (gchar*)filename);
@@ -138,7 +138,7 @@ caja_python_load_file(GTypeModule *type_module,
 }
 
 static void
-caja_python_load_dir (GTypeModule *module,
+baul_python_load_dir (GTypeModule *module,
 						  const char  *dirname)
 {
 	GDir *dir;
@@ -168,9 +168,9 @@ caja_python_load_dir (GTypeModule *module,
 
 				/* n-p python part is initialized on demand (or not
 				* at all if no extensions are found) */
-				if (!caja_python_init_python())
+				if (!baul_python_init_python())
 				{
-					g_warning("caja_python_init_python failed");
+					g_warning("baul_python_init_python failed");
 					g_dir_close(dir);
 					break;
 				}
@@ -181,17 +181,17 @@ caja_python_load_dir (GTypeModule *module,
 				PyList_Insert(sys_path, 0, py_path);
 				Py_DECREF(py_path);
 			}
-			caja_python_load_file(module, modulename);
+			baul_python_load_file(module, modulename);
 		}
 	}
 }
 
 static gboolean
-caja_python_init_python (void)
+baul_python_init_python (void)
 {
-	PyObject *gi, *require_version, *args, *caja, *descr;
+	PyObject *gi, *require_version, *args, *baul, *descr;
 	GModule *libpython;
-	wchar_t *argv[] = { L"caja", NULL };
+	wchar_t *argv[] = { L"baul", NULL };
 
 	if (Py_IsInitialized())
 		return TRUE;
@@ -233,9 +233,9 @@ caja_python_init_python (void)
 		return FALSE;
 	}
 
-	/* import caja */
+	/* import baul */
 	g_setenv("INSIDE_CAJA_PYTHON", "", FALSE);
-	debug("import caja");
+	debug("import baul");
 	gi = PyImport_ImportModule ("gi");
 	if (!gi) {
 		PyErr_Print();
@@ -249,8 +249,8 @@ caja_python_init_python (void)
 	Py_DECREF (require_version);
 	Py_DECREF (args);
 	Py_DECREF (gi);
-	caja = PyImport_ImportModule("gi.repository.Caja");
-	if (!caja)
+	baul = PyImport_ImportModule("gi.repository.Caja");
+	if (!baul)
 	{
 		PyErr_Print();
 		return FALSE;
@@ -260,7 +260,7 @@ caja_python_init_python (void)
 	g_assert(_PyGtkWidget_Type != NULL);
 
 #define IMPORT(x, y) \
-    _PyCaja##x##_Type = (PyTypeObject *)PyObject_GetAttrString(caja, y); \
+    _PyCaja##x##_Type = (PyTypeObject *)PyObject_GetAttrString(baul, y); \
 	if (_PyCaja##x##_Type == NULL) { \
 		PyErr_Print(); \
 		return FALSE; \
@@ -281,13 +281,13 @@ caja_python_init_python (void)
 
 	/* Add the "handle" member to the OperationHandle type. */
 	descr = PyDescr_NewGetSet(_PyCajaOperationHandle_Type,
-							  &caja_operationhandle_handle);
+							  &baul_operationhandle_handle);
     if (!descr) {
 		PyErr_Print();
 		return FALSE;
 	}
 	if (PyDict_SetItemString(_PyCajaOperationHandle_Type->tp_dict,
-						     caja_operationhandle_handle.name, descr)) {
+						     baul_operationhandle_handle.name, descr)) {
 		Py_DECREF(descr);
 		PyErr_Print();
 		return FALSE;
@@ -298,7 +298,7 @@ caja_python_init_python (void)
 }
 
 void
-caja_module_initialize(GTypeModule *module)
+baul_module_initialize(GTypeModule *module)
 {
 	gchar *user_extensions_dir;
 	const gchar *env_string;
@@ -306,9 +306,9 @@ caja_module_initialize(GTypeModule *module)
 	env_string = g_getenv("CAJA_PYTHON_DEBUG");
 	if (env_string != NULL)
 	{
-		caja_python_debug = g_parse_debug_string(env_string,
-													 caja_python_debug_keys,
-													 caja_python_ndebug_keys);
+		baul_python_debug = g_parse_debug_string(env_string,
+													 baul_python_debug_keys,
+													 baul_python_ndebug_keys);
 		env_string = NULL;
     }
 
@@ -316,17 +316,17 @@ caja_module_initialize(GTypeModule *module)
 
 	all_types = g_array_new(FALSE, FALSE, sizeof(GType));
 
-	// Look in the new global path, $DATADIR/caja-python/extensions
-	caja_python_load_dir(module, DATADIR "/caja-python/extensions");
+	// Look in the new global path, $DATADIR/baul-python/extensions
+	baul_python_load_dir(module, DATADIR "/baul-python/extensions");
 
-	// Look in XDG_DATA_DIR, ~/.local/share/caja-python/extensions
+	// Look in XDG_DATA_DIR, ~/.local/share/baul-python/extensions
 	user_extensions_dir = g_build_filename(g_get_user_data_dir(),
-		"caja-python", "extensions", NULL);
-	caja_python_load_dir(module, user_extensions_dir);
+		"baul-python", "extensions", NULL);
+	baul_python_load_dir(module, user_extensions_dir);
 }
 
 void
-caja_module_shutdown(void)
+baul_module_shutdown(void)
 {
 	debug_enter();
 
@@ -338,7 +338,7 @@ caja_module_shutdown(void)
 }
 
 void
-caja_module_list_types(const GType **types,
+baul_module_list_types(const GType **types,
 						   int          *num_types)
 {
 	debug_enter();
@@ -348,7 +348,7 @@ caja_module_list_types(const GType **types,
 }
 
 void
-caja_module_list_pyfiles(GList **pyfiles)
+baul_module_list_pyfiles(GList **pyfiles)
 {
 	debug_enter();
 

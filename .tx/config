@@ -1,9 +1,9 @@
 [main]
 host = https://www.transifex.com
  
-[CAFE.master--python-caja]
+[CAFE.master--python-baul]
 file_filter = po/<lang>.po
-source_file = po/python-caja.pot
+source_file = po/python-baul.pot
 source_lang = en
 type = PO
 minimum_perc = 2

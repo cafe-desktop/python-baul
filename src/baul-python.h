@@ -1,5 +1,5 @@
 /*
- *  caja-python.c - Caja Python extension
+ *  baul-python.c - Caja Python extension
  *
  *  Copyright (C) 2004 Johan Dahlin
  *
@@ -36,13 +36,13 @@ typedef enum {
     CAJA_PYTHON_DEBUG_MISC = 1 << 0,
 } CajaPythonDebug;
 
-extern CajaPythonDebug caja_python_debug;
+extern CajaPythonDebug baul_python_debug;
 
-#define debug(x) { if (caja_python_debug & CAJA_PYTHON_DEBUG_MISC) \
-                       g_printf( "caja-python:" x "\n"); }
-#define debug_enter()  { if (caja_python_debug & CAJA_PYTHON_DEBUG_MISC) \
+#define debug(x) { if (baul_python_debug & CAJA_PYTHON_DEBUG_MISC) \
+                       g_printf( "baul-python:" x "\n"); }
+#define debug_enter()  { if (baul_python_debug & CAJA_PYTHON_DEBUG_MISC) \
                              g_printf("%s: entered\n", __FUNCTION__); }
-#define debug_enter_args(x, y) { if (caja_python_debug & CAJA_PYTHON_DEBUG_MISC) \
+#define debug_enter_args(x, y) { if (baul_python_debug & CAJA_PYTHON_DEBUG_MISC) \
                                      g_printf("%s: entered " x "\n", __FUNCTION__, y); }
 
 

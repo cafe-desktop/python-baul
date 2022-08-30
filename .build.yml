@@ -4,7 +4,7 @@
 requires:
   debian:
     # Useful URL: https://github.com/cafe-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-cafe-team/python-caja
+    # Useful URL: https://salsa.debian.org/debian-cafe-team/python-baul
     - aptitude
     - autoconf
     - autopoint
@@ -15,7 +15,7 @@ requires:
     - gcc
     - git
     - gtk-doc-tools
-    - libcaja-extension-dev
+    - libbaul-extension-dev
     - libgirepository1.0-dev
     - libtool
     - make

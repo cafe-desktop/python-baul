@@ -63,8 +63,8 @@ env:
 ##########################################################
 requires:
   archlinux:
-    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/python-caja
-    - caja
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/python-baul
+    - baul
     - clang
     - gcc
     - git
@@ -75,7 +75,7 @@ requires:
 
   debian:
     # Useful URL: https://github.com/cafe-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-cafe-team/python-caja
+    # Useful URL: https://salsa.debian.org/debian-cafe-team/python-baul
     - autopoint
     - clang
     - clang-tools
@@ -83,7 +83,7 @@ requires:
     - gcc
     - git
     - gtk-doc-tools
-    - libcaja-extension-dev
+    - libbaul-extension-dev
     - libgirepository1.0-dev
     - make
     - cafe-common
@@ -92,8 +92,8 @@ requires:
     - quilt
 
   fedora:
-    # Useful URL: https://src.fedoraproject.org/cgit/rpms/python-caja.git
-    - caja-devel
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/python-baul.git
+    - baul-devel
     - clang
     - clang-analyzer
     - cppcheck-htmlreport
@@ -111,7 +111,7 @@ requires:
     - clang-tools
     - git
     - gtk-doc-tools
-    - libcaja-extension-dev
+    - libbaul-extension-dev
     - libgirepository1.0-dev
     - make
     - cafe-common
@@ -163,7 +163,7 @@ releases:
   prerelease: false
   checksum: true
   file_glob: true
-  files: python-caja-*.tar.xz
+  files: python-baul-*.tar.xz
   github_release:
     tags: true
     overwrite: true

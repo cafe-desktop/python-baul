@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
-<chapter id="caja-python-overview-example"
+<chapter id="baul-python-overview-example"
   xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <title>A Simple Extension</title>
@@ -36,7 +36,7 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
         return [item]</programlisting>
     </example>
     
-    <para>Save this file as TestExtension.py in the ~/.local/share/caja-python/extensions folder. 
+    <para>Save this file as TestExtension.py in the ~/.local/share/baul-python/extensions folder. 
     You may need to create this folder. To run, simply restart Caja.</para>
 
     <para>Once Caja restarts, right-click on a file and you should see a new menu item, 
@@ -44,7 +44,7 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
     
     <para>As mentioned above, in order to 
     get loaded by Caja, a python extension must import the Caja module from gi.repository, 
-    create a class derived from a caja *Provider and a gobject.GObject, and create the methods that 
+    create a class derived from a baul *Provider and a gobject.GObject, and create the methods that 
     will be called by Caja when it requests information from its providers. 
     In this case, when someone right-clicks on a file, Caja will ask all of its 
     MenuProviders for additional menu items to show the user. When folders or files are clicked, 

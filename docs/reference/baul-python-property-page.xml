@@ -2,7 +2,7 @@
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
 
-<refentry id="class-caja-python-property-page">
+<refentry id="class-baul-python-property-page">
   <refnamediv>
     <refname>Caja.PropertyPage</refname>
     <refpurpose>Caja.PropertyPage Reference</refpurpose>
@@ -20,7 +20,7 @@
         <ooclass><classname><link linkend="class-gobject">gobject.GObject</link></classname></ooclass>
 
         <constructorsynopsis language="python">
-            <methodname><link linkend="constructor-caja-property-page">Caja.PropertyPage</link></methodname>
+            <methodname><link linkend="constructor-baul-property-page">Caja.PropertyPage</link></methodname>
             <methodparam><parameter role="keyword">name</parameter></methodparam>
             <methodparam><parameter role="keyword">label</parameter></methodparam>
             <methodparam><parameter role="keyword">page</parameter></methodparam>
@@ -36,7 +36,7 @@
     <title>Ancestry</title>
 
 <synopsis>+-- <link linkend="class-gobject">gobject.GObject</link>
-    +-- <link linkend="class-caja-python-property-page">Caja.PropertyPage</link>
+    +-- <link linkend="class-baul-python-property-page">Caja.PropertyPage</link>
 </synopsis>
 </refsect1>
 
@@ -49,7 +49,7 @@
     <title>Description</title>
 
       <para>
-        A <link linkend="class-caja-python-property-page"><classname>Caja.PropertyPage</classname></link> object is returned by <link linkend="class-caja-python-property-page-provider"><classname>Caja.PropertyPageProvider</classname></link> extensions.
+        A <link linkend="class-baul-python-property-page"><classname>Caja.PropertyPage</classname></link> object is returned by <link linkend="class-baul-python-property-page-provider"><classname>Caja.PropertyPageProvider</classname></link> extensions.
       </para>
 
   </refsect1>
@@ -99,7 +99,7 @@
 <!-- BEGIN OF CONSTRUCTOR -->
 <!-- ************************************ -->
 
-<refsect1 id="constructor-caja-property-page">
+<refsect1 id="constructor-baul-property-page">
   <title>Constructor</title>
 
   <programlisting><constructorsynopsis language="python">
@@ -125,7 +125,7 @@
   </variablelist>
 
   <para>
-    Creates a new <link linkend="class-caja-python-property-page"><classname>Caja.PropertyPage</classname></link> object.
+    Creates a new <link linkend="class-baul-python-property-page"><classname>Caja.PropertyPage</classname></link> object.
   </para>
 </refsect1>
 

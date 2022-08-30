@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR CAFE Desktop Environment team
-# This file is distributed under the same license as the python-caja package.
+# This file is distributed under the same license as the python-baul package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -8,8 +8,8 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: python-caja 1.23.0\n"
-"Report-Msgid-Bugs-To: https://github.com/cafe-desktop/python-caja/issues\n"
+"Project-Id-Version: python-baul 1.23.0\n"
+"Report-Msgid-Bugs-To: https://github.com/cafe-desktop/python-baul/issues\n"
 "POT-Creation-Date: 2020-01-07 00:41+0100\n"
 "PO-Revision-Date: 2018-03-12 10:42+0000\n"
 "Last-Translator: tomoe_musashi <hkg.musashi@gmail.com>, 2018\n"
@@ -22,14 +22,14 @@ msgstr ""
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: libcaja-python.caja-extension.desktop.in:4
+#: libbaul-python.baul-extension.desktop.in:4
 msgid "text-x-python"
 msgstr ""
 
-#: libcaja-python.caja-extension.desktop.in:5
+#: libbaul-python.baul-extension.desktop.in:5
 msgid "Python"
 msgstr "Python"
 
-#: libcaja-python.caja-extension.desktop.in:6
+#: libbaul-python.baul-extension.desktop.in:6
 msgid "Allows to use Python extensions"
 msgstr "允許使用 Python 擴充套件"

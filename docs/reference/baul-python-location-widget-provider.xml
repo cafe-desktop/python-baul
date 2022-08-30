@@ -2,7 +2,7 @@
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
 
-<refentry id="class-caja-python-location-widget-provider">
+<refentry id="class-baul-python-location-widget-provider">
   <refnamediv>
     <refname>Caja.LocationWidgetProvider</refname>
     <refpurpose>Caja.LocationWidgetProvider Reference</refpurpose>
@@ -19,7 +19,7 @@
       <ooclass><classname>Caja.LocationWidgetProvider</classname></ooclass>
 
       <methodsynopsis language="python">
-        <methodname><link linkend="method-caja-location-widget-provider--get-widget">get_widget</link></methodname>
+        <methodname><link linkend="method-baul-location-widget-provider--get-widget">get_widget</link></methodname>
         <methodparam><parameter role="keyword">uri</parameter></methodparam>
         <methodparam><parameter role="keyword">window</parameter></methodparam>
       </methodsynopsis>
@@ -63,7 +63,7 @@ class ColumnExtension(GObject.GObject, Caja.LocationWidgetProvider):
   <refsect1>
         <title>Passive Methods</title>
 
-        <refsect2 id="method-caja-location-widget-provider--get-widget">
+        <refsect2 id="method-baul-location-widget-provider--get-widget">
           <title>Caja.LocationWidgetProvider.get_widget</title>
 
           <programlisting><methodsynopsis language="python">

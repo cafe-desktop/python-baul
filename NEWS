@@ -1,8 +1,8 @@
-### python-caja 1.24.0
+### python-baul 1.24.0
 
   * Translations update
 
-### python-caja 1.23.1
+### python-baul 1.23.1
 
   * Translations update
   * configure: get quieter output from make
@@ -13,7 +13,7 @@
   * Make configure.ac cross compile safe.
   * Remove trailing whitespaces
 
-### python-caja 1.23.0
+### python-baul 1.23.0
 
   * Translations update
   * Add support for building with Python 3.8
@@ -21,7 +21,7 @@
   * Create FUNDING.yml
   * Make Caja.OperationHandle usable.
 
-### python-caja 1.22.0
+### python-baul 1.22.0
 
   * fix distcheck when use python3
   * Initialize Travis CI support
@@ -29,7 +29,7 @@
   * Report effective Python version and library location at the end of configure
   * docs: fix remaining incompatibility with Python 3
 
-### python-caja 1.21.1
+### python-baul 1.21.1
 
   * Translations update
   * Fix Python 2 INT_ASLONG function.
@@ -40,35 +40,35 @@
   * Fail to build if some referenced symbol cannot be resolved at link time.
   * Modernize examples
 
-### python-caja 1.21.0
+### python-baul 1.21.0
 
   * Translations update
   * disable deprecation warnings for distcheck
 
-### python-caja 1.20.0
+### python-baul 1.20.0
 
   * Translations update
 
-### python-caja 1.19.0
+### python-baul 1.19.0
 
   * Translations update
   * use standard python exception message
   * Added gi.require_version()
 
-### python-caja 1.18.0
+### python-baul 1.18.0
 
   * Translations update
   * support GTK+3 only: require Caja 1.17.1 and pygobject-3.0
   * drop ancient check for Python 2.5, not needed these days
 
-### python-caja 1.16.0
+### python-baul 1.16.0
 
   * Examples: fix Caja crash on loading background-image
     extension
   * Examples: various fixes
   * Translations update
 
-### python-caja 1.14.0
+### python-baul 1.14.0
 
   * Expose filenames of Python extensions to Caja
     (needed for showing each Python extension as
@@ -76,19 +76,19 @@
   * Fix missing icon in About dialog
   * Fix Changelog generation
 
-### python-caja 1.12.0
+### python-baul 1.12.0
 
   * Translations update
 
-### python-caja 1.10.0
+### python-baul 1.10.0
 
   * Bugfixes
-  * Add about window for caja extensions tab
+  * Add about window for baul extensions tab
 
-### python-caja 1.8.1 Bugfix release
+### python-baul 1.8.1 Bugfix release
 
   * Use pkg-config for python detection and variables
 
-### python-caja 1.8.0
+### python-baul 1.8.0
 
   * Bugfixes
