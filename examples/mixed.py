@@ -8,7 +8,7 @@
 
 import os
 
-from gi.repository import Baul, GObject, Gtk
+from gi.repository import Baul, GObject, Ctk
 
 
 class Mixed(GObject.GObject,
@@ -87,13 +87,13 @@ class Mixed(GObject.GObject,
         if len(baulfiles) == 1:
             for baulfile in baulfiles:
                 if self._file_has_mixed_name(baulfile):
-                    page_label = Gtk.Label('Mixed')
+                    page_label = Ctk.Label('Mixed')
                     page_label.show()
-                    hbox = Gtk.HBox(homogeneous = False, spacing = 4)
+                    hbox = Ctk.HBox(homogeneous = False, spacing = 4)
                     hbox.show()
-                    name_label = Gtk.Label(baulfile.get_name())
+                    name_label = Ctk.Label(baulfile.get_name())
                     name_label.show()
-                    comment_label = Gtk.Label('has a mixed-case name')
+                    comment_label = Ctk.Label('has a mixed-case name')
                     comment_label.show()
                     hbox.pack_start(name_label, False, False, 0)
                     hbox.pack_start(comment_label, False, False, 0)
@@ -113,6 +113,6 @@ class Mixed(GObject.GObject,
         baulfile = Baul.FileInfo.create_for_uri(uri)
         if not self._file_has_mixed_name(baulfile):
             return None
-        label = Gtk.Label('In mixed-case directory ' + baulfile.get_name())
+        label = Ctk.Label('In mixed-case directory ' + baulfile.get_name())
         label.show()
         return label

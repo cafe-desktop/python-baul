@@ -179,13 +179,13 @@ baul_python_object_property_page_provider_iface_init (BaulPropertyPageProviderIf
 }
 
 #define METHOD_NAME "get_widget"
-static GtkWidget *
+static CtkWidget *
 baul_python_object_get_widget (BaulLocationWidgetProvider *provider,
 								   const char 				 	  *uri,
-								   GtkWidget 					  *window)
+								   CtkWidget 					  *window)
 {
 	BaulPythonObject *object = (BaulPythonObject*)provider;
-	GtkWidget *ret = NULL;
+	CtkWidget *ret = NULL;
 	PyObject *py_ret = NULL;
 	PyGObject *py_ret_gobj;
 	PyObject *py_uri = NULL;
@@ -204,13 +204,13 @@ baul_python_object_get_widget (BaulLocationWidgetProvider *provider,
 	HANDLE_RETVAL(py_ret);
 
 	py_ret_gobj = (PyGObject *)py_ret;
-	if (!pygobject_check(py_ret_gobj, &PyGtkWidget_Type))
+	if (!pygobject_check(py_ret_gobj, &PyCtkWidget_Type))
 	{
 		PyErr_SetString(PyExc_TypeError,
 					    METHOD_NAME "should return a ctk.Widget");
 		goto beach;
 	}
-	ret = (GtkWidget *)g_object_ref(py_ret_gobj->obj);
+	ret = (CtkWidget *)g_object_ref(py_ret_gobj->obj);
 
  beach:
 	Py_XDECREF(py_ret);
@@ -228,7 +228,7 @@ baul_python_object_location_widget_provider_iface_init (BaulLocationWidgetProvid
 #define METHOD_NAME "get_file_items"
 static GList *
 baul_python_object_get_file_items (BaulMenuProvider *provider,
-									   GtkWidget 			*window,
+									   CtkWidget 			*window,
 									   GList 				*files)
 {
 	BaulPythonObject *object = (BaulPythonObject*)provider;
@@ -277,7 +277,7 @@ baul_python_object_get_file_items (BaulMenuProvider *provider,
 #define METHOD_NAME "get_background_items"
 static GList *
 baul_python_object_get_background_items (BaulMenuProvider *provider,
-											 GtkWidget 			  *window,
+											 CtkWidget 			  *window,
 											 BaulFileInfo 	  *file)
 {
 	BaulPythonObject *object = (BaulPythonObject*)provider;
