@@ -207,7 +207,7 @@ baul_python_object_get_widget (BaulLocationWidgetProvider *provider,
 	if (!pygobject_check(py_ret_gobj, &PyGtkWidget_Type))
 	{
 		PyErr_SetString(PyExc_TypeError,
-					    METHOD_NAME "should return a gtk.Widget");
+					    METHOD_NAME "should return a ctk.Widget");
 		goto beach;
 	}
 	ret = (GtkWidget *)g_object_ref(py_ret_gobj->obj);

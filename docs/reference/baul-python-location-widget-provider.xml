@@ -79,11 +79,11 @@ class ColumnExtension(GObject.GObject, Baul.LocationWidgetProvider):
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">window</parameter>&nbsp;:</term>
-                <listitem><simpara>the current <link linkend="class-gtkwindow"><classname>gtk.Window</classname></link> instance</simpara></listitem>
+                <listitem><simpara>the current <link linkend="class-ctkwindow"><classname>ctk.Window</classname></link> instance</simpara></listitem>
             </varlistentry>
             <varlistentry>
               <term><emphasis>Returns</emphasis>&nbsp;:</term>
-              <listitem><simpara>a <link linkend="class-gtk-widget"><classname>gtk.Widget</classname></link> object</simpara></listitem>
+              <listitem><simpara>a <link linkend="class-ctk-widget"><classname>ctk.Widget</classname></link> object</simpara></listitem>
             </varlistentry>
           </variablelist>
 

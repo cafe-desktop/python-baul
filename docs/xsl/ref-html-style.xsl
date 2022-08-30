@@ -27,8 +27,8 @@
         <xsl:text>&lt;ANCHOR id=&quot;</xsl:text>
         <xsl:value-of select="@id"/>
         <xsl:text>&quot; href=&quot;</xsl:text>
-        <xsl:if test="$gtkdoc.bookname">
-          <xsl:value-of select="$gtkdoc.bookname"/>
+        <xsl:if test="$ctkdoc.bookname">
+          <xsl:value-of select="$ctkdoc.bookname"/>
           <xsl:text>/</xsl:text>
         </xsl:if>
         <xsl:call-template name="href.target"/>
@@ -38,8 +38,8 @@
     </xsl:if>
   </xsl:template>
 
-  <xsl:param name="gtkdoc.version" select="''"/>
-  <xsl:param name="gtkdoc.bookname" select="''"/>
+  <xsl:param name="ctkdoc.version" select="''"/>
+  <xsl:param name="ctkdoc.bookname" select="''"/>
 
   <xsl:param name="refentry.generate.name" select="0"/>
   <xsl:param name="refentry.generate.title" select="1"/>

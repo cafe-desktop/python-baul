@@ -27,7 +27,7 @@ XML_FILES = 							\
 	reference/baul-python-operation-result.xml \
 	reference/baul-python-operation-handle.xml
 
-HTMLdir = $(datadir)/gtk-doc/html/baul-python
+HTMLdir = $(datadir)/ctk-doc/html/baul-python
 HTML_FILES =						\
 	html/index.html					\
 	html/index.sgml					\
@@ -93,8 +93,8 @@ reference/builddate.xml: $(REFERENCE_DEPS)
 $(HTML_FILES): $(REFERENCE_DEPS)
 	xsltproc --nonet --xinclude -o $(BUILDDIR)/html/ \
 		 --path $(BUILDDIR)/reference:$(srcdir)/reference \
-		 --stringparam gtkdoc.bookname "baul-python" \
-		 --stringparam gtkdoc.version ${REF_VERSION} \
+		 --stringparam ctkdoc.bookname "baul-python" \
+		 --stringparam ctkdoc.version ${REF_VERSION} \
 		 $(HTML_STYLE) $(srcdir)/reference/baul-python-ref.xml
 	$(FIXXREF) -i xsl $(BUILDDIR)/html
 	touch $@

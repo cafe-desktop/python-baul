@@ -25,7 +25,7 @@
 #include <structmember.h>
 #include <pygobject.h>
 #include <gmodule.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include "baul-python.h"
 #include "baul-python-object.h"

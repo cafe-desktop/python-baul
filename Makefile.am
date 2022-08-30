@@ -19,7 +19,7 @@ EXTRA_DIST = autogen.sh baul-python.pc.in libbaul-python.baul-extension.desktop.
 CLEANFILES = libbaul-python.baul-extension
 
 DISTCHECK_CONFIGURE_FLAGS= \
-	--enable-gtk-doc \
+	--enable-ctk-doc \
 	--with-bauldir='$${libdir}/baul/extensions-2.0-distcheck' \
 	CFLAGS='-Wno-deprecated-declarations'
 

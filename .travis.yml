@@ -82,7 +82,7 @@ requires:
     - cppcheck
     - gcc
     - git
-    - gtk-doc-tools
+    - ctk-doc-tools
     - libbaul-extension-dev
     - libgirepository1.0-dev
     - make
@@ -110,7 +110,7 @@ requires:
     - clang
     - clang-tools
     - git
-    - gtk-doc-tools
+    - ctk-doc-tools
     - libbaul-extension-dev
     - libgirepository1.0-dev
     - make
