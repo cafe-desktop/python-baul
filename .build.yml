@@ -23,6 +23,7 @@ requires:
     - quilt
 
     #required packages for baul
+    - autoconf-archive
     - gla11y
     - gobject-introspection
     - gtk-doc-tools
