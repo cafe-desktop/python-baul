@@ -29,7 +29,7 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [GetText Package])
 
 AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
-dnl Check for ctk-doc
+dnl Check for gtk-doc
 CTK_DOC_CHECK(1.9)
 
 dnl **************************************************
@@ -91,7 +91,7 @@ AC_MSG_NOTICE([installing baul plugin in ${ac_with_bauldir}])
 AC_SUBST([BAUL_EXTENSION_DIR], [${ac_with_bauldir}])
 
 dnl ---------------------------------
-dnl Check for ctk-doc dependencies
+dnl Check for gtk-doc dependencies
 dnl ---------------------------------
 AS_IF([test "${enable_ctk_doc}" != no],[
     dnl Check for xsltproc

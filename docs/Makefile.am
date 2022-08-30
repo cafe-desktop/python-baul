@@ -27,7 +27,7 @@ XML_FILES = 							\
 	reference/baul-python-operation-result.xml \
 	reference/baul-python-operation-handle.xml
 
-HTMLdir = $(datadir)/ctk-doc/html/baul-python
+HTMLdir = $(datadir)/gtk-doc/html/baul-python
 HTML_FILES =						\
 	html/index.html					\
 	html/index.sgml					\
