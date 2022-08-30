@@ -31,7 +31,7 @@
 
 #include <pygobject.h>
 
-/* Caja extension headers */
+/* Baul extension headers */
 #include <libbaul-extension/baul-file-info.h>
 #include <libbaul-extension/baul-info-provider.h>
 #include <libbaul-extension/baul-column-provider.h>
@@ -114,7 +114,7 @@ static GObjectClass *parent_class;
 static void
 free_pygobject_data(gpointer data, gpointer user_data)
 {
-	/* Some CajaFile objects are cached and not freed until baul
+	/* Some BaulFile objects are cached and not freed until baul
 		itself is closed.  Since PyGObject stores data that must be freed by
 		the Python interpreter, we must always free it before the interpreter
 		is finalized. */
@@ -143,10 +143,10 @@ baul_python_boxed_new (PyTypeObject *type, gpointer boxed, gboolean free_on_deal
 
 #define METHOD_NAME "get_property_pages"
 static GList *
-baul_python_object_get_property_pages (CajaPropertyPageProvider *provider,
+baul_python_object_get_property_pages (BaulPropertyPageProvider *provider,
 										   GList 						*files)
 {
-	CajaPythonObject *object = (CajaPythonObject*)provider;
+	BaulPythonObject *object = (BaulPythonObject*)provider;
     PyObject *py_files, *py_ret = NULL;
     GList *ret = NULL;
 	PyGILState_STATE state = pyg_gil_state_ensure();
@@ -162,7 +162,7 @@ baul_python_object_get_property_pages (CajaPropertyPageProvider *provider,
 								 "(N)", py_files);
 	HANDLE_RETVAL(py_ret);
 
-	HANDLE_LIST(py_ret, CajaPropertyPage, "Caja.PropertyPage");
+	HANDLE_LIST(py_ret, BaulPropertyPage, "Baul.PropertyPage");
 
  beach:
 	Py_XDECREF(py_ret);
@@ -173,18 +173,18 @@ baul_python_object_get_property_pages (CajaPropertyPageProvider *provider,
 
 
 static void
-baul_python_object_property_page_provider_iface_init (CajaPropertyPageProviderIface *iface)
+baul_python_object_property_page_provider_iface_init (BaulPropertyPageProviderIface *iface)
 {
 	iface->get_pages = baul_python_object_get_property_pages;
 }
 
 #define METHOD_NAME "get_widget"
 static GtkWidget *
-baul_python_object_get_widget (CajaLocationWidgetProvider *provider,
+baul_python_object_get_widget (BaulLocationWidgetProvider *provider,
 								   const char 				 	  *uri,
 								   GtkWidget 					  *window)
 {
-	CajaPythonObject *object = (CajaPythonObject*)provider;
+	BaulPythonObject *object = (BaulPythonObject*)provider;
 	GtkWidget *ret = NULL;
 	PyObject *py_ret = NULL;
 	PyGObject *py_ret_gobj;
@@ -220,18 +220,18 @@ baul_python_object_get_widget (CajaLocationWidgetProvider *provider,
 #undef METHOD_NAME
 
 static void
-baul_python_object_location_widget_provider_iface_init (CajaLocationWidgetProviderIface *iface)
+baul_python_object_location_widget_provider_iface_init (BaulLocationWidgetProviderIface *iface)
 {
 	iface->get_widget = baul_python_object_get_widget;
 }
 
 #define METHOD_NAME "get_file_items"
 static GList *
-baul_python_object_get_file_items (CajaMenuProvider *provider,
+baul_python_object_get_file_items (BaulMenuProvider *provider,
 									   GtkWidget 			*window,
 									   GList 				*files)
 {
-	CajaPythonObject *object = (CajaPythonObject*)provider;
+	BaulPythonObject *object = (BaulPythonObject*)provider;
     GList *ret = NULL;
     PyObject *py_ret = NULL, *py_files;
 	PyGILState_STATE state = pyg_gil_state_ensure();
@@ -264,7 +264,7 @@ baul_python_object_get_file_items (CajaMenuProvider *provider,
 
 	HANDLE_RETVAL(py_ret);
 
-	HANDLE_LIST(py_ret, CajaMenuItem, "Caja.MenuItem");
+	HANDLE_LIST(py_ret, BaulMenuItem, "Baul.MenuItem");
 
  beach:
  	free_pygobject_data_list(files);
@@ -276,11 +276,11 @@ baul_python_object_get_file_items (CajaMenuProvider *provider,
 
 #define METHOD_NAME "get_background_items"
 static GList *
-baul_python_object_get_background_items (CajaMenuProvider *provider,
+baul_python_object_get_background_items (BaulMenuProvider *provider,
 											 GtkWidget 			  *window,
-											 CajaFileInfo 	  *file)
+											 BaulFileInfo 	  *file)
 {
-	CajaPythonObject *object = (CajaPythonObject*)provider;
+	BaulPythonObject *object = (BaulPythonObject*)provider;
     GList *ret = NULL;
     PyObject *py_ret = NULL;
 	PyGILState_STATE state = pyg_gil_state_ensure();
@@ -311,7 +311,7 @@ baul_python_object_get_background_items (CajaMenuProvider *provider,
 
 	HANDLE_RETVAL(py_ret);
 
-	HANDLE_LIST(py_ret, CajaMenuItem, "Caja.MenuItem");
+	HANDLE_LIST(py_ret, BaulMenuItem, "Baul.MenuItem");
 
  beach:
 	free_pygobject_data(file, NULL);
@@ -322,7 +322,7 @@ baul_python_object_get_background_items (CajaMenuProvider *provider,
 #undef METHOD_NAME
 
 static void
-baul_python_object_menu_provider_iface_init (CajaMenuProviderIface *iface)
+baul_python_object_menu_provider_iface_init (BaulMenuProviderIface *iface)
 {
 	iface->get_background_items = baul_python_object_get_background_items;
 	iface->get_file_items = baul_python_object_get_file_items;
@@ -330,9 +330,9 @@ baul_python_object_menu_provider_iface_init (CajaMenuProviderIface *iface)
 
 #define METHOD_NAME "get_columns"
 static GList *
-baul_python_object_get_columns (CajaColumnProvider *provider)
+baul_python_object_get_columns (BaulColumnProvider *provider)
 {
-	CajaPythonObject *object = (CajaPythonObject*)provider;
+	BaulPythonObject *object = (BaulPythonObject*)provider;
     GList *ret = NULL;
     PyObject *py_ret = NULL;
 	PyGILState_STATE state = pyg_gil_state_ensure();                                    \
@@ -347,7 +347,7 @@ baul_python_object_get_columns (CajaColumnProvider *provider)
 
 	HANDLE_RETVAL(py_ret);
 
-	HANDLE_LIST(py_ret, CajaColumn, "Caja.Column");
+	HANDLE_LIST(py_ret, BaulColumn, "Baul.Column");
 
  beach:
 	if (py_ret != NULL)
@@ -358,7 +358,7 @@ baul_python_object_get_columns (CajaColumnProvider *provider)
 #undef METHOD_NAME
 
 static void
-baul_python_object_column_provider_iface_init (CajaColumnProviderIface *iface)
+baul_python_object_column_provider_iface_init (BaulColumnProviderIface *iface)
 {
 	iface->get_columns = baul_python_object_get_columns;
 }
@@ -366,12 +366,12 @@ baul_python_object_column_provider_iface_init (CajaColumnProviderIface *iface)
 
 #define METHOD_NAME "cancel_update"
 static void
-baul_python_object_cancel_update (CajaInfoProvider 		*provider,
-									  CajaOperationHandle 	*handle)
+baul_python_object_cancel_update (BaulInfoProvider 		*provider,
+									  BaulOperationHandle 	*handle)
 {
-	CajaPythonObject *object = (CajaPythonObject*)provider;
+	BaulPythonObject *object = (BaulPythonObject*)provider;
 	PyGILState_STATE state = pyg_gil_state_ensure();
-	PyObject *py_handle = baul_python_boxed_new (_PyCajaOperationHandle_Type, handle, FALSE);
+	PyObject *py_handle = baul_python_boxed_new (_PyBaulOperationHandle_Type, handle, FALSE);
 
   	debug_enter();
 
@@ -389,14 +389,14 @@ baul_python_object_cancel_update (CajaInfoProvider 		*provider,
 #undef METHOD_NAME
 
 #define METHOD_NAME "update_file_info"
-static CajaOperationResult
-baul_python_object_update_file_info (CajaInfoProvider 		*provider,
-										 CajaFile 				*file,
+static BaulOperationResult
+baul_python_object_update_file_info (BaulInfoProvider 		*provider,
+										 BaulFile 				*file,
 										 GClosure 					*update_complete,
-										 CajaOperationHandle   **handle)
+										 BaulOperationHandle   **handle)
 {
-	CajaPythonObject *object = (CajaPythonObject*)provider;
-    CajaOperationResult ret = CAJA_OPERATION_COMPLETE;
+	BaulPythonObject *object = (BaulPythonObject*)provider;
+    BaulOperationResult ret = CAJA_OPERATION_COMPLETE;
     PyObject *py_ret = NULL;
 	PyGILState_STATE state = pyg_gil_state_ensure();
 	static volatile gssize handle_generator = 1;
@@ -414,9 +414,9 @@ baul_python_object_update_file_info (CajaInfoProvider 		*provider,
 
         /* Generate a new handle with a default value. */
         do {
-            h = (CajaOperationHandle *) g_atomic_pointer_add (&handle_generator, 1);
+            h = (BaulOperationHandle *) g_atomic_pointer_add (&handle_generator, 1);
         } while (!h);
-        py_handle = baul_python_boxed_new (_PyCajaOperationHandle_Type,
+        py_handle = baul_python_boxed_new (_PyBaulOperationHandle_Type,
                                            h, FALSE);
 
 
@@ -462,19 +462,19 @@ baul_python_object_update_file_info (CajaInfoProvider 		*provider,
 #undef METHOD_NAME
 
 static void
-baul_python_object_info_provider_iface_init (CajaInfoProviderIface *iface)
+baul_python_object_info_provider_iface_init (BaulInfoProviderIface *iface)
 {
 	iface->cancel_update = baul_python_object_cancel_update;
 	iface->update_file_info = baul_python_object_update_file_info;
 }
 
 static void
-baul_python_object_instance_init (CajaPythonObject *object)
+baul_python_object_instance_init (BaulPythonObject *object)
 {
-	CajaPythonObjectClass *class;
+	BaulPythonObjectClass *class;
   	debug_enter();
 
-	class = (CajaPythonObjectClass*)(((GTypeInstance*)object)->g_class);
+	class = (BaulPythonObjectClass*)(((GTypeInstance*)object)->g_class);
 
 	object->instance = PyObject_CallObject(class->type, NULL);
 	if (object->instance == NULL)
@@ -486,12 +486,12 @@ baul_python_object_finalize (GObject *object)
 {
   	debug_enter();
 
-	if (((CajaPythonObject *)object)->instance != NULL)
-		Py_DECREF(((CajaPythonObject *)object)->instance);
+	if (((BaulPythonObject *)object)->instance != NULL)
+		Py_DECREF(((BaulPythonObject *)object)->instance);
 }
 
 static void
-baul_python_object_class_init (CajaPythonObjectClass *class,
+baul_python_object_class_init (BaulPythonObjectClass *class,
 								   gpointer 				  class_data)
 {
 	debug_enter();
@@ -544,15 +544,15 @@ baul_python_object_get_type (GTypeModule *module,
 	debug_enter_args("type=%s", PyUnicode_AsUTF8(PyObject_GetAttrString(type, "__name__")));
 	info = g_new0 (GTypeInfo, 1);
 
-	info->class_size = sizeof (CajaPythonObjectClass);
+	info->class_size = sizeof (BaulPythonObjectClass);
 	info->class_init = (GClassInitFunc)baul_python_object_class_init;
-	info->instance_size = sizeof (CajaPythonObject);
+	info->instance_size = sizeof (BaulPythonObject);
 	info->instance_init = (GInstanceInitFunc)baul_python_object_instance_init;
 
 	info->class_data = type;
 	Py_INCREF(type);
 
-	type_name = g_strdup_printf("%s+CajaPython",
+	type_name = g_strdup_printf("%s+BaulPython",
 								PyUnicode_AsUTF8(PyObject_GetAttrString(type, "__name__")));
 
 	gtype = g_type_module_register_type (module,
@@ -560,35 +560,35 @@ baul_python_object_get_type (GTypeModule *module,
 										 type_name,
 										 info, 0);
 
-	if (PyObject_IsSubclass(type, (PyObject*)&PyCajaPropertyPageProvider_Type))
+	if (PyObject_IsSubclass(type, (PyObject*)&PyBaulPropertyPageProvider_Type))
 	{
 		g_type_module_add_interface (module, gtype,
 									 CAJA_TYPE_PROPERTY_PAGE_PROVIDER,
 									 &property_page_provider_iface_info);
 	}
 
-	if (PyObject_IsSubclass(type, (PyObject*)&PyCajaLocationWidgetProvider_Type))
+	if (PyObject_IsSubclass(type, (PyObject*)&PyBaulLocationWidgetProvider_Type))
 	{
 		g_type_module_add_interface (module, gtype,
 									 CAJA_TYPE_LOCATION_WIDGET_PROVIDER,
 									 &location_widget_provider_iface_info);
 	}
 
-	if (PyObject_IsSubclass(type, (PyObject*)&PyCajaMenuProvider_Type))
+	if (PyObject_IsSubclass(type, (PyObject*)&PyBaulMenuProvider_Type))
 	{
 		g_type_module_add_interface (module, gtype,
 									 CAJA_TYPE_MENU_PROVIDER,
 									 &menu_provider_iface_info);
 	}
 
-	if (PyObject_IsSubclass(type, (PyObject*)&PyCajaColumnProvider_Type))
+	if (PyObject_IsSubclass(type, (PyObject*)&PyBaulColumnProvider_Type))
 	{
 		g_type_module_add_interface (module, gtype,
 									 CAJA_TYPE_COLUMN_PROVIDER,
 									 &column_provider_iface_info);
 	}
 
-	if (PyObject_IsSubclass(type, (PyObject*)&PyCajaInfoProvider_Type))
+	if (PyObject_IsSubclass(type, (PyObject*)&PyBaulInfoProvider_Type))
 	{
 		g_type_module_add_interface (module, gtype,
 									 CAJA_TYPE_INFO_PROVIDER,

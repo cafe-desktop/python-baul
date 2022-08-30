@@ -1,5 +1,5 @@
-Name: Caja-Python
-Description: Caja-Python Components
+Name: Baul-Python
+Description: Baul-Python Components
 Version: @VERSION@
 
 prefix=@prefix@

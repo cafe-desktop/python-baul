@@ -11,7 +11,7 @@ libbaul_python_la_SOURCES =     	\
 libbaul_python_la_CPPFLAGS = \
 	-I$(top_srcdir)	\
 	-I$(top_builddir) \
-	-DG_LOG_DOMAIN=\"Caja-Python\" \
+	-DG_LOG_DOMAIN=\"Baul-Python\" \
 	-DDATADIR=\"$(datadir)\" \
 	-DLIBDIR=\"$(libdir)\" \
 	-DPYTHON_VERSION=\"$(PYTHON_VERSION)\" \

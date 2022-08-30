@@ -2,10 +2,10 @@ SUPPORTED_FORMATS = 'image/jpeg', 'image/png'
 BACKGROUND_SCHEMA = 'org.cafe.background'
 BACKGROUND_KEY = 'picture-filename'
 
-from gi.repository import Caja, GObject, Gio
+from gi.repository import Baul, GObject, Gio
 
 
-class BackgroundImageExtension(GObject.GObject, Caja.MenuProvider):
+class BackgroundImageExtension(GObject.GObject, Baul.MenuProvider):
     def __init__(self):
         self.bgsettings = Gio.Settings.new(BACKGROUND_SCHEMA)
     
@@ -31,7 +31,7 @@ class BackgroundImageExtension(GObject.GObject, Caja.MenuProvider):
         if file.get_uri_scheme() != 'file':
             return
 
-        item = Caja.MenuItem(name='Caja::set_background_image',
+        item = Baul.MenuItem(name='Baul::set_background_image',
                                  label='Use as background image',
                                  tip='Set the current image as a background image')
         item.connect('activate', self.menu_activate_cb, file)

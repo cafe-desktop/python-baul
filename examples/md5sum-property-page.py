@@ -1,8 +1,8 @@
 import hashlib
 
-from gi.repository import Caja, Gtk, GObject
+from gi.repository import Baul, Gtk, GObject
 
-class MD5SumPropertyPage(GObject.GObject, Caja.PropertyPageProvider):
+class MD5SumPropertyPage(GObject.GObject, Baul.PropertyPageProvider):
     def __init__(self):
         pass
     
@@ -41,6 +41,6 @@ class MD5SumPropertyPage(GObject.GObject, Caja.PropertyPageProvider):
         self.value_label.set_text(md5sum.hexdigest())
         self.value_label.show()
         
-        return Caja.PropertyPage(name="CajaPython::md5_sum",
+        return Baul.PropertyPage(name="BaulPython::md5_sum",
                                      label=self.property_label, 
                                      page=self.hbox),

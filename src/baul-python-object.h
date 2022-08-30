@@ -30,15 +30,15 @@
 
 G_BEGIN_DECLS
 
-typedef struct _CajaPythonObject       CajaPythonObject;
-typedef struct _CajaPythonObjectClass  CajaPythonObjectClass;
+typedef struct _BaulPythonObject       BaulPythonObject;
+typedef struct _BaulPythonObjectClass  BaulPythonObjectClass;
 
-struct _CajaPythonObject {
+struct _BaulPythonObject {
   GObject parent_slot;
   PyObject *instance;
 };
 
-struct _CajaPythonObjectClass {
+struct _BaulPythonObjectClass {
     GObjectClass parent_slot;
     PyObject *type;
 };

@@ -1,5 +1,5 @@
 /*
- *  baul-python.c - Caja Python extension
+ *  baul-python.c - Baul Python extension
  *
  *  Copyright (C) 2004 Johan Dahlin
  *
@@ -34,9 +34,9 @@
 
 typedef enum {
     CAJA_PYTHON_DEBUG_MISC = 1 << 0,
-} CajaPythonDebug;
+} BaulPythonDebug;
 
-extern CajaPythonDebug baul_python_debug;
+extern BaulPythonDebug baul_python_debug;
 
 #define debug(x) { if (baul_python_debug & CAJA_PYTHON_DEBUG_MISC) \
                        g_printf( "baul-python:" x "\n"); }
@@ -49,34 +49,34 @@ extern CajaPythonDebug baul_python_debug;
 CAJA_PYTHON_VAR_DECL PyTypeObject *_PyGtkWidget_Type;
 #define PyGtkWidget_Type (*_PyGtkWidget_Type)
 
-CAJA_PYTHON_VAR_DECL PyTypeObject *_PyCajaColumn_Type;
-#define PyCajaColumn_Type (*_PyCajaColumn_Type)
+CAJA_PYTHON_VAR_DECL PyTypeObject *_PyBaulColumn_Type;
+#define PyBaulColumn_Type (*_PyBaulColumn_Type)
 
-CAJA_PYTHON_VAR_DECL PyTypeObject *_PyCajaColumnProvider_Type;
-#define PyCajaColumnProvider_Type (*_PyCajaColumnProvider_Type)
+CAJA_PYTHON_VAR_DECL PyTypeObject *_PyBaulColumnProvider_Type;
+#define PyBaulColumnProvider_Type (*_PyBaulColumnProvider_Type)
 
-CAJA_PYTHON_VAR_DECL PyTypeObject *_PyCajaInfoProvider_Type;
-#define PyCajaInfoProvider_Type (*_PyCajaInfoProvider_Type)
+CAJA_PYTHON_VAR_DECL PyTypeObject *_PyBaulInfoProvider_Type;
+#define PyBaulInfoProvider_Type (*_PyBaulInfoProvider_Type)
 
-CAJA_PYTHON_VAR_DECL PyTypeObject *_PyCajaLocationWidgetProvider_Type;
-#define PyCajaLocationWidgetProvider_Type (*_PyCajaLocationWidgetProvider_Type)
+CAJA_PYTHON_VAR_DECL PyTypeObject *_PyBaulLocationWidgetProvider_Type;
+#define PyBaulLocationWidgetProvider_Type (*_PyBaulLocationWidgetProvider_Type)
 
-CAJA_PYTHON_VAR_DECL PyTypeObject *_PyCajaMenu_Type;
-#define PyCajaMenu_Type (*_PyCajaMenu_Type)
+CAJA_PYTHON_VAR_DECL PyTypeObject *_PyBaulMenu_Type;
+#define PyBaulMenu_Type (*_PyBaulMenu_Type)
 
-CAJA_PYTHON_VAR_DECL PyTypeObject *_PyCajaMenuItem_Type;
-#define PyCajaMenuItem_Type (*_PyCajaMenuItem_Type)
+CAJA_PYTHON_VAR_DECL PyTypeObject *_PyBaulMenuItem_Type;
+#define PyBaulMenuItem_Type (*_PyBaulMenuItem_Type)
 
-CAJA_PYTHON_VAR_DECL PyTypeObject *_PyCajaMenuProvider_Type;
-#define PyCajaMenuProvider_Type (*_PyCajaMenuProvider_Type)
+CAJA_PYTHON_VAR_DECL PyTypeObject *_PyBaulMenuProvider_Type;
+#define PyBaulMenuProvider_Type (*_PyBaulMenuProvider_Type)
 
-CAJA_PYTHON_VAR_DECL PyTypeObject *_PyCajaPropertyPage_Type;
-#define PyCajaPropertyPage_Type (*_PyCajaPropertyPage_Type)
+CAJA_PYTHON_VAR_DECL PyTypeObject *_PyBaulPropertyPage_Type;
+#define PyBaulPropertyPage_Type (*_PyBaulPropertyPage_Type)
 
-CAJA_PYTHON_VAR_DECL PyTypeObject *_PyCajaPropertyPageProvider_Type;
-#define PyCajaPropertyPageProvider_Type (*_PyCajaPropertyPageProvider_Type)
+CAJA_PYTHON_VAR_DECL PyTypeObject *_PyBaulPropertyPageProvider_Type;
+#define PyBaulPropertyPageProvider_Type (*_PyBaulPropertyPageProvider_Type)
 
-CAJA_PYTHON_VAR_DECL PyTypeObject *_PyCajaOperationHandle_Type;
-#define PyCajaOperationHandle_Type (*_PyCajaOperationHandle_Type)
+CAJA_PYTHON_VAR_DECL PyTypeObject *_PyBaulOperationHandle_Type;
+#define PyBaulOperationHandle_Type (*_PyBaulOperationHandle_Type)
 
 #endif /* CAJA_PYTHON_H */

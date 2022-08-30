@@ -8,15 +8,15 @@
 
 import os
 
-from gi.repository import Caja, GObject, Gtk
+from gi.repository import Baul, GObject, Gtk
 
 
 class Mixed(GObject.GObject,
-                Caja.InfoProvider,
-                Caja.ColumnProvider,
-                Caja.MenuProvider,
-                Caja.PropertyPageProvider,
-                Caja.LocationWidgetProvider):
+                Baul.InfoProvider,
+                Baul.ColumnProvider,
+                Baul.MenuProvider,
+                Baul.PropertyPageProvider,
+                Baul.LocationWidgetProvider):
 
     emblem = 'favorite-symbolic.symbolic'       # Use one of the stock emblems.
 
@@ -28,7 +28,7 @@ class Mixed(GObject.GObject,
             return 'mixed'
         return ''
 
-    # Caja.InfoProvider implementation.
+    # Baul.InfoProvider implementation.
 
     def update_file_info(self, baulfile):
         mixed = self._file_has_mixed_name(baulfile)
@@ -36,11 +36,11 @@ class Mixed(GObject.GObject,
         if mixed:
             baulfile.add_emblem(self.emblem)
 
-    # Caja.ColumnProvider implementation.
+    # Baul.ColumnProvider implementation.
 
     def get_columns(self):
         return [
-            Caja.Column(
+            Baul.Column(
                 name        = 'Mixed::mixed_column',
                 attribute   = 'mixed',
                 label       = 'Mixed',
@@ -48,7 +48,7 @@ class Mixed(GObject.GObject,
             )
         ]
 
-    # Caja.MenuProvider implementation.
+    # Baul.MenuProvider implementation.
 
     def get_file_items(self, window, baulfiles):
         menuitems = []
@@ -57,7 +57,7 @@ class Mixed(GObject.GObject,
                 mixed = baulfile.get_string_attribute('mixed')
                 if mixed:
                     filename = baulfile.get_name()
-                    menuitem = Caja.MenuItem(
+                    menuitem = Baul.MenuItem(
                         name  = 'Mixed::FileMenu',
                         label = 'Mixed: %s has a mixed case name' % filename,
                         tip   = '',
@@ -72,7 +72,7 @@ class Mixed(GObject.GObject,
         if not mixed:
             return []
         return [
-            Caja.MenuItem(
+            Baul.MenuItem(
                 name  = 'Mixed::BackgroundMenu',
                 label = 'Mixed: you are browsing a directory with a mixed case name',
                 tip   = '',
@@ -80,7 +80,7 @@ class Mixed(GObject.GObject,
             )
         ]
 
-    # Caja.PropertyPageProvider implementation.
+    # Baul.PropertyPageProvider implementation.
 
     def get_property_pages(self, baulfiles):
         pages = []
@@ -98,7 +98,7 @@ class Mixed(GObject.GObject,
                     hbox.pack_start(name_label, False, False, 0)
                     hbox.pack_start(comment_label, False, False, 0)
                     pages.append(
-                        Caja.PropertyPage(
+                        Baul.PropertyPage(
                             name  = 'Mixed::PropertyPage',
                             label = page_label,
                             page  = hbox
@@ -107,10 +107,10 @@ class Mixed(GObject.GObject,
 
         return pages
 
-    # Caja.LocationWidgetProvider implementation.
+    # Baul.LocationWidgetProvider implementation.
 
     def get_widget(self, uri, window):
-        baulfile = Caja.FileInfo.create_for_uri(uri)
+        baulfile = Baul.FileInfo.create_for_uri(uri)
         if not self._file_has_mixed_name(baulfile):
             return None
         label = Gtk.Label('In mixed-case directory ' + baulfile.get_name())

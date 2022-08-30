@@ -36,7 +36,7 @@ static const GDebugKey baul_python_debug_keys[] = {
 	{"misc", CAJA_PYTHON_DEBUG_MISC},
 };
 static const guint baul_python_ndebug_keys = sizeof (baul_python_debug_keys) / sizeof (GDebugKey);
-CajaPythonDebug baul_python_debug;
+BaulPythonDebug baul_python_debug;
 
 static gboolean baul_python_init_python(void);
 
@@ -44,7 +44,7 @@ static GArray *all_types = NULL;
 static GList *all_pyfiles = NULL;
 
 
-/* Caja.OperationHandle value access. */
+/* Baul.OperationHandle value access. */
 static PyObject *
 baul_operationhandle_get_handle(PyGBoxed *self, void *closure)
 {
@@ -121,11 +121,11 @@ baul_python_load_file(GTypeModule *type_module,
 		if (!PyType_Check(value))
 			continue;
 
-		if (PyObject_IsSubclass(value, (PyObject*)&PyCajaColumnProvider_Type) ||
-			PyObject_IsSubclass(value, (PyObject*)&PyCajaInfoProvider_Type) ||
-			PyObject_IsSubclass(value, (PyObject*)&PyCajaLocationWidgetProvider_Type) ||
-			PyObject_IsSubclass(value, (PyObject*)&PyCajaMenuProvider_Type) ||
-			PyObject_IsSubclass(value, (PyObject*)&PyCajaPropertyPageProvider_Type))
+		if (PyObject_IsSubclass(value, (PyObject*)&PyBaulColumnProvider_Type) ||
+			PyObject_IsSubclass(value, (PyObject*)&PyBaulInfoProvider_Type) ||
+			PyObject_IsSubclass(value, (PyObject*)&PyBaulLocationWidgetProvider_Type) ||
+			PyObject_IsSubclass(value, (PyObject*)&PyBaulMenuProvider_Type) ||
+			PyObject_IsSubclass(value, (PyObject*)&PyBaulPropertyPageProvider_Type))
 		{
 			gtype = baul_python_object_get_type(type_module, value);
 			g_array_append_val(all_types, gtype);
@@ -243,13 +243,13 @@ baul_python_init_python (void)
 	}
 
 	require_version = PyObject_GetAttrString (gi, (char *) "require_version");
-	args = PyTuple_Pack (2, PyUnicode_FromString ("Caja"),
+	args = PyTuple_Pack (2, PyUnicode_FromString ("Baul"),
 	PyUnicode_FromString ("2.0"));
 	PyObject_CallObject (require_version, args);
 	Py_DECREF (require_version);
 	Py_DECREF (args);
 	Py_DECREF (gi);
-	baul = PyImport_ImportModule("gi.repository.Caja");
+	baul = PyImport_ImportModule("gi.repository.Baul");
 	if (!baul)
 	{
 		PyErr_Print();
@@ -260,8 +260,8 @@ baul_python_init_python (void)
 	g_assert(_PyGtkWidget_Type != NULL);
 
 #define IMPORT(x, y) \
-    _PyCaja##x##_Type = (PyTypeObject *)PyObject_GetAttrString(baul, y); \
-	if (_PyCaja##x##_Type == NULL) { \
+    _PyBaul##x##_Type = (PyTypeObject *)PyObject_GetAttrString(baul, y); \
+	if (_PyBaul##x##_Type == NULL) { \
 		PyErr_Print(); \
 		return FALSE; \
 	}
@@ -280,13 +280,13 @@ baul_python_init_python (void)
 #undef IMPORT
 
 	/* Add the "handle" member to the OperationHandle type. */
-	descr = PyDescr_NewGetSet(_PyCajaOperationHandle_Type,
+	descr = PyDescr_NewGetSet(_PyBaulOperationHandle_Type,
 							  &baul_operationhandle_handle);
     if (!descr) {
 		PyErr_Print();
 		return FALSE;
 	}
-	if (PyDict_SetItemString(_PyCajaOperationHandle_Type->tp_dict,
+	if (PyDict_SetItemString(_PyBaulOperationHandle_Type->tp_dict,
 						     baul_operationhandle_handle.name, descr)) {
 		Py_DECREF(descr);
 		PyErr_Print();
