@@ -2,17 +2,6 @@
 # THE FOLLOWING LINES IS USED BY docker-build
 ##########################################################
 requires:
-  archlinux:
-    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/python-caja
-    - caja
-    - clang
-    - gcc
-    - git
-    - make
-    - mate-common
-    - python-gobject
-    - which
-
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/python-caja
@@ -21,34 +10,6 @@ requires:
     - clang-tools
     - cppcheck
     - gcc
-    - git
-    - gtk-doc-tools
-    - libcaja-extension-dev
-    - libgirepository1.0-dev
-    - make
-    - mate-common
-    - python3-dev
-    - python-gi-dev
-    - quilt
-
-  fedora:
-    # Useful URL: https://src.fedoraproject.org/cgit/rpms/python-caja.git
-    - caja-devel
-    - clang
-    - clang-analyzer
-    - cppcheck-htmlreport
-    - gcc
-    - git
-    - make
-    - mate-common
-    - pygobject3-devel
-    - python3-devel
-    - redhat-rpm-config
-
-  ubuntu:
-    - autopoint
-    - clang
-    - clang-tools
     - git
     - gtk-doc-tools
     - libcaja-extension-dev
