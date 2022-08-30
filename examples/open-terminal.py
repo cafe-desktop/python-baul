@@ -3,7 +3,7 @@ import os
 
 from gi.repository import Caja, GObject, Gio
 
-TERMINAL_SCHEMA = 'org.mate.applications-terminal'
+TERMINAL_SCHEMA = 'org.cafe.applications-terminal'
 TERMINAL_KEY = 'exec'
 
 class OpenTerminalExtension(Caja.MenuProvider, GObject.GObject):

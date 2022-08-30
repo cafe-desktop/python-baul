@@ -10,8 +10,8 @@ branches:
   - gh-pages
 
 before_install:
-  - curl -Ls -o docker-build https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/docker-build
-  - curl -Ls -o gen-index https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/gen-index.sh
+  - curl -Ls -o docker-build https://github.com/cafe-desktop/cafe-dev-scripts/raw/master/travis/docker-build
+  - curl -Ls -o gen-index https://github.com/cafe-desktop/cafe-dev-scripts/raw/master/travis/gen-index.sh
   - chmod +x docker-build gen-index
 
 install:
@@ -45,7 +45,7 @@ after_success:
   - 'if [[ "$TRAVIS_SECURE_ENV_VARS" == "true" && "$TRAVIS_PULL_REQUEST" != "false" && ${DISTRO} =~ ^fedora.*$ ]]; then
         REPO_SLUG_ARRAY=(${TRAVIS_REPO_SLUG//\// });
         REPO_NAME=${REPO_SLUG_ARRAY[1]};
-        URL="https://${REPO_NAME}.mate-desktop.dev";
+        URL="https://${REPO_NAME}.cafe-desktop.dev";
         COMMENT="Code analysis completed";
         curl -H "Authorization: token $GITHUB_TOKEN" -X POST
            -d "{\"state\": \"success\", \"description\": \"$COMMENT\", \"context\":\"scan-build\", \"target_url\": \"$URL\"}"
@@ -69,13 +69,13 @@ requires:
     - gcc
     - git
     - make
-    - mate-common
+    - cafe-common
     - python-gobject
     - which
 
   debian:
-    # Useful URL: https://github.com/mate-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-mate-team/python-caja
+    # Useful URL: https://github.com/cafe-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-cafe-team/python-caja
     - autopoint
     - clang
     - clang-tools
@@ -86,7 +86,7 @@ requires:
     - libcaja-extension-dev
     - libgirepository1.0-dev
     - make
-    - mate-common
+    - cafe-common
     - python3-dev
     - python-gi-dev
     - quilt
@@ -100,7 +100,7 @@ requires:
     - gcc
     - git
     - make
-    - mate-common
+    - cafe-common
     - pygobject3-devel
     - python3-devel
     - redhat-rpm-config
@@ -114,7 +114,7 @@ requires:
     - libcaja-extension-dev
     - libgirepository1.0-dev
     - make
-    - mate-common
+    - cafe-common
     - python3-dev
     - python-gi-dev
     - quilt
@@ -169,4 +169,4 @@ releases:
     overwrite: true
     base_version: 1.20.0
     notify_servers:
-      - https://release.mate-desktop.org/release
+      - https://release.cafe-desktop.org/release

@@ -1,5 +1,5 @@
 SUPPORTED_FORMATS = 'image/jpeg', 'image/png'
-BACKGROUND_SCHEMA = 'org.mate.background'
+BACKGROUND_SCHEMA = 'org.cafe.background'
 BACKGROUND_KEY = 'picture-filename'
 
 from gi.repository import Caja, GObject, Gio
