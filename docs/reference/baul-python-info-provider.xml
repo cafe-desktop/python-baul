@@ -4,8 +4,8 @@
 
 <refentry id="class-baul-python-info-provider">
   <refnamediv>
-    <refname>Caja.InfoProvider</refname>
-    <refpurpose>Caja.InfoProvider Reference</refpurpose>
+    <refname>Baul.InfoProvider</refname>
+    <refpurpose>Baul.InfoProvider Reference</refpurpose>
   </refnamediv>
 
 <!-- ******************************* -->
@@ -16,7 +16,7 @@
     <title>Synopsis</title>
 
     <classsynopsis language="python">
-      <ooclass><classname>Caja.InfoProvider</classname></ooclass>
+      <ooclass><classname>Baul.InfoProvider</classname></ooclass>
 
       <methodsynopsis language="python">
         <methodname><link linkend="method-baul-python-info-provider--update-file-info">update_file_info</link></methodname>
@@ -38,11 +38,11 @@
       </methodsynopsis>
 
       <methodsynopsis language="python">
-        <methodname><link linkend="method-baul-python-info-provider--update-complete-invoke">Caja.info_provider_update_complete_invoke</link></methodname>
+        <methodname><link linkend="method-baul-python-info-provider--update-complete-invoke">Baul.info_provider_update_complete_invoke</link></methodname>
         <methodparam><parameter role="keyword">provider</parameter></methodparam>
         <methodparam><parameter role="keyword">handle</parameter></methodparam>
         <methodparam><parameter role="keyword">closure</parameter></methodparam>
-        <methodparam><parameter role="keyword">result</parameter><initializer>Caja.OperationResult.COMPLETE</initializer></methodparam>
+        <methodparam><parameter role="keyword">result</parameter><initializer>Baul.OperationResult.COMPLETE</initializer></methodparam>
       </methodsynopsis>
     </classsynopsis>
   </refsect1>
@@ -55,26 +55,26 @@
     <title>Description</title>
 
       <para>
-      If subclassed, Caja will call update_file_info(_full) to notify extensions of which
+      If subclassed, Baul will call update_file_info(_full) to notify extensions of which
       files are being viewed by the user.  This gives extensions an opportunity to invoke actions on the files,
       or to add emblems or attributes.
       </para>
 
 <example>
-    <title>Caja.InfoProvider Example</title>
+    <title>Baul.InfoProvider Example</title>
     <programlisting>
-from gi.repository import Caja, GObject
+from gi.repository import Baul, GObject
 
-class ColumnExtension(GObject.GObject, Caja.InfoProvider):
+class ColumnExtension(GObject.GObject, Baul.InfoProvider):
     def __init__(self):
         pass
     
     def update_file_info_full(self, provider, handle, closure, file):
         gobject.timeout_add_seconds(3, self.update_cb, provider, handle, closure)
-        return Caja.OperationResult.IN_PROGRESS
+        return Baul.OperationResult.IN_PROGRESS
         
     def update_cb(self, provider, handle, closure):
-        Caja.info_provider_update_complete_invoke(closure, provider, handle, Caja.OperationResult.FAILED)
+        Baul.info_provider_update_complete_invoke(closure, provider, handle, Baul.OperationResult.FAILED)
     </programlisting>
 </example>
         
@@ -88,7 +88,7 @@ class ColumnExtension(GObject.GObject, Caja.InfoProvider):
         <title>Passive Methods</title>
 
         <refsect2 id="method-baul-python-info-provider--update-file-info">
-          <title>Caja.InfoProvider.update_file_info</title>
+          <title>Baul.InfoProvider.update_file_info</title>
 
           <programlisting><methodsynopsis language="python">
             <methodname>update_file_info</methodname>
@@ -98,19 +98,19 @@ class ColumnExtension(GObject.GObject, Caja.InfoProvider):
           <variablelist>
             <varlistentry>
 	            <term><parameter role="keyword">file</parameter>&nbsp;:</term>
-	            <listitem><simpara>a <link linkend="class-baul-python-file-info"><classname>Caja.FileInfo</classname></link> object</simpara></listitem>
+	            <listitem><simpara>a <link linkend="class-baul-python-file-info"><classname>Baul.FileInfo</classname></link> object</simpara></listitem>
             </varlistentry>
           </variablelist>
 
           <para>
-                This method is called by Caja for each file or folder that exists under the
+                This method is called by Baul for each file or folder that exists under the
                 current directory listing.  There is no return value.
           </para>
         </refsect2>
 
 
         <refsect2 id="method-baul-python-info-provider--update-file-info-full">
-          <title>Caja.InfoProvider.update_file_info_full</title>
+          <title>Baul.InfoProvider.update_file_info_full</title>
 
           <programlisting><methodsynopsis language="python">
             <methodname>update_file_info_full</methodname>
@@ -123,38 +123,38 @@ class ColumnExtension(GObject.GObject, Caja.InfoProvider):
           <variablelist>
             <varlistentry>
 	            <term><parameter role="keyword">provider</parameter>&nbsp;:</term>
-	            <listitem><simpara>the current <link linkend="class-baul-python-info-provider"><classname>Caja.InfoProvider</classname></link> instance</simpara></listitem>
+	            <listitem><simpara>the current <link linkend="class-baul-python-info-provider"><classname>Baul.InfoProvider</classname></link> instance</simpara></listitem>
             </varlistentry>
             <varlistentry>
 	            <term><parameter role="keyword">handle</parameter>&nbsp;:</term>
-	            <listitem><simpara>a <link linkend="class-baul-python-operation-handle"><classname>Caja.OperationHandle</classname></link> generated solely to track this call</simpara></listitem>
+	            <listitem><simpara>a <link linkend="class-baul-python-operation-handle"><classname>Baul.OperationHandle</classname></link> generated solely to track this call</simpara></listitem>
             </varlistentry>
             <varlistentry>
 	            <term><parameter role="keyword">closure</parameter>&nbsp;:</term>
-	            <listitem><simpara>a C Closure that must be passed to <link linkend="method-baul-python-info-provider--update-complete-invoke">Caja.info_provider_update_complete_invoke</link> if that method is called</simpara></listitem>
+	            <listitem><simpara>a C Closure that must be passed to <link linkend="method-baul-python-info-provider--update-complete-invoke">Baul.info_provider_update_complete_invoke</link> if that method is called</simpara></listitem>
             </varlistentry>
             <varlistentry>
 	            <term><parameter role="keyword">file</parameter>&nbsp;:</term>
-	            <listitem><simpara>a <link linkend="class-baul-python-file-info"><classname>Caja.FileInfo</classname></link> object</simpara></listitem>
+	            <listitem><simpara>a <link linkend="class-baul-python-file-info"><classname>Baul.FileInfo</classname></link> object</simpara></listitem>
             </varlistentry>
             <varlistentry>
                 <term><emphasis>Returns</emphasis>&nbsp;:</term>
-                <listitem><simpara>None or a <link linkend="enum-baul-python-operation-result"><classname>Caja.OperationResult</classname></link> enum</simpara></listitem>
+                <listitem><simpara>None or a <link linkend="enum-baul-python-operation-result"><classname>Baul.OperationResult</classname></link> enum</simpara></listitem>
             </varlistentry>
           </variablelist>
 
           <para>
-                This method is called by Caja for each file or folder that exists under the
-                current directory listing.  Originally, <link linkend="class-baul-python-info-provider"><classname>Caja.InfoProvider</classname></link>
+                This method is called by Baul for each file or folder that exists under the
+                current directory listing.  Originally, <link linkend="class-baul-python-info-provider"><classname>Baul.InfoProvider</classname></link>
                 only provided the update_file_info
-                method, which blocked Caja when the method required a lot of computation time.  This method was 
-                created to allow an extension to tell Caja that it will be spending time on an operation and that
-                Caja should not block itself during that time.
+                method, which blocked Baul when the method required a lot of computation time.  This method was 
+                created to allow an extension to tell Baul that it will be spending time on an operation and that
+                Baul should not block itself during that time.
           </para>
           <para>
-                In order to notify Caja of your extension's intentions, you must return a 
-                <link linkend="enum-baul-python-operation-result"><classname>Caja.OperationResult</classname></link> enum.  
-                Then, when the operation has completed, call the Caja.info_provider_update_complete_invoke method, passing the provider, 
+                In order to notify Baul of your extension's intentions, you must return a 
+                <link linkend="enum-baul-python-operation-result"><classname>Baul.OperationResult</classname></link> enum.  
+                Then, when the operation has completed, call the Baul.info_provider_update_complete_invoke method, passing the provider, 
                 handle and closure variables as parameters.
           </para>
           <para>
@@ -169,7 +169,7 @@ class ColumnExtension(GObject.GObject, Caja.InfoProvider):
 
 
         <refsect2 id="method-baul-python-info-provider--cancel-update">
-          <title>Caja.InfoProvider.cancel_update</title>
+          <title>Baul.InfoProvider.cancel_update</title>
 
           <programlisting><methodsynopsis language="python">
             <methodname>cancel_update</methodname>
@@ -180,16 +180,16 @@ class ColumnExtension(GObject.GObject, Caja.InfoProvider):
           <variablelist>
             <varlistentry>
 	            <term><parameter role="keyword">provider</parameter>&nbsp;:</term>
-	            <listitem><simpara>the current <link linkend="class-baul-python-info-provider"><classname>Caja.InfoProvider</classname></link> instance</simpara></listitem>
+	            <listitem><simpara>the current <link linkend="class-baul-python-info-provider"><classname>Baul.InfoProvider</classname></link> instance</simpara></listitem>
             </varlistentry>
             <varlistentry>
 	            <term><parameter role="keyword">handle</parameter>&nbsp;:</term>
-	            <listitem><simpara>a <link linkend="class-baul-python-operation-handle"><classname>Caja.OperationHandle</classname></link> generated for a specific update_file_info_full call</simpara></listitem>
+	            <listitem><simpara>a <link linkend="class-baul-python-operation-handle"><classname>Baul.OperationHandle</classname></link> generated for a specific update_file_info_full call</simpara></listitem>
             </varlistentry>
           </variablelist>
 
           <para>
-            This method is called by Caja when an update_file_info_full call is in progress
+            This method is called by Baul when an update_file_info_full call is in progress
             but is no longer required.  This may happen because the user is moving directories or a file
             has been deleted, etc.  You may use the handle parameter here to match the
             handle parameter passed in <link linkend="method-baul-python-info-provider--update-file-info-full"><function>update_file_info_full</function></link>.
@@ -204,39 +204,39 @@ class ColumnExtension(GObject.GObject, Caja.InfoProvider):
         <title>Active Methods</title>
 
         <refsect2 id="method-baul-python-info-provider--update-complete-invoke">
-          <title>Caja.info_provider_update_complete_invoke</title>
+          <title>Baul.info_provider_update_complete_invoke</title>
 
           <programlisting><methodsynopsis language="python">
             <methodname>info_provider_update_complete_invoke</methodname>
             <methodparam><parameter role="keyword">provider</parameter></methodparam>
             <methodparam><parameter role="keyword">handle</parameter></methodparam>
             <methodparam><parameter role="keyword">closure</parameter></methodparam>
-            <methodparam><parameter role="keyword">result</parameter><initializer>Caja.OperationResult.COMPLETE</initializer></methodparam>
+            <methodparam><parameter role="keyword">result</parameter><initializer>Baul.OperationResult.COMPLETE</initializer></methodparam>
           </methodsynopsis></programlisting>
 
           <variablelist>
             <varlistentry>
 	            <term><parameter role="keyword">provider</parameter>&nbsp;:</term>
-	            <listitem><simpara>the current <link linkend="class-baul-python-info-provider"><classname>Caja.InfoProvider</classname></link> instance</simpara></listitem>
+	            <listitem><simpara>the current <link linkend="class-baul-python-info-provider"><classname>Baul.InfoProvider</classname></link> instance</simpara></listitem>
             </varlistentry>
             <varlistentry>
 	            <term><parameter role="keyword">handle</parameter>&nbsp;:</term>
-	            <listitem><simpara>a <link linkend="class-baul-python-operation-handle"><classname>Caja.OperationHandle</classname></link> generated for a specific update_file_info_full call</simpara></listitem>
+	            <listitem><simpara>a <link linkend="class-baul-python-operation-handle"><classname>Baul.OperationHandle</classname></link> generated for a specific update_file_info_full call</simpara></listitem>
             </varlistentry>
             <varlistentry>
 	            <term><parameter role="keyword">closure</parameter>&nbsp;:</term>
-	            <listitem><simpara>a C Closure that must be passed to <link linkend="method-baul-python-info-provider--update-complete-invoke">Caja.info_provider_update_complete_invoke</link> if that method is called</simpara></listitem>
+	            <listitem><simpara>a C Closure that must be passed to <link linkend="method-baul-python-info-provider--update-complete-invoke">Baul.info_provider_update_complete_invoke</link> if that method is called</simpara></listitem>
             </varlistentry>
             <varlistentry>
 	            <term><parameter role="keyword">result</parameter>&nbsp;:</term>
-	            <listitem><simpara>an optional parameter.  If left out, <link linkend="enum-baul-python-operation-result--OPERATION_COMPLETE"><classname>Caja.OperationResult.COMPLETE</classname></link> is assumed.  
-	            Otherwise, you may pass any any of the <link linkend="enum-baul-python-operation-result"><classname>Caja.OperationResult</classname></link> enums.</simpara></listitem>
+	            <listitem><simpara>an optional parameter.  If left out, <link linkend="enum-baul-python-operation-result--OPERATION_COMPLETE"><classname>Baul.OperationResult.COMPLETE</classname></link> is assumed.  
+	            Otherwise, you may pass any any of the <link linkend="enum-baul-python-operation-result"><classname>Baul.OperationResult</classname></link> enums.</simpara></listitem>
             </varlistentry>
           </variablelist>
 
           <para>
             An extension must call this method for each update_file_info_full method that
-            returns the <link linkend="enum-baul-python-operation-result--OPERATION_IN_PROGRESS"><classname>Caja.OperationResult.IN_PROGRESS</classname></link> enum.  
+            returns the <link linkend="enum-baul-python-operation-result--OPERATION_IN_PROGRESS"><classname>Baul.OperationResult.IN_PROGRESS</classname></link> enum.  
             The method must be called with the provider, handle, and closure parameters which were passed to the earlier <link linkend="method-baul-python-info-provider--update-file-info-full"><function>update_file_info_full</function></link> method.
           </para>
           <note>

@@ -1,13 +1,13 @@
 import os
 
-from gi.repository import GObject, Caja
+from gi.repository import GObject, Baul
 
-class ColumnExtension(GObject.GObject, Caja.ColumnProvider, Caja.InfoProvider):
+class ColumnExtension(GObject.GObject, Baul.ColumnProvider, Baul.InfoProvider):
     def __init__(self):
         pass
     
     def get_columns(self):
-        return Caja.Column(name="CajaPython::block_size_column",
+        return Baul.Column(name="BaulPython::block_size_column",
                                attribute="block_size",
                                label="Block size",
                                description="Get the block size"),

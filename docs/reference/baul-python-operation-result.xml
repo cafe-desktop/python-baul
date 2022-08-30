@@ -4,8 +4,8 @@
 
 <refentry id="enum-baul-python-operation-result">
   <refnamediv>
-    <refname>Caja.OperationResult</refname>
-    <refpurpose>Caja.OperationResult Reference</refpurpose>
+    <refname>Baul.OperationResult</refname>
+    <refpurpose>Baul.OperationResult Reference</refpurpose>
   </refnamediv>
 
 
@@ -18,29 +18,29 @@
     <title>Description</title>
 
       <para>
-        The <link linkend="enum-baul-python-operation-result"><classname>Caja.OperationResult</classname></link> constants are
-        used by the <link linkend="class-baul-python-info-provider"><classname>Caja.InfoProvider</classname></link> provider to
-        notify Caja what the extension intends to do when Caja calls the extension's <link linkend="method-baul-python-info-provider--update-file-info-full">update_file_info_full</link>
+        The <link linkend="enum-baul-python-operation-result"><classname>Baul.OperationResult</classname></link> constants are
+        used by the <link linkend="class-baul-python-info-provider"><classname>Baul.InfoProvider</classname></link> provider to
+        notify Baul what the extension intends to do when Baul calls the extension's <link linkend="method-baul-python-info-provider--update-file-info-full">update_file_info_full</link>
         method.  The possible values are as follows:
       </para>
 
 
       <variablelist>
 	    <varlistentry>
-	      <term><literal>Caja.OperationResult.COMPLETE</literal></term>
+	      <term><literal>Baul.OperationResult.COMPLETE</literal></term>
 	      <listitem>
-	        <simpara>The operation is complete and Caja can move on to the next <link linkend="method-baul-python-info-provider--update-file-info-full">update_file_info_full</link> call.</simpara>
+	        <simpara>The operation is complete and Baul can move on to the next <link linkend="method-baul-python-info-provider--update-file-info-full">update_file_info_full</link> call.</simpara>
 	      </listitem>
 	    </varlistentry>
 	    <varlistentry>
-	      <term><literal>Caja.OperationResult.IN_PROGRESS</literal></term>
+	      <term><literal>Baul.OperationResult.IN_PROGRESS</literal></term>
 	      <listitem>
-	        <simpara>The operation is in progress and running asynchronously and Caja should wait until the <link linkend="method-baul-python-info-provider--update-complete-invoke">Caja.info_provider_update_complete_invoke</link> method
+	        <simpara>The operation is in progress and running asynchronously and Baul should wait until the <link linkend="method-baul-python-info-provider--update-complete-invoke">Baul.info_provider_update_complete_invoke</link> method
 	        is called before moving on to the next <link linkend="method-baul-python-info-provider--update-file-info-full">update_file_info_full</link> call.</simpara>
 	      </listitem>
 	    </varlistentry>
 	    <varlistentry>
-	      <term><literal>Caja.OperationResult.FAILED</literal></term>
+	      <term><literal>Baul.OperationResult.FAILED</literal></term>
 	      <listitem>
 	        <simpara>The operation has failed.</simpara>
 	      </listitem>

@@ -4,8 +4,8 @@
 
 <refentry id="class-baul-python-location-widget-provider">
   <refnamediv>
-    <refname>Caja.LocationWidgetProvider</refname>
-    <refpurpose>Caja.LocationWidgetProvider Reference</refpurpose>
+    <refname>Baul.LocationWidgetProvider</refname>
+    <refpurpose>Baul.LocationWidgetProvider Reference</refpurpose>
   </refnamediv>
 
 <!-- ******************************* -->
@@ -16,7 +16,7 @@
     <title>Synopsis</title>
 
     <classsynopsis language="python">
-      <ooclass><classname>Caja.LocationWidgetProvider</classname></ooclass>
+      <ooclass><classname>Baul.LocationWidgetProvider</classname></ooclass>
 
       <methodsynopsis language="python">
         <methodname><link linkend="method-baul-location-widget-provider--get-widget">get_widget</link></methodname>
@@ -34,15 +34,15 @@
     <title>Description</title>
 
       <para>
-      If subclassed, Caja will request a widget to be displayed at the top of the directory listing.
+      If subclassed, Baul will request a widget to be displayed at the top of the directory listing.
       </para>
 
 <example>
-    <title>Caja.LocationWidgetProvider Example</title>
+    <title>Baul.LocationWidgetProvider Example</title>
     <programlisting>
-from gi.repository import Caja, GObject, Gtk
+from gi.repository import Baul, GObject, Gtk
 
-class ColumnExtension(GObject.GObject, Caja.LocationWidgetProvider):
+class ColumnExtension(GObject.GObject, Baul.LocationWidgetProvider):
     def __init__(self):
         pass
     
@@ -64,7 +64,7 @@ class ColumnExtension(GObject.GObject, Caja.LocationWidgetProvider):
         <title>Passive Methods</title>
 
         <refsect2 id="method-baul-location-widget-provider--get-widget">
-          <title>Caja.LocationWidgetProvider.get_widget</title>
+          <title>Baul.LocationWidgetProvider.get_widget</title>
 
           <programlisting><methodsynopsis language="python">
             <methodname>get_widget</methodname>
@@ -88,7 +88,7 @@ class ColumnExtension(GObject.GObject, Caja.LocationWidgetProvider):
           </variablelist>
 
           <para>
-                This function is called by Caja when it wants a location widget from the extension.  
+                This function is called by Baul when it wants a location widget from the extension.  
                 It is called in the main thread before a directory listing is shown, so it should return quickly.
           </para>
         </refsect2>

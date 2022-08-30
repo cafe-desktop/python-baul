@@ -14,7 +14,7 @@ Try to copy test.py to that directory for an example
 Requirements
 ============
 
-Caja      1.17.1
+Baul      1.17.1
 Python    3.6
 PyGObject 3.0.0
 

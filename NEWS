@@ -19,7 +19,7 @@
   * Add support for building with Python 3.8
   * Change url project's website
   * Create FUNDING.yml
-  * Make Caja.OperationHandle usable.
+  * Make Baul.OperationHandle usable.
 
 ### python-baul 1.22.0
 
@@ -58,19 +58,19 @@
 ### python-baul 1.18.0
 
   * Translations update
-  * support GTK+3 only: require Caja 1.17.1 and pygobject-3.0
+  * support GTK+3 only: require Baul 1.17.1 and pygobject-3.0
   * drop ancient check for Python 2.5, not needed these days
 
 ### python-baul 1.16.0
 
-  * Examples: fix Caja crash on loading background-image
+  * Examples: fix Baul crash on loading background-image
     extension
   * Examples: various fixes
   * Translations update
 
 ### python-baul 1.14.0
 
-  * Expose filenames of Python extensions to Caja
+  * Expose filenames of Python extensions to Baul
     (needed for showing each Python extension as
     a separate entry in the extensions list)
   * Fix missing icon in About dialog

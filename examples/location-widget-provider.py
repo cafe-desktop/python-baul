@@ -1,6 +1,6 @@
-from gi.repository import Caja, Gtk, GObject
+from gi.repository import Baul, Gtk, GObject
 
-class LocationProviderExample(GObject.GObject, Caja.LocationWidgetProvider):
+class LocationProviderExample(GObject.GObject, Baul.LocationWidgetProvider):
     def __init__(self):
         pass
     

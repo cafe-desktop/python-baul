@@ -4,8 +4,8 @@
 
 <refentry id="class-baul-python-menu-provider">
   <refnamediv>
-    <refname>Caja.MenuProvider</refname>
-    <refpurpose>Caja.MenuProvider Reference</refpurpose>
+    <refname>Baul.MenuProvider</refname>
+    <refpurpose>Baul.MenuProvider Reference</refpurpose>
   </refnamediv>
 
 <!-- ******************************* -->
@@ -16,7 +16,7 @@
     <title>Synopsis</title>
 
     <classsynopsis language="python">
-      <ooclass><classname>Caja.MenuProvider</classname></ooclass>
+      <ooclass><classname>Baul.MenuProvider</classname></ooclass>
 
       <methodsynopsis language="python">
         <methodname><link linkend="method-baul-python-menu-provider--get-file-items">get_file_items</link></methodname>
@@ -45,7 +45,7 @@
       </methodsynopsis>
 
       <methodsynopsis language="python">
-        <methodname><link linkend="method-baul-python-menu-provider--emit-items-updated-signal">Caja.menu_provider_emit_items_updated_signal</link></methodname>
+        <methodname><link linkend="method-baul-python-menu-provider--emit-items-updated-signal">Baul.menu_provider_emit_items_updated_signal</link></methodname>
         <methodparam><parameter role="keyword">provider</parameter></methodparam>
       </methodsynopsis>
     </classsynopsis>
@@ -59,34 +59,34 @@
     <title>Description</title>
 
       <para>
-        If subclassed, Caja will request a list of <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link> objects, 
-        which are then attached to various menus.  Caja expects at least one of
+        If subclassed, Baul will request a list of <link linkend="class-baul-python-menu-item"><classname>Baul.MenuItem</classname></link> objects, 
+        which are then attached to various menus.  Baul expects at least one of
         the following methods to be defined (or their *_full variants): get_file_items or
         get_background_items.</para>
         
-        <para>The get_toolbar_items methods were removed in baul-python 1.0 because they were removed from Caja 3.  Technically, you should still be 
-        able to call those methods with baul-python 1.0 if you are running Caja 2.x with annotations.
+        <para>The get_toolbar_items methods were removed in baul-python 1.0 because they were removed from Baul 3.  Technically, you should still be 
+        able to call those methods with baul-python 1.0 if you are running Baul 2.x with annotations.
         </para>
 
 <example>
-    <title>Caja.MenuProvider Example</title>
+    <title>Baul.MenuProvider Example</title>
     <programlisting>
-from gi.repository import Caja, GObject
+from gi.repository import Baul, GObject
 
-class ColumnExtension(GObject.GObject, Caja.MenuProvider):
+class ColumnExtension(GObject.GObject, Baul.MenuProvider):
     def __init__(self):
         pass
         
     def get_file_items(self, window, files):
-        top_menuitem = Caja.MenuItem(name='ExampleMenuProvider::Foo', 
+        top_menuitem = Baul.MenuItem(name='ExampleMenuProvider::Foo', 
                                          label='Foo', 
                                          tip='',
                                          icon='')
 
-        submenu = Caja.Menu()
+        submenu = Baul.Menu()
         top_menuitem.set_submenu(submenu)
 
-        sub_menuitem = Caja.MenuItem(name='ExampleMenuProvider::Bar', 
+        sub_menuitem = Baul.MenuItem(name='ExampleMenuProvider::Bar', 
                                          label='Bar', 
                                          tip='',
                                          icon='')
@@ -95,13 +95,13 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
         return top_menuitem,
 
     def get_background_items(self, window, file):
-        submenu = Caja.Menu()
-        submenu.append_item(Caja.MenuItem(name='ExampleMenuProvider::Bar2', 
+        submenu = Baul.Menu()
+        submenu.append_item(Baul.MenuItem(name='ExampleMenuProvider::Bar2', 
                                          label='Bar2', 
                                          tip='',
                                          icon=''))
 
-        menuitem = Caja.MenuItem(name='ExampleMenuProvider::Foo2', 
+        menuitem = Baul.MenuItem(name='ExampleMenuProvider::Foo2', 
                                          label='Foo2', 
                                          tip='',
                                          icon='')
@@ -141,7 +141,7 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
         <title>Passive Methods</title>
 
         <refsect2 id="method-baul-python-menu-provider--get-file-items">
-          <title>Caja.MenuProvider.get_file_items</title>
+          <title>Baul.MenuProvider.get_file_items</title>
 
           <programlisting><methodsynopsis language="python">
             <methodname>get_file_items</methodname>
@@ -156,22 +156,22 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">menu</parameter>&nbsp;:</term>
-                <listitem><simpara>a list of <link linkend="class-baul-python-file-info"><classname>Caja.FileInfo</classname></link> objects.</simpara></listitem>
+                <listitem><simpara>a list of <link linkend="class-baul-python-file-info"><classname>Baul.FileInfo</classname></link> objects.</simpara></listitem>
             </varlistentry>
             <varlistentry>
                 <term><emphasis>Returns</emphasis>&nbsp;:</term>
-                <listitem><simpara>a list of <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link> objects</simpara></listitem>
+                <listitem><simpara>a list of <link linkend="class-baul-python-menu-item"><classname>Baul.MenuItem</classname></link> objects</simpara></listitem>
             </varlistentry>
           </variablelist>
 
           <para>
             The <methodname>get_file_items</methodname>() method returns a list of
-            <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link> objects.
+            <link linkend="class-baul-python-menu-item"><classname>Baul.MenuItem</classname></link> objects.
           </para>
         </refsect2>
 
         <refsect2 id="method-baul-python-menu-provider--get-file-items-full">
-          <title>Caja.MenuProvider.get_file_items_full</title>
+          <title>Baul.MenuProvider.get_file_items_full</title>
 
           <programlisting><methodsynopsis language="python">
             <methodname>get_file_items_full</methodname>
@@ -183,7 +183,7 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
           <variablelist>
             <varlistentry>
                 <term><parameter role="keyword">provider</parameter>&nbsp;:</term>
-                <listitem><simpara>the current <link linkend="class-baul-python-menu-provider"><classname>Caja.MenuProvider</classname></link> instance</simpara></listitem>
+                <listitem><simpara>the current <link linkend="class-baul-python-menu-provider"><classname>Baul.MenuProvider</classname></link> instance</simpara></listitem>
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">window</parameter>&nbsp;:</term>
@@ -191,21 +191,21 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">files</parameter>&nbsp;:</term>
-                <listitem><simpara>a list of <link linkend="class-baul-python-file-info"><classname>Caja.FileInfo</classname></link> objects.</simpara></listitem>
+                <listitem><simpara>a list of <link linkend="class-baul-python-file-info"><classname>Baul.FileInfo</classname></link> objects.</simpara></listitem>
             </varlistentry>
             <varlistentry>
                 <term><emphasis>Returns</emphasis>&nbsp;:</term>
-                <listitem><simpara>a list of <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link> objects</simpara></listitem>
+                <listitem><simpara>a list of <link linkend="class-baul-python-menu-item"><classname>Baul.MenuItem</classname></link> objects</simpara></listitem>
             </varlistentry>
           </variablelist>
 
           <para>
             The <methodname>get_file_items_full</methodname>() method returns a list of
-            <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname> objects</link>.
+            <link linkend="class-baul-python-menu-item"><classname>Baul.MenuItem</classname> objects</link>.
           </para>
           <para>
             This method was created in order to allow extension writers to call the 
-            <link linkend="method-baul-menu-provider--emit_items_updated_signal">Caja.menu_provider_emit_items_updated_signal</link>, which must
+            <link linkend="method-baul-menu-provider--emit_items_updated_signal">Baul.menu_provider_emit_items_updated_signal</link>, which must
             be passed the current provider instance.
           </para>
           <note>
@@ -215,7 +215,7 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
 
 
         <refsect2 id="method-baul-python-menu-provider--get-background-items">
-          <title>Caja.MenuProvider.get_background_items</title>
+          <title>Baul.MenuProvider.get_background_items</title>
 
           <programlisting><methodsynopsis language="python">
             <methodname>get_background_items</methodname>
@@ -230,22 +230,22 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">folder</parameter>&nbsp;:</term>
-                <listitem><simpara>the current folder, as a <link linkend="class-baul-python-file-info"><classname>Caja.FileInfo</classname></link> object.</simpara></listitem>
+                <listitem><simpara>the current folder, as a <link linkend="class-baul-python-file-info"><classname>Baul.FileInfo</classname></link> object.</simpara></listitem>
             </varlistentry>
             <varlistentry>
                 <term><emphasis>Returns</emphasis>&nbsp;:</term>
-                <listitem><simpara>a list of <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link> objects</simpara></listitem>
+                <listitem><simpara>a list of <link linkend="class-baul-python-menu-item"><classname>Baul.MenuItem</classname></link> objects</simpara></listitem>
             </varlistentry>
           </variablelist>
 
           <para>
             The <methodname>get_background_items</methodname>() method returns a list of
-            <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname> objects</link>.
+            <link linkend="class-baul-python-menu-item"><classname>Baul.MenuItem</classname> objects</link>.
           </para>
         </refsect2>
 
         <refsect2 id="method-baul-python-menu-provider--get-background-items-full">
-          <title>Caja.MenuProvider.get_background_items_full</title>
+          <title>Baul.MenuProvider.get_background_items_full</title>
 
           <programlisting><methodsynopsis language="python">
             <methodname>get_background_items_full</methodname>
@@ -257,7 +257,7 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
           <variablelist>
             <varlistentry>
                 <term><parameter role="keyword">provider</parameter>&nbsp;:</term>
-                <listitem><simpara>the current <link linkend="class-baul-python-menu-provider"><classname>Caja.MenuProvider</classname></link> instance</simpara></listitem>
+                <listitem><simpara>the current <link linkend="class-baul-python-menu-provider"><classname>Baul.MenuProvider</classname></link> instance</simpara></listitem>
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">window</parameter>&nbsp;:</term>
@@ -265,21 +265,21 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
             </varlistentry>
             <varlistentry>
                 <term><parameter role="keyword">folder</parameter>&nbsp;:</term>
-                <listitem><simpara>the current folder, as a <link linkend="class-baul-python-file-info"><classname>Caja.FileInfo</classname></link> object.</simpara></listitem>
+                <listitem><simpara>the current folder, as a <link linkend="class-baul-python-file-info"><classname>Baul.FileInfo</classname></link> object.</simpara></listitem>
             </varlistentry>
             <varlistentry>
                 <term><emphasis>Returns</emphasis>&nbsp;:</term>
-                <listitem><simpara>a list of <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link> objects</simpara></listitem>
+                <listitem><simpara>a list of <link linkend="class-baul-python-menu-item"><classname>Baul.MenuItem</classname></link> objects</simpara></listitem>
             </varlistentry>
           </variablelist>
 
           <para>
             The <methodname>get_background_items_full</methodname>() method returns a list of
-            <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname> objects</link>.
+            <link linkend="class-baul-python-menu-item"><classname>Baul.MenuItem</classname> objects</link>.
           </para>
           <para>
             This method was created in order to allow extension writers to call the 
-            <link linkend="method-baul-menu-provider--emit_items_updated_signal">Caja.menu_provider_emit_items_updated_signal</link>, which must
+            <link linkend="method-baul-menu-provider--emit_items_updated_signal">Baul.menu_provider_emit_items_updated_signal</link>, which must
             be passed the current provider instance.
           </para>
           <note>
@@ -293,7 +293,7 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
         <title>Active Methods</title>
 
         <refsect2 id="method-baul-python-menu-provider--emit-items-updated-signal">
-          <title>Caja.menu_provider_emit_items_updated_signal</title>
+          <title>Baul.menu_provider_emit_items_updated_signal</title>
 
           <programlisting><methodsynopsis language="python">
             <methodname>menu_provider_emit_items_updated_signal</methodname>
@@ -303,7 +303,7 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
           <variablelist>
             <varlistentry>
                 <term><parameter role="keyword">provider</parameter>&nbsp;:</term>
-                <listitem><simpara>the current <link linkend="class-baul-python-menu-provider"><classname>Caja.MenuProvider</classname></link> instance</simpara></listitem>
+                <listitem><simpara>the current <link linkend="class-baul-python-menu-provider"><classname>Baul.MenuProvider</classname></link> instance</simpara></listitem>
             </varlistentry>
           </variablelist>
 
@@ -326,7 +326,7 @@ class ColumnExtension(GObject.GObject, Caja.MenuProvider):
     <title>Signal Details</title>
 
   <refsect2 id="signal-baul-python-menu-provider--items-updated">
-    <title>The "items-updated" Caja.MenuProvider Signal</title>
+    <title>The "items-updated" Baul.MenuProvider Signal</title>
 
     <para>
       Emits the "<link linkend="signal-baul-python-menu-provider--items-updated">items-updated</link>" signal.

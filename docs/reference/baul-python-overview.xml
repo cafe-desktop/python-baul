@@ -6,10 +6,10 @@
 
     <title>Overview</title>
 
-    <para>Writing a Caja-Python extension is a fairly straight-forward process.
-    One simply imports the Caja module from the gobject introspection repository and creates a class which is derived from a gobject.GObject and 
-    one of the Caja module's classes. When an extension derives a class, it becomes a "provider", 
-    telling Caja to ask it for information. There are several types of providers 
+    <para>Writing a Baul-Python extension is a fairly straight-forward process.
+    One simply imports the Baul module from the gobject introspection repository and creates a class which is derived from a gobject.GObject and 
+    one of the Baul module's classes. When an extension derives a class, it becomes a "provider", 
+    telling Baul to ask it for information. There are several types of providers 
     available for extensions to use: there is MenuProvider, LocationWidgetProvider, 
     ColumnProvider, PropertyPageProvider, and InfoProvider, all of which will be explained 
     in more detail below. Your class can be derived from multiple providers.</para>
@@ -17,9 +17,9 @@
     <para>Here are the basic steps:</para>
     
     <para>1. A script is written and installed to the standard baul-python extension install path</para>
-    <para>2. Caja is (re)started and loads the baul-python C extension, which in turn loads all python extensions it can find</para>
-    <para>3. Any python script in the standard baul-python extension install path that imports the Caja module from the gobject introspection repository and derives 
-    the main class from a Caja module class will be loaded</para>
+    <para>2. Baul is (re)started and loads the baul-python C extension, which in turn loads all python extensions it can find</para>
+    <para>3. Any python script in the standard baul-python extension install path that imports the Baul module from the gobject introspection repository and derives 
+    the main class from a Baul module class will be loaded</para>
     
     <note>
 <title>A note about the standard python extensions install path</title>
@@ -31,9 +31,9 @@ for local extensions and $PREFIX/share/baul-python/extensions for global extensi
     <note>
 <title>A note about compatibility issues for baul-python 1.0</title>
     <para>1. We no longer support the "import baul" command that previous versions used.  This is because
-    baul-python now directly uses Caja's annotations, which must be imported by the "from gi.repository import Caja" command.</para>
-    <para>2. The extension class must now derive itself from a gobject.GObject in addition to the standard Caja classes.</para>
-    <para>3. For now, some Caja class constructors require passing named arguments instead of a standard argument list.  This requirement may go away at some point.</para>
+    baul-python now directly uses Baul's annotations, which must be imported by the "from gi.repository import Baul" command.</para>
+    <para>2. The extension class must now derive itself from a gobject.GObject in addition to the standard Baul classes.</para>
+    <para>3. For now, some Baul class constructors require passing named arguments instead of a standard argument list.  This requirement may go away at some point.</para>
     </note>
 
     <xi:include href="baul-python-overview-example.xml"/>

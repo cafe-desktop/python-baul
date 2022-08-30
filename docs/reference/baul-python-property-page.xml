@@ -4,8 +4,8 @@
 
 <refentry id="class-baul-python-property-page">
   <refnamediv>
-    <refname>Caja.PropertyPage</refname>
-    <refpurpose>Caja.PropertyPage Reference</refpurpose>
+    <refname>Baul.PropertyPage</refname>
+    <refpurpose>Baul.PropertyPage Reference</refpurpose>
   </refnamediv>
 
 <!-- ******************************* -->
@@ -16,11 +16,11 @@
     <title>Synopsis</title>
 
     <classsynopsis language="python">
-        <ooclass><classname>Caja.PropertyPage</classname></ooclass>
+        <ooclass><classname>Baul.PropertyPage</classname></ooclass>
         <ooclass><classname><link linkend="class-gobject">gobject.GObject</link></classname></ooclass>
 
         <constructorsynopsis language="python">
-            <methodname><link linkend="constructor-baul-property-page">Caja.PropertyPage</link></methodname>
+            <methodname><link linkend="constructor-baul-property-page">Baul.PropertyPage</link></methodname>
             <methodparam><parameter role="keyword">name</parameter></methodparam>
             <methodparam><parameter role="keyword">label</parameter></methodparam>
             <methodparam><parameter role="keyword">page</parameter></methodparam>
@@ -36,7 +36,7 @@
     <title>Ancestry</title>
 
 <synopsis>+-- <link linkend="class-gobject">gobject.GObject</link>
-    +-- <link linkend="class-baul-python-property-page">Caja.PropertyPage</link>
+    +-- <link linkend="class-baul-python-property-page">Baul.PropertyPage</link>
 </synopsis>
 </refsect1>
 
@@ -49,7 +49,7 @@
     <title>Description</title>
 
       <para>
-        A <link linkend="class-baul-python-property-page"><classname>Caja.PropertyPage</classname></link> object is returned by <link linkend="class-baul-python-property-page-provider"><classname>Caja.PropertyPageProvider</classname></link> extensions.
+        A <link linkend="class-baul-python-property-page"><classname>Baul.PropertyPage</classname></link> object is returned by <link linkend="class-baul-python-property-page-provider"><classname>Baul.PropertyPageProvider</classname></link> extensions.
       </para>
 
   </refsect1>
@@ -103,7 +103,7 @@
   <title>Constructor</title>
 
   <programlisting><constructorsynopsis language="python">
-        <methodname>Caja.PropertyPage</methodname>
+        <methodname>Baul.PropertyPage</methodname>
         <methodparam><parameter role="keyword">name</parameter></methodparam>
         <methodparam><parameter role="keyword">label</parameter></methodparam>
         <methodparam><parameter role="keyword">page</parameter></methodparam>
@@ -125,7 +125,7 @@
   </variablelist>
 
   <para>
-    Creates a new <link linkend="class-baul-python-property-page"><classname>Caja.PropertyPage</classname></link> object.
+    Creates a new <link linkend="class-baul-python-property-page"><classname>Baul.PropertyPage</classname></link> object.
   </para>
 </refsect1>
 

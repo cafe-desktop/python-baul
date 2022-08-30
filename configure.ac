@@ -74,13 +74,13 @@ AC_SUBST(PYGOBJECT_FIXXREF)
 
 CAJA_LIBDIR=`$PKG_CONFIG --variable=libdir libbaul-extension`
 AC_SUBST(CAJA_LIBDIR)
-AC_DEFINE_UNQUOTED(CAJA_LIBDIR, "$CAJA_LIBDIR", [Caja libdir])
+AC_DEFINE_UNQUOTED(CAJA_LIBDIR, "$CAJA_LIBDIR", [Baul libdir])
 
 dnl ---------------------------------
 dnl Get baul extensions directory
 dnl ---------------------------------
 AC_ARG_WITH(bauldir,
-	AS_HELP_STRING([--with-bauldir=DIR],[Installation path for Caja extension @<:@auto@:>@]),
+	AS_HELP_STRING([--with-bauldir=DIR],[Installation path for Baul extension @<:@auto@:>@]),
 	[ac_with_bauldir=$withval],
 	[ac_with_bauldir=""])
 AS_IF([test "${ac_with_bauldir}" = ""],[
@@ -116,7 +116,7 @@ AC_OUTPUT([
 echo
 echo " baul-python $PACKAGE_VERSION"
 echo
-echo "      Caja Prefix:             ${prefix}"
+echo "      Baul Prefix:             ${prefix}"
 echo "      Python version:          ${PYTHON_VERSION}"
 echo "      Python library location: ${PYTHON_LIB_LOC}"
 echo "      Documentation:           ${enable_gtk_doc}"

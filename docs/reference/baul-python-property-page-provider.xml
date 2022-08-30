@@ -4,8 +4,8 @@
 
 <refentry id="class-baul-python-property-page-provider">
   <refnamediv>
-    <refname>Caja.PropertyPageProvider</refname>
-    <refpurpose>Caja.PropertyPageProvider Reference</refpurpose>
+    <refname>Baul.PropertyPageProvider</refname>
+    <refpurpose>Baul.PropertyPageProvider Reference</refpurpose>
   </refnamediv>
 
 <!-- ******************************* -->
@@ -16,7 +16,7 @@
     <title>Synopsis</title>
 
     <classsynopsis language="python">
-      <ooclass><classname>Caja.PropertyPageProvider</classname></ooclass>
+      <ooclass><classname>Baul.PropertyPageProvider</classname></ooclass>
 
       <methodsynopsis language="python">
         <methodname><link linkend="method-baul-property-page-provider--get-pages">get_pages</link></methodname>
@@ -33,19 +33,19 @@
     <title>Description</title>
 
       <para>
-      If subclassed, Caja will request a list of custom property pages that should
+      If subclassed, Baul will request a list of custom property pages that should
       appear when a user opens the Properties dialog for a file or folder.
       </para>
 
 <example>
-    <title>Caja.PropertyPageProvider Example</title>
+    <title>Baul.PropertyPageProvider Example</title>
     <programlisting>
 import hashlib
 import urllib
 
-from gi.repository import Caja, GObject, Gtk
+from gi.repository import Baul, GObject, Gtk
 
-class ColumnExtension(GObject.GObject, Caja.PropertyPageProvider):
+class ColumnExtension(GObject.GObject, Baul.PropertyPageProvider):
     def __init__(self):
         pass
     
@@ -84,7 +84,7 @@ class ColumnExtension(GObject.GObject, Caja.PropertyPageProvider):
         self.value_label.set_text(md5sum.hexdigest())
         self.value_label.show()
         
-        return Caja.PropertyPage(name="CajaPython::md5_sum",
+        return Baul.PropertyPage(name="BaulPython::md5_sum",
                                      label=self.property_label, 
                                      page=self.hbox),
     </programlisting>
@@ -100,7 +100,7 @@ class ColumnExtension(GObject.GObject, Caja.PropertyPageProvider):
         <title>Passive Methods</title>
 
         <refsect2 id="method-baul-property-page-provider--get-pages">
-          <title>Caja.PropertyPageProvider.get_pages</title>
+          <title>Baul.PropertyPageProvider.get_pages</title>
 
           <programlisting><methodsynopsis language="python">
             <methodname>get_pages</methodname>
@@ -110,16 +110,16 @@ class ColumnExtension(GObject.GObject, Caja.PropertyPageProvider):
           <variablelist>
             <varlistentry>
 	            <term><parameter role="keyword">files</parameter>&nbsp;:</term>
-	            <listitem><simpara>a list of <link linkend="class-baul-python-file-info"><classname>Caja.FileInfo</classname></link> objects.</simpara></listitem>
+	            <listitem><simpara>a list of <link linkend="class-baul-python-file-info"><classname>Baul.FileInfo</classname></link> objects.</simpara></listitem>
             </varlistentry>
             <varlistentry>
               <term><emphasis>Returns</emphasis>&nbsp;:</term>
-              <listitem><simpara>a list of <link linkend="class-baul-python-property-page"><classname>Caja.PropertyPage</classname></link> objects</simpara></listitem>
+              <listitem><simpara>a list of <link linkend="class-baul-python-property-page"><classname>Baul.PropertyPage</classname></link> objects</simpara></listitem>
             </varlistentry>
           </variablelist>
 
           <para>
-                This function is called by Caja when it wants property page items from the extension.  
+                This function is called by Baul when it wants property page items from the extension.  
                 It is called in the main thread before a property page is shown, so it should return quickly.
           </para>
         </refsect2>
