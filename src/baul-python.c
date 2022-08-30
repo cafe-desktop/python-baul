@@ -33,7 +33,7 @@
 #include <libbaul-extension/baul-extension-types.h>
 
 static const GDebugKey baul_python_debug_keys[] = {
-	{"misc", CAJA_PYTHON_DEBUG_MISC},
+	{"misc", BAUL_PYTHON_DEBUG_MISC},
 };
 static const guint baul_python_ndebug_keys = sizeof (baul_python_debug_keys) / sizeof (GDebugKey);
 BaulPythonDebug baul_python_debug;
@@ -234,7 +234,7 @@ baul_python_init_python (void)
 	}
 
 	/* import baul */
-	g_setenv("INSIDE_CAJA_PYTHON", "", FALSE);
+	g_setenv("INSIDE_BAUL_PYTHON", "", FALSE);
 	debug("import baul");
 	gi = PyImport_ImportModule ("gi");
 	if (!gi) {
@@ -303,7 +303,7 @@ baul_module_initialize(GTypeModule *module)
 	gchar *user_extensions_dir;
 	const gchar *env_string;
 
-	env_string = g_getenv("CAJA_PYTHON_DEBUG");
+	env_string = g_getenv("BAUL_PYTHON_DEBUG");
 	if (env_string != NULL)
 	{
 		baul_python_debug = g_parse_debug_string(env_string,

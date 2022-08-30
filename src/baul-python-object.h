@@ -22,8 +22,8 @@
  *
  */
 
-#ifndef CAJA_PYTHON_OBJECT_H
-#define CAJA_PYTHON_OBJECT_H
+#ifndef BAUL_PYTHON_OBJECT_H
+#define BAUL_PYTHON_OBJECT_H
 
 #include <Python.h>
 #include <glib-object.h>

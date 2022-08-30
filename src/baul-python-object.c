@@ -396,7 +396,7 @@ baul_python_object_update_file_info (BaulInfoProvider 		*provider,
 										 BaulOperationHandle   **handle)
 {
 	BaulPythonObject *object = (BaulPythonObject*)provider;
-    BaulOperationResult ret = CAJA_OPERATION_COMPLETE;
+    BaulOperationResult ret = BAUL_OPERATION_COMPLETE;
     PyObject *py_ret = NULL;
 	PyGILState_STATE state = pyg_gil_state_ensure();
 	static volatile gssize handle_generator = 1;
@@ -450,8 +450,8 @@ baul_python_object_update_file_info (BaulInfoProvider 		*provider,
 
 	ret = PyLong_AsLong(py_ret);
 
-    if (!*handle && ret == CAJA_OPERATION_IN_PROGRESS)
-        ret = CAJA_OPERATION_FAILED;
+    if (!*handle && ret == BAUL_OPERATION_IN_PROGRESS)
+        ret = BAUL_OPERATION_FAILED;
 
  beach:
  	free_pygobject_data(file, NULL);
@@ -563,35 +563,35 @@ baul_python_object_get_type (GTypeModule *module,
 	if (PyObject_IsSubclass(type, (PyObject*)&PyBaulPropertyPageProvider_Type))
 	{
 		g_type_module_add_interface (module, gtype,
-									 CAJA_TYPE_PROPERTY_PAGE_PROVIDER,
+									 BAUL_TYPE_PROPERTY_PAGE_PROVIDER,
 									 &property_page_provider_iface_info);
 	}
 
 	if (PyObject_IsSubclass(type, (PyObject*)&PyBaulLocationWidgetProvider_Type))
 	{
 		g_type_module_add_interface (module, gtype,
-									 CAJA_TYPE_LOCATION_WIDGET_PROVIDER,
+									 BAUL_TYPE_LOCATION_WIDGET_PROVIDER,
 									 &location_widget_provider_iface_info);
 	}
 
 	if (PyObject_IsSubclass(type, (PyObject*)&PyBaulMenuProvider_Type))
 	{
 		g_type_module_add_interface (module, gtype,
-									 CAJA_TYPE_MENU_PROVIDER,
+									 BAUL_TYPE_MENU_PROVIDER,
 									 &menu_provider_iface_info);
 	}
 
 	if (PyObject_IsSubclass(type, (PyObject*)&PyBaulColumnProvider_Type))
 	{
 		g_type_module_add_interface (module, gtype,
-									 CAJA_TYPE_COLUMN_PROVIDER,
+									 BAUL_TYPE_COLUMN_PROVIDER,
 									 &column_provider_iface_info);
 	}
 
 	if (PyObject_IsSubclass(type, (PyObject*)&PyBaulInfoProvider_Type))
 	{
 		g_type_module_add_interface (module, gtype,
-									 CAJA_TYPE_INFO_PROVIDER,
+									 BAUL_TYPE_INFO_PROVIDER,
 									 &info_provider_iface_info);
 	}
 
