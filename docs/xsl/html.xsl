@@ -244,7 +244,7 @@
   </xsl:template>
 
   <!-- ========================================================= -->
-  <!-- template to output ctkdoclink elements for the unknown targets -->
+  <!-- template to output gtkdoclink elements for the unknown targets -->
 
   <xsl:template match="link">
     <xsl:choose>
