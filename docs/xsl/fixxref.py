@@ -10,8 +10,8 @@ anchors = {}
 anchor_pat = re.compile(r'''^\s*<ANCHOR\s+id\s*=\s*"([^"]*)"\s+
                             href\s*=\s*"([^"]*)"\s*>''',
                         re.MULTILINE | re.VERBOSE)
-link_pat = re.compile(r'''<PYGTKDOCLINK\s+HREF="([^"]*)"\s*>(.*?)
-                          </PYGTKDOCLINK\s*>''', re.DOTALL | re.VERBOSE)
+link_pat = re.compile(r'''<PYCTKDOCLINK\s+HREF="([^"]*)"\s*>(.*?)
+                          </PYCTKDOCLINK\s*>''', re.DOTALL | re.VERBOSE)
 def scan_index_dir(idir):
     for root, dirs, files in os.walk(idir):
         if 'index.sgml' in files:

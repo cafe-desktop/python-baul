@@ -256,7 +256,7 @@ baul_python_init_python (void)
 		return FALSE;
 	}
 
-	_PyCtkWidget_Type = pygobject_lookup_class(GTK_TYPE_WIDGET);
+	_PyCtkWidget_Type = pygobject_lookup_class(CTK_TYPE_WIDGET);
 	g_assert(_PyCtkWidget_Type != NULL);
 
 #define IMPORT(x, y) \

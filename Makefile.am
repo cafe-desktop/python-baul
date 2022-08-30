@@ -1,6 +1,6 @@
 SUBDIRS = po src examples
 
-if ENABLE_GTK_DOC
+if ENABLE_CTK_DOC
 SUBDIRS += docs
 endif
 
