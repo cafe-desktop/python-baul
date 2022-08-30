@@ -30,7 +30,7 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [GetText Package])
 AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
 dnl Check for gtk-doc
-CTK_DOC_CHECK(1.9)
+GTK_DOC_CHECK(1.9)
 
 dnl **************************************************
 dnl * Check for Python
