@@ -3,8 +3,8 @@
 ##########################################################
 requires:
   debian:
-    # Useful URL: https://github.com/mate-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-mate-team/python-caja
+    # Useful URL: https://github.com/cafe-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-cafe-team/python-caja
     - aptitude
     - autopoint
     - clang
@@ -17,7 +17,7 @@ requires:
     - libcaja-extension-dev
     - libgirepository1.0-dev
     - make
-    - mate-common
+    - cafe-common
     - python3-dev
     - python-gi-dev
     - quilt
