@@ -26,7 +26,7 @@ class BackgroundImageExtension(GObject.GObject, Caja.MenuProvider):
         if not file.get_mime_type() in SUPPORTED_FORMATS:
             return
 
-        # Mate can only handle file:
+        # Cafe can only handle file:
         # In the future we might want to copy the file locally
         if file.get_uri_scheme() != 'file':
             return
