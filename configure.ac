@@ -10,7 +10,7 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 AC_CONFIG_HEADERS(config.h)
 AC_CONFIG_MACRO_DIR([m4])
 
-CAJA_REQUIRED=1.17.1
+BAUL_REQUIRED=1.17.1
 
 AC_PROG_CC
 AC_DISABLE_STATIC
@@ -59,9 +59,9 @@ AC_DEFINE_UNQUOTED(PYGOBJECT_MAJOR_VERSION,[$PYGOBJECT_MAJOR_VERSION], [PyGObjec
 AC_DEFINE_UNQUOTED(PYGOBJECT_MINOR_VERSION,[$PYGOBJECT_MINOR_VERSION], [PyGObject minor version.])
 AC_DEFINE_UNQUOTED(PYGOBJECT_MICRO_VERSION,[$PYGOBJECT_MICRO_VERSION], [PyGObject micro version.])
 
-PKG_CHECK_MODULES(CAJA_PYTHON, [pygobject-3.0 >= $PYGOBJECT_REQUIRED
+PKG_CHECK_MODULES(BAUL_PYTHON, [pygobject-3.0 >= $PYGOBJECT_REQUIRED
                                 gmodule-no-export-2.0
-                                libbaul-extension >= $CAJA_REQUIRED])
+                                libbaul-extension >= $BAUL_REQUIRED])
 
 PYGOBJECT_DATADIR=`$PKG_CONFIG --variable=datadir pygobject-3.0`
 AC_SUBST(PYGOBJECT_DATADIR)
@@ -72,9 +72,9 @@ AC_SUBST(PYGOBJECT_PYGDOCS)
 PYGOBJECT_FIXXREF="$PYTHON `$PKG_CONFIG --variable=fixxref pygobject-3.0`"
 AC_SUBST(PYGOBJECT_FIXXREF)
 
-CAJA_LIBDIR=`$PKG_CONFIG --variable=libdir libbaul-extension`
-AC_SUBST(CAJA_LIBDIR)
-AC_DEFINE_UNQUOTED(CAJA_LIBDIR, "$CAJA_LIBDIR", [Baul libdir])
+BAUL_LIBDIR=`$PKG_CONFIG --variable=libdir libbaul-extension`
+AC_SUBST(BAUL_LIBDIR)
+AC_DEFINE_UNQUOTED(BAUL_LIBDIR, "$BAUL_LIBDIR", [Baul libdir])
 
 dnl ---------------------------------
 dnl Get baul extensions directory
@@ -88,7 +88,7 @@ AS_IF([test "${ac_with_bauldir}" = ""],[
 ])
 
 AC_MSG_NOTICE([installing baul plugin in ${ac_with_bauldir}])
-AC_SUBST([CAJA_EXTENSION_DIR], [${ac_with_bauldir}])
+AC_SUBST([BAUL_EXTENSION_DIR], [${ac_with_bauldir}])
 
 dnl ---------------------------------
 dnl Check for gtk-doc dependencies
