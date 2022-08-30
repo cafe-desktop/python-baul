@@ -81,7 +81,7 @@ REFERENCE_DEPS = 	\
 	$(XSL_FILES)    \
 	$(FIXXREF)
 
-if ENABLE_CTK_DOC
+if ENABLE_GTK_DOC
 
 BUILT_SOURCES = 		\
 	reference/builddate.xml	\
