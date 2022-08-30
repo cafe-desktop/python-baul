@@ -1,6 +1,6 @@
 import hashlib
 
-from gi.repository import Baul, Gtk, GObject
+from gi.repository import Baul, Ctk, GObject
 
 class MD5SumPropertyPage(GObject.GObject, Baul.PropertyPageProvider):
     def __init__(self):
@@ -19,17 +19,17 @@ class MD5SumPropertyPage(GObject.GObject, Baul.PropertyPageProvider):
 
         filename = file.get_location().get_path()
 
-        self.property_label = Gtk.Label('MD5Sum')
+        self.property_label = Ctk.Label('MD5Sum')
         self.property_label.show()
 
-        self.hbox = Gtk.HBox(homogeneous=False, spacing=0)
+        self.hbox = Ctk.HBox(homogeneous=False, spacing=0)
         self.hbox.show()
 
-        label = Gtk.Label('MD5Sum:')
+        label = Ctk.Label('MD5Sum:')
         label.show()
         self.hbox.pack_start(label, False, False, 0)
 
-        self.value_label = Gtk.Label()
+        self.value_label = Ctk.Label()
         self.hbox.pack_start(self.value_label, False, False, 0)
 
         md5sum = hashlib.md5()

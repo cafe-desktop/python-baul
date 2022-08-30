@@ -46,8 +46,8 @@ extern BaulPythonDebug baul_python_debug;
                                      g_printf("%s: entered " x "\n", __FUNCTION__, y); }
 
 
-BAUL_PYTHON_VAR_DECL PyTypeObject *_PyGtkWidget_Type;
-#define PyGtkWidget_Type (*_PyGtkWidget_Type)
+BAUL_PYTHON_VAR_DECL PyTypeObject *_PyCtkWidget_Type;
+#define PyCtkWidget_Type (*_PyCtkWidget_Type)
 
 BAUL_PYTHON_VAR_DECL PyTypeObject *_PyBaulColumn_Type;
 #define PyBaulColumn_Type (*_PyBaulColumn_Type)
