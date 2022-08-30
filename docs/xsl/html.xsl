@@ -252,9 +252,9 @@
         <xsl:apply-imports/>
       </xsl:when>
       <xsl:otherwise>
-        <PYGTKDOCLINK HREF="{@linkend}">
+        <PYCTKDOCLINK HREF="{@linkend}">
           <xsl:apply-templates/>
-        </PYGTKDOCLINK>
+        </PYCTKDOCLINK>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
