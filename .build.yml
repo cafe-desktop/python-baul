@@ -17,6 +17,7 @@ requires:
     - gtk-doc-tools
     - libcaja-extension-dev
     - libgirepository1.0-dev
+    - libtool
     - make
     - python3-dev
     - python-gi-dev
