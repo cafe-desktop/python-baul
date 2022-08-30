@@ -2,7 +2,7 @@
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
 
-<refentry id="class-caja-python-menu-item">
+<refentry id="class-baul-python-menu-item">
   <refnamediv>
     <refname>Caja.MenuItem</refname>
     <refpurpose>Caja.MenuItem Reference</refpurpose>
@@ -20,7 +20,7 @@
         <ooclass><classname><link linkend="class-gobject">gobject.GObject</link></classname></ooclass>
 
         <constructorsynopsis language="python">
-            <methodname><link linkend="constructor-caja-menu-item">Caja.MenuItem</link></methodname>
+            <methodname><link linkend="constructor-baul-menu-item">Caja.MenuItem</link></methodname>
             <methodparam><parameter role="keyword">name</parameter></methodparam>
             <methodparam><parameter role="keyword">label</parameter></methodparam>
             <methodparam><parameter role="keyword">tooltip</parameter></methodparam>
@@ -28,11 +28,11 @@
         </constructorsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-menu-item--activate">activate</link></methodname>
+            <methodname><link linkend="method-baul-python-menu-item--activate">activate</link></methodname>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-menu-item--set_submenu">set_submenu</link></methodname>
+            <methodname><link linkend="method-baul-python-menu-item--set_submenu">set_submenu</link></methodname>
             <methodparam><parameter role="keyword">menu</parameter></methodparam>
         </methodsynopsis>
 
@@ -47,7 +47,7 @@
     <title>Ancestry</title>
 
 <synopsis>+-- <link linkend="class-gobject">gobject.GObject</link>
-    +-- <link linkend="class-caja-python-menu-item">Caja.MenuItem</link>
+    +-- <link linkend="class-baul-python-menu-item">Caja.MenuItem</link>
 </synopsis>
 </refsect1>
 
@@ -60,7 +60,7 @@
     <title>Description</title>
 
       <para>
-        <link linkend="class-caja-python-menu-item"><classname>Caja.MenuItem</classname></link> objects are appended to lists to create menus and submenus.
+        <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link> objects are appended to lists to create menus and submenus.
       </para>
 
   </refsect1>
@@ -82,43 +82,43 @@
           <tbody>
       
             <row valign="top">
-              <entry>"<link linkend="property-caja-python-menu-item--icon">icon</link>"</entry>
+              <entry>"<link linkend="property-baul-python-menu-item--icon">icon</link>"</entry>
               <entry>Name of the icon to display in the menu item.  Default value: None</entry>
               <entry>Read-Write</entry>
             </row>
       
             <row valign="top">
-              <entry>"<link linkend="property-caja-python-menu-item--label">label</link>"</entry>
+              <entry>"<link linkend="property-baul-python-menu-item--label">label</link>"</entry>
               <entry>The label to display to the user.  Default value: None</entry>
               <entry>Read-Write</entry>
             </row>
       
             <row valign="top">
-              <entry>"<link linkend="property-caja-python-menu-item--menu">menu</link>"</entry>
-              <entry>The <link linkend="class-caja-python-menu">Caja.Menu</link> menu object belonging to this item.  May be None.</entry>
+              <entry>"<link linkend="property-baul-python-menu-item--menu">menu</link>"</entry>
+              <entry>The <link linkend="class-baul-python-menu">Caja.Menu</link> menu object belonging to this item.  May be None.</entry>
               <entry>Read-Write</entry>
             </row>
 
             <row valign="top">
-              <entry>"<link linkend="property-caja-python-menu-item--name">name</link>"</entry>
+              <entry>"<link linkend="property-baul-python-menu-item--name">name</link>"</entry>
               <entry>The name of the item.  Default value: None</entry>
               <entry>Read-Write-ConstructOnly</entry>
             </row>
       
             <row valign="top">
-              <entry>"<link linkend="property-caja-python-menu-item--priority">priority</link>"</entry>
+              <entry>"<link linkend="property-baul-python-menu-item--priority">priority</link>"</entry>
               <entry>Whether or not to show priority text in toolbars.  Default value: True</entry>
               <entry>Read-Write</entry>
             </row>
       
             <row valign="top">
-              <entry>"<link linkend="property-caja-python-menu-item--sensitive">sensitive</link>"</entry>
+              <entry>"<link linkend="property-baul-python-menu-item--sensitive">sensitive</link>"</entry>
               <entry>Whether or not the menu item is sensitive.  Default value: True</entry>
               <entry>Read-Write</entry>
             </row>
 
             <row valign="top">
-              <entry>"<link linkend="property-caja-python-menu-item--tip">tip</link>"</entry>
+              <entry>"<link linkend="property-baul-python-menu-item--tip">tip</link>"</entry>
               <entry>The tooltip for the menu item.  Default value: None</entry>
               <entry>Read-Write</entry>
             </row>
@@ -138,7 +138,7 @@
     <title>Signals</title>
     <variablelist>
       <varlistentry>
-        <term><link linkend="signal-caja-python-menu-item--activate">"activate"</link></term>
+        <term><link linkend="signal-baul-python-menu-item--activate">"activate"</link></term>
         <listitem>
           <methodsynopsis language="python"><methodname>callback</methodname>
             <methodparam><parameter>item</parameter></methodparam>
@@ -157,7 +157,7 @@
 <!-- BEGIN OF CONSTRUCTOR -->
 <!-- ************************************ -->
 
-<refsect1 id="constructor-caja-menu-item">
+<refsect1 id="constructor-baul-menu-item">
   <title>Constructor</title>
 
   <programlisting><constructorsynopsis language="python">
@@ -188,7 +188,7 @@
   </variablelist>
 
   <para>
-    Creates a new <link linkend="class-caja-python-menu-item"><classname>Caja.MenuItem</classname></link> object.
+    Creates a new <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link> object.
   </para>
 </refsect1>
 
@@ -200,18 +200,18 @@
 <refsect1>
     <title>Public Methods</title>
 
-  <refsect2 id="method-caja-python-menu-item--activate">
+  <refsect2 id="method-baul-python-menu-item--activate">
     <title>Caja.MenuItem.activate</title>
     <programlisting><methodsynopsis language="python">
 	  <methodname>activate</methodname>
     </methodsynopsis></programlisting>
 
     <para>
-     Generates the "<link linkend="signal-caja-python-menu-item--activate">activate</link>" signal for this <link linkend="class-caja-python-menu-item"><classname>Caja.MenuItem</classname></link>.
+     Generates the "<link linkend="signal-baul-python-menu-item--activate">activate</link>" signal for this <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link>.
     </para>
   </refsect2>
 
-  <refsect2 id="method-caja-python-menu-item--set_submenu">
+  <refsect2 id="method-baul-python-menu-item--set_submenu">
     <title>Caja.MenuItem.set_submenu</title>
     <programlisting><methodsynopsis language="python">
 	  <methodname>set_submenu</methodname>
@@ -220,11 +220,11 @@
     <variablelist>
       <varlistentry>
         <term><parameter role="keyword">menu</parameter>&nbsp;:</term>
-        <listitem><simpara>a <link linkend="class-caja-python-menu"><classname>Caja.Menu</classname></link></simpara></listitem>
+        <listitem><simpara>a <link linkend="class-baul-python-menu"><classname>Caja.Menu</classname></link></simpara></listitem>
       </varlistentry>
     </variablelist>
     <para>
-        Attaches a <link linkend="class-caja-python-menu"><classname>Caja.Menu</classname></link> as the submenu for this <link linkend="class-caja-python-menu-item"><classname>Caja.MenuItem</classname></link>.
+        Attaches a <link linkend="class-baul-python-menu"><classname>Caja.Menu</classname></link> as the submenu for this <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link>.
     </para>
   </refsect2>
 </refsect1>
@@ -237,7 +237,7 @@
 <refsect1>
     <title>Signal Details</title>
 
-  <refsect2 id="signal-caja-python-menu-item--activate">
+  <refsect2 id="signal-baul-python-menu-item--activate">
     <title>The "activate" Caja.MenuItem Signal</title>
 
     <programlisting><methodsynopsis language="python">
@@ -250,7 +250,7 @@
     <variablelist>
 	    <varlistentry>
 	      <term><parameter>item</parameter>&nbsp;:</term>
-	      <listitem><simpara>the <link linkend="class-caja-python-menu-item"><classname>Caja.MenuItem</classname></link> being activated</simpara></listitem>
+	      <listitem><simpara>the <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link> being activated</simpara></listitem>
 	    </varlistentry>
       <varlistentry>
 	      <term><parameter>user_param1</parameter>&nbsp;:</term>
@@ -263,7 +263,7 @@
     </variablelist>
 
     <para>
-      Emits the "<link linkend="signal-caja-python-menu-item--activate">activate</link>" signal.
+      Emits the "<link linkend="signal-baul-python-menu-item--activate">activate</link>" signal.
     </para>
 
   </refsect2>

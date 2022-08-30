@@ -2,7 +2,7 @@
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
 
-<refentry id="class-caja-python-menu">
+<refentry id="class-baul-python-menu">
   <refnamediv>
     <refname>Caja.Menu</refname>
     <refpurpose>Caja.Menu Reference</refpurpose>
@@ -20,16 +20,16 @@
         <ooclass><classname><link linkend="class-gobject">gobject.GObject</link></classname></ooclass>
 
         <constructorsynopsis language="python">
-            <methodname><link linkend="constructor-caja-menu">Caja.Menu</link></methodname>
+            <methodname><link linkend="constructor-baul-menu">Caja.Menu</link></methodname>
         </constructorsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-menu--append_item">append_item</link></methodname>
+            <methodname><link linkend="method-baul-python-menu--append_item">append_item</link></methodname>
             <methodparam><parameter role="keyword">item</parameter></methodparam>
         </methodsynopsis>
 
         <methodsynopsis language="python">
-            <methodname><link linkend="method-caja-python-menu--get_items">get_items</link></methodname>
+            <methodname><link linkend="method-baul-python-menu--get_items">get_items</link></methodname>
         </methodsynopsis>
 
     </classsynopsis>
@@ -43,7 +43,7 @@
     <title>Ancestry</title>
 
 <synopsis>+-- <link linkend="class-gobject">gobject.GObject</link>
-    +-- <link linkend="class-caja-python-menu">Caja.Menu</link>
+    +-- <link linkend="class-baul-python-menu">Caja.Menu</link>
 </synopsis>
 </refsect1>
 
@@ -67,7 +67,7 @@
 <!-- BEGIN OF CONSTRUCTOR -->
 <!-- ************************************ -->
 
-<refsect1 id="constructor-caja-menu">
+<refsect1 id="constructor-baul-menu">
   <title>Constructor</title>
 
   <programlisting><constructorsynopsis language="python">
@@ -75,7 +75,7 @@
   </constructorsynopsis></programlisting>
     
   <para>
-    Creates a new <link linkend="class-caja-python-menu"><classname>Caja.Menu</classname></link> object.
+    Creates a new <link linkend="class-baul-python-menu"><classname>Caja.Menu</classname></link> object.
   </para>
 </refsect1>
 
@@ -88,7 +88,7 @@
 <refsect1>
     <title>Public Methods</title>
 
-  <refsect2 id="method-caja-python-menu--append_item">
+  <refsect2 id="method-baul-python-menu--append_item">
     <title>Caja.Menu.append_item</title>
     <programlisting><methodsynopsis language="python">
 	  <methodname>append_item</methodname>
@@ -97,22 +97,22 @@
     <variablelist>
       <varlistentry>
         <term><parameter role="keyword">item</parameter>&nbsp;:</term>
-        <listitem><simpara>a <link linkend="class-caja-python-menu-item"><classname>Caja.MenuItem</classname></link></simpara></listitem>
+        <listitem><simpara>a <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link></simpara></listitem>
       </varlistentry>
     </variablelist>
 
     <para>
-      Append a <link linkend="class-caja-python-menu-item"><classname>Caja.MenuItem</classname></link> to a <link linkend="class-caja-python-menu"><classname>Caja.Menu</classname></link>.
+      Append a <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link> to a <link linkend="class-baul-python-menu"><classname>Caja.Menu</classname></link>.
     </para>
   </refsect2>
 
-  <refsect2 id="method-caja-python-menu--get_items">
+  <refsect2 id="method-baul-python-menu--get_items">
     <title>Caja.Menu.get_items</title>
     <programlisting><methodsynopsis language="python">
 	  <methodname>get_items</methodname>
     </methodsynopsis></programlisting>
     <para>
-      Returns a list of <link linkend="class-caja-python-menu-item"><classname>Caja.MenuItem</classname></link> objects attached to the <link linkend="class-caja-python-menu"><classname>Caja.Menu</classname></link>.
+      Returns a list of <link linkend="class-baul-python-menu-item"><classname>Caja.MenuItem</classname></link> objects attached to the <link linkend="class-baul-python-menu"><classname>Caja.Menu</classname></link>.
     </para>
   </refsect2>
 </refsect1>

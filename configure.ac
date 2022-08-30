@@ -1,6 +1,6 @@
-AC_INIT([python-caja], [1.24.0],
-	[https://github.com/cafe-desktop/python-caja/issues],
-	[python-caja], [http://cafe-desktop.org])
+AC_INIT([python-baul], [1.24.0],
+	[https://github.com/cafe-desktop/python-baul/issues],
+	[python-baul], [http://cafe-desktop.org])
 
 AC_SUBST(PACKAGE)
 AC_SUBST(VERSION)
@@ -23,7 +23,7 @@ AS_IF([test "x$PKG_CONFIG" = "x"],[
 ])
 
 dnl i18n
-GETTEXT_PACKAGE=python-caja
+GETTEXT_PACKAGE=python-baul
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [GetText Package])
 
@@ -61,7 +61,7 @@ AC_DEFINE_UNQUOTED(PYGOBJECT_MICRO_VERSION,[$PYGOBJECT_MICRO_VERSION], [PyGObjec
 
 PKG_CHECK_MODULES(CAJA_PYTHON, [pygobject-3.0 >= $PYGOBJECT_REQUIRED
                                 gmodule-no-export-2.0
-                                libcaja-extension >= $CAJA_REQUIRED])
+                                libbaul-extension >= $CAJA_REQUIRED])
 
 PYGOBJECT_DATADIR=`$PKG_CONFIG --variable=datadir pygobject-3.0`
 AC_SUBST(PYGOBJECT_DATADIR)
@@ -72,23 +72,23 @@ AC_SUBST(PYGOBJECT_PYGDOCS)
 PYGOBJECT_FIXXREF="$PYTHON `$PKG_CONFIG --variable=fixxref pygobject-3.0`"
 AC_SUBST(PYGOBJECT_FIXXREF)
 
-CAJA_LIBDIR=`$PKG_CONFIG --variable=libdir libcaja-extension`
+CAJA_LIBDIR=`$PKG_CONFIG --variable=libdir libbaul-extension`
 AC_SUBST(CAJA_LIBDIR)
 AC_DEFINE_UNQUOTED(CAJA_LIBDIR, "$CAJA_LIBDIR", [Caja libdir])
 
 dnl ---------------------------------
-dnl Get caja extensions directory
+dnl Get baul extensions directory
 dnl ---------------------------------
-AC_ARG_WITH(cajadir,
-	AS_HELP_STRING([--with-cajadir=DIR],[Installation path for Caja extension @<:@auto@:>@]),
-	[ac_with_cajadir=$withval],
-	[ac_with_cajadir=""])
-AS_IF([test "${ac_with_cajadir}" = ""],[
-	ac_with_cajadir=`$PKG_CONFIG --variable=extensiondir libcaja-extension`
+AC_ARG_WITH(bauldir,
+	AS_HELP_STRING([--with-bauldir=DIR],[Installation path for Caja extension @<:@auto@:>@]),
+	[ac_with_bauldir=$withval],
+	[ac_with_bauldir=""])
+AS_IF([test "${ac_with_bauldir}" = ""],[
+	ac_with_bauldir=`$PKG_CONFIG --variable=extensiondir libbaul-extension`
 ])
 
-AC_MSG_NOTICE([installing caja plugin in ${ac_with_cajadir}])
-AC_SUBST([CAJA_EXTENSION_DIR], [${ac_with_cajadir}])
+AC_MSG_NOTICE([installing baul plugin in ${ac_with_bauldir}])
+AC_SUBST([CAJA_EXTENSION_DIR], [${ac_with_bauldir}])
 
 dnl ---------------------------------
 dnl Check for gtk-doc dependencies
@@ -104,17 +104,17 @@ AS_IF([test "${enable_gtk_doc}" != no],[
 
 AC_OUTPUT([
   Makefile
-  libcaja-python.caja-extension.desktop.in
+  libbaul-python.baul-extension.desktop.in
   examples/Makefile
   src/Makefile
-  caja-python.pc
+  baul-python.pc
   docs/Makefile
   docs/reference/entities.docbook
   po/Makefile.in
 ])
 
 echo
-echo " caja-python $PACKAGE_VERSION"
+echo " baul-python $PACKAGE_VERSION"
 echo
 echo "      Caja Prefix:             ${prefix}"
 echo "      Python version:          ${PYTHON_VERSION}"

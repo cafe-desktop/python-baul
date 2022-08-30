@@ -2,7 +2,7 @@
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
 
-<refentry id="class-caja-python-column-provider">
+<refentry id="class-baul-python-column-provider">
   <refnamediv>
     <refname>Caja.ColumnProvider</refname>
     <refpurpose>Caja.ColumnProvider Reference</refpurpose>
@@ -19,7 +19,7 @@
       <ooclass><classname>Caja.ColumnProvider</classname></ooclass>
 
       <methodsynopsis language="python">
-        <methodname><link linkend="method-caja-column-provider--get-columns">get_columns</link></methodname>
+        <methodname><link linkend="method-baul-column-provider--get-columns">get_columns</link></methodname>
           <methodparam></methodparam>
       </methodsynopsis>
     </classsynopsis>
@@ -33,10 +33,10 @@
     <title>Description</title>
 
       <para>
-        If subclassed, Caja will request a list of <link linkend="class-caja-python-column"><classname>Caja.Column</classname></link> 
+        If subclassed, Caja will request a list of <link linkend="class-baul-python-column"><classname>Caja.Column</classname></link> 
         objects, which are then displayed when the user is in <literal>List</literal> mode.
         
-        <note>An extension sub-classing <link linkend="class-caja-python-column-provider"><classname>Caja.ColumnProvider</classname></link> 
+        <note>An extension sub-classing <link linkend="class-baul-python-column-provider"><classname>Caja.ColumnProvider</classname></link> 
         will almost always want to sub-class <link linkend="class-info-provider"><classname>Caja.InfoProvider</classname></link> 
         as well, since that is how an extension provides information for each item in a directory listing.
         </note>
@@ -79,7 +79,7 @@ class ColumnExtension(GObject.GObject, Caja.ColumnProvider, Caja.InfoProvider):
   <refsect1>
         <title>Passive Methods</title>
 
-        <refsect2 id="method-caja-column-provider--get-columns">
+        <refsect2 id="method-baul-column-provider--get-columns">
           <title>Caja.ColumnProvider.get_columns</title>
 
           <programlisting><methodsynopsis language="python">
@@ -96,7 +96,7 @@ class ColumnExtension(GObject.GObject, Caja.ColumnProvider, Caja.InfoProvider):
 
           <para>
             The <methodname>get_columns</methodname>() method returns a list of
-            <link linkend="class-caja-python-column"><classname>Caja.Column</classname></link>.
+            <link linkend="class-baul-python-column"><classname>Caja.Column</classname></link>.
           </para>
         </refsect2>
     </refsect1>

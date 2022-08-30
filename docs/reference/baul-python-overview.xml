@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
-<chapter id="caja-python-overview"
+<chapter id="baul-python-overview"
   xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <title>Overview</title>
@@ -16,28 +16,28 @@
     
     <para>Here are the basic steps:</para>
     
-    <para>1. A script is written and installed to the standard caja-python extension install path</para>
-    <para>2. Caja is (re)started and loads the caja-python C extension, which in turn loads all python extensions it can find</para>
-    <para>3. Any python script in the standard caja-python extension install path that imports the Caja module from the gobject introspection repository and derives 
+    <para>1. A script is written and installed to the standard baul-python extension install path</para>
+    <para>2. Caja is (re)started and loads the baul-python C extension, which in turn loads all python extensions it can find</para>
+    <para>3. Any python script in the standard baul-python extension install path that imports the Caja module from the gobject introspection repository and derives 
     the main class from a Caja module class will be loaded</para>
     
     <note>
 <title>A note about the standard python extensions install path</title>
 
-<para>As of caja-python 0.7.0 (and continued in 1.0+), caja-python looks in ~/.local/share/caja-python/extensions 
-for local extensions and $PREFIX/share/caja-python/extensions for global extensions.</para>
+<para>As of baul-python 0.7.0 (and continued in 1.0+), baul-python looks in ~/.local/share/baul-python/extensions 
+for local extensions and $PREFIX/share/baul-python/extensions for global extensions.</para>
     </note>
     
     <note>
-<title>A note about compatibility issues for caja-python 1.0</title>
-    <para>1. We no longer support the "import caja" command that previous versions used.  This is because
-    caja-python now directly uses Caja's annotations, which must be imported by the "from gi.repository import Caja" command.</para>
+<title>A note about compatibility issues for baul-python 1.0</title>
+    <para>1. We no longer support the "import baul" command that previous versions used.  This is because
+    baul-python now directly uses Caja's annotations, which must be imported by the "from gi.repository import Caja" command.</para>
     <para>2. The extension class must now derive itself from a gobject.GObject in addition to the standard Caja classes.</para>
     <para>3. For now, some Caja class constructors require passing named arguments instead of a standard argument list.  This requirement may go away at some point.</para>
     </note>
 
-    <xi:include href="caja-python-overview-example.xml"/>
-    <xi:include href="caja-python-overview-methods.xml"/>
+    <xi:include href="baul-python-overview-example.xml"/>
+    <xi:include href="baul-python-overview-methods.xml"/>
 
 </chapter>
 

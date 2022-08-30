@@ -1,11 +1,11 @@
-libcaja-extension python bindings
+libbaul-extension python bindings
 ====================================
 
-These are unstable bindings for the caja extension library.
+These are unstable bindings for the baul extension library.
 
 For examples and documentation check the examples sub directory.
 
-As of python-caja 1.5.0, scripts are loaded only from $XDG_DATA_DIR/caja-python/extensions,
+As of python-baul 1.5.0, scripts are loaded only from $XDG_DATA_DIR/baul-python/extensions,
 which includes ~/.local/share and /usr/share (or whatever your $XDG_DATA_DIR is 
 set to).
 
@@ -21,4 +21,4 @@ PyGObject 3.0.0
 Problems
 ========
 It's currently not possible to reload the python file without
-restarting caja. That's a planned feature for future versions.
+restarting baul. That's a planned feature for future versions.

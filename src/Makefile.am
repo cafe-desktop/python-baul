@@ -1,14 +1,14 @@
-caja_extensiondir=$(CAJA_EXTENSION_DIR)
+baul_extensiondir=$(CAJA_EXTENSION_DIR)
 
-caja_extension_LTLIBRARIES = libcaja-python.la
+baul_extension_LTLIBRARIES = libbaul-python.la
 
-libcaja_python_la_SOURCES =     	\
-	caja-python.c		\
-	caja-python.h		\
-	caja-python-object.c	\
-	caja-python-object.h
+libbaul_python_la_SOURCES =     	\
+	baul-python.c		\
+	baul-python.h		\
+	baul-python-object.c	\
+	baul-python-object.h
 
-libcaja_python_la_CPPFLAGS = \
+libbaul_python_la_CPPFLAGS = \
 	-I$(top_srcdir)	\
 	-I$(top_builddir) \
 	-DG_LOG_DOMAIN=\"Caja-Python\" \
@@ -20,10 +20,10 @@ libcaja_python_la_CPPFLAGS = \
 	$(CAJA_PYTHON_CFLAGS) \
 	$(AM_CPPFLAGS)
 
-libcaja_python_la_CFLAGS = \
+libbaul_python_la_CFLAGS = \
 	$(PYTHON_CFLAGS)
 	$(CAJA_PYTHON_CFLAGS) \
 	$(AM_CFLAGS)
 
-libcaja_python_la_LDFLAGS = -module -avoid-version -Wl,-z,defs
-libcaja_python_la_LIBADD  = $(PYTHON_LIBS) $(CAJA_PYTHON_LIBS)
+libbaul_python_la_LDFLAGS = -module -avoid-version -Wl,-z,defs
+libbaul_python_la_LIBADD  = $(PYTHON_LIBS) $(CAJA_PYTHON_LIBS)

@@ -2,7 +2,7 @@
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
 
-<refentry id="class-caja-python-property-page-provider">
+<refentry id="class-baul-python-property-page-provider">
   <refnamediv>
     <refname>Caja.PropertyPageProvider</refname>
     <refpurpose>Caja.PropertyPageProvider Reference</refpurpose>
@@ -19,7 +19,7 @@
       <ooclass><classname>Caja.PropertyPageProvider</classname></ooclass>
 
       <methodsynopsis language="python">
-        <methodname><link linkend="method-caja-property-page-provider--get-pages">get_pages</link></methodname>
+        <methodname><link linkend="method-baul-property-page-provider--get-pages">get_pages</link></methodname>
         <methodparam><parameter role="keyword">files</parameter></methodparam>
       </methodsynopsis>
     </classsynopsis>
@@ -99,7 +99,7 @@ class ColumnExtension(GObject.GObject, Caja.PropertyPageProvider):
   <refsect1>
         <title>Passive Methods</title>
 
-        <refsect2 id="method-caja-property-page-provider--get-pages">
+        <refsect2 id="method-baul-property-page-provider--get-pages">
           <title>Caja.PropertyPageProvider.get_pages</title>
 
           <programlisting><methodsynopsis language="python">
@@ -110,11 +110,11 @@ class ColumnExtension(GObject.GObject, Caja.PropertyPageProvider):
           <variablelist>
             <varlistentry>
 	            <term><parameter role="keyword">files</parameter>&nbsp;:</term>
-	            <listitem><simpara>a list of <link linkend="class-caja-python-file-info"><classname>Caja.FileInfo</classname></link> objects.</simpara></listitem>
+	            <listitem><simpara>a list of <link linkend="class-baul-python-file-info"><classname>Caja.FileInfo</classname></link> objects.</simpara></listitem>
             </varlistentry>
             <varlistentry>
               <term><emphasis>Returns</emphasis>&nbsp;:</term>
-              <listitem><simpara>a list of <link linkend="class-caja-python-property-page"><classname>Caja.PropertyPage</classname></link> objects</simpara></listitem>
+              <listitem><simpara>a list of <link linkend="class-baul-python-property-page"><classname>Caja.PropertyPage</classname></link> objects</simpara></listitem>
             </varlistentry>
           </variablelist>
 
