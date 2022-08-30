@@ -93,12 +93,12 @@ AC_SUBST([BAUL_EXTENSION_DIR], [${ac_with_bauldir}])
 dnl ---------------------------------
 dnl Check for gtk-doc dependencies
 dnl ---------------------------------
-AS_IF([test "${enable_ctk_doc}" != no],[
+AS_IF([test "${enable_gtk_doc}" != no],[
     dnl Check for xsltproc
     AC_PATH_PROG([XSLTPROC], [xsltproc])
     AS_IF([test -z "$XSLTPROC"],[
         echo " disabling generation of docs"
-        enable_ctk_doc=no
+        enable_gtk_doc=no
     ])
 ])
 
@@ -119,5 +119,5 @@ echo
 echo "      Baul Prefix:             ${prefix}"
 echo "      Python version:          ${PYTHON_VERSION}"
 echo "      Python library location: ${PYTHON_LIB_LOC}"
-echo "      Documentation:           ${enable_ctk_doc}"
+echo "      Documentation:           ${enable_gtk_doc}"
 echo
