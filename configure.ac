@@ -102,7 +102,7 @@ AS_IF([test "${enable_gtk_doc}" != no],[
     ])
 ])
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
   Makefile
   libbaul-python.baul-extension.desktop.in
   examples/Makefile
@@ -112,6 +112,8 @@ AC_OUTPUT([
   docs/reference/entities.docbook
   po/Makefile.in
 ])
+
+AC_OUTPUT
 
 echo
 echo " baul-python $PACKAGE_VERSION"
