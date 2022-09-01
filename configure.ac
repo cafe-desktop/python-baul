@@ -13,8 +13,8 @@ AC_CONFIG_MACRO_DIR([m4])
 BAUL_REQUIRED=1.17.1
 
 AC_PROG_CC
-AC_DISABLE_STATIC
-AC_PROG_LIBTOOL
+
+LT_INIT([disable-static])
 
 PKG_PROG_PKG_CONFIG
 dnl Give error and exit if we dont have pkgconfig
