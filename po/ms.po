@@ -2,29 +2,23 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the python-baul package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # abuyop <abuyop@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: python-baul 1.23.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/python-baul/issues\n"
-"POT-Creation-Date: 2020-01-07 00:41+0100\n"
+"POT-Creation-Date: 2022-09-01 20:39+0200\n"
 "PO-Revision-Date: 2018-03-12 10:42+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>, 2020\n"
 "Language-Team: Malay (https://www.transifex.com/cafe/teams/13566/ms/)\n"
+"Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ms\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: libbaul-python.baul-extension.desktop.in:4
-msgid "text-x-python"
-msgstr "text-x-python"
 
 #: libbaul-python.baul-extension.desktop.in:5
 msgid "Python"
@@ -33,3 +27,6 @@ msgstr "Python"
 #: libbaul-python.baul-extension.desktop.in:6
 msgid "Allows to use Python extensions"
 msgstr "Membolehkan penggunaan sambungan Python"
+
+#~ msgid "text-x-python"
+#~ msgstr "text-x-python"
