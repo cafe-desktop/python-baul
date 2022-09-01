@@ -1,9 +1,12 @@
-baul-python is developed by:
+caja-python is developed by:
+Pablo Barciela <scow@riseup.net>
+
+it is based on caja-python written by
 Perberos <perberos@gmail.com>
 Stefano Karapetsas <stefano@karapetsas.com>
 Steve Zesch <stevezesch2@gmail.com>
 
-it is based on nautilus-python written by
+and it is based on nautilus-python written by
 Johan Dahlin <johan@gnome.org>
 Dave Camp <dave@ximian.com>
 Calvin Gaisford <cgaisford@novell.com>
