@@ -1,94 +1,16 @@
-### python-baul 1.24.0
+### python-baul 1.25.0
 
-  * Translations update
-
-### python-baul 1.23.1
-
-  * Translations update
-  * configure: get quieter output from make
-  * Get rid of commons
-  * migrate from intltools to gettext
-  * README: update required Python version
-  * drop Python 2 support (#50)
-  * Make configure.ac cross compile safe.
-  * Remove trailing whitespaces
-
-### python-baul 1.23.0
-
-  * Translations update
-  * Add support for building with Python 3.8
-  * Change url project's website
-  * Create FUNDING.yml
-  * Make Baul.OperationHandle usable.
-
-### python-baul 1.22.0
-
-  * fix distcheck when use python3
-  * Initialize Travis CI support
-  * Examples: remove use of Python 2/3 incompatible urllib/urlparse.
-  * Report effective Python version and library location at the end of configure
-  * docs: fix remaining incompatibility with Python 3
-
-### python-baul 1.21.1
-
-  * Translations update
-  * Fix Python 2 INT_ASLONG function.
-  * Include Python 3 ABI flags in shared library name.
-  * Make Python statements compatible with version 2 and 3.
-  * Implement Python 3 C API compatibility using conditional and macros.
-  * Allow to "make dist" without building the docs.
-  * Fail to build if some referenced symbol cannot be resolved at link time.
-  * Modernize examples
-
-### python-baul 1.21.0
-
-  * Translations update
-  * disable deprecation warnings for distcheck
-
-### python-baul 1.20.0
-
-  * Translations update
-
-### python-baul 1.19.0
-
-  * Translations update
-  * use standard python exception message
-  * Added gi.require_version()
-
-### python-baul 1.18.0
-
-  * Translations update
-  * support CTK+3 only: require Baul 1.17.1 and pygobject-3.0
-  * drop ancient check for Python 2.5, not needed these days
-
-### python-baul 1.16.0
-
-  * Examples: fix Baul crash on loading background-image
-    extension
-  * Examples: various fixes
-  * Translations update
-
-### python-baul 1.14.0
-
-  * Expose filenames of Python extensions to Baul
-    (needed for showing each Python extension as
-    a separate entry in the extensions list)
-  * Fix missing icon in About dialog
-  * Fix Changelog generation
-
-### python-baul 1.12.0
-
-  * Translations update
-
-### python-baul 1.10.0
-
-  * Bugfixes
-  * Add about window for baul extensions tab
-
-### python-baul 1.8.1 Bugfix release
-
-  * Use pkg-config for python detection and variables
-
-### python-baul 1.8.0
-
-  * Bugfixes
+  * initial commit: python-caja 1.24.0 fork
+  * ci: enable Github Actions
+  * apply debian patches taken from [python-caja_1.24.0-3.debian.tar.xz]:
+    - docs,Makefile: Make build reproducible
+    - Fix Python libdir not found on Debian et al
+  * rename MATE -> CAFE
+  * rename CAJA -> BAUL
+  * port from GTK to CTK
+  * update AUTHORS
+  * po,Makevars: supress progress indicators
+  * build:
+    - avoid obsolete AC_PROG_LIBTOOL and AC_DISABLE_STATIC
+    - Fix AC_OUTPUT warning
+  * update translations
