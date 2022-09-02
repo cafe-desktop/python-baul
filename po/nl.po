@@ -29,5 +29,3 @@ msgstr "Python"
 msgid "Allows to use Python extensions"
 msgstr "Staat gebruik van Python-uitbreidingen toe"
 
-#~ msgid "text-x-python"
-#~ msgstr "text-x-python"
