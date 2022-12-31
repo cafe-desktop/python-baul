@@ -1,0 +1,5 @@
+build: Fix AC_OUTPUT warning:
+
+Fixes the warning:
+configure.ac:105: warning: AC_OUTPUT should be used without arguments.
+configure.ac:105: You should run autoupdate.
