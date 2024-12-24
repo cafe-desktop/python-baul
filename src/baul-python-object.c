@@ -112,7 +112,7 @@ static GObjectClass *parent_class;
 
 
 static void
-free_pygobject_data(gpointer data, gpointer user_data)
+free_pygobject_data(gpointer data, gpointer user_data G_GNUC_UNUSED)
 {
 	/* Some BaulFile objects are cached and not freed until baul
 		itself is closed.  Since PyGObject stores data that must be freed by

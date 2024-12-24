@@ -46,13 +46,13 @@ static GList *all_pyfiles = NULL;
 
 /* Baul.OperationHandle value access. */
 static PyObject *
-baul_operationhandle_get_handle(PyGBoxed *self, void *closure)
+baul_operationhandle_get_handle(PyGBoxed *self, void *closure G_GNUC_UNUSED)
 {
 	return PyLong_FromSsize_t((Py_ssize_t) (size_t) self->boxed);
 }
 
 static int
-baul_operationhandle_set_handle(PyGBoxed *self, PyObject *value, void *closure)
+baul_operationhandle_set_handle(PyGBoxed *self, PyObject *value, void *closure G_GNUC_UNUSED)
 {
 	Py_ssize_t val = PyLong_AsSsize_t(value);
 
