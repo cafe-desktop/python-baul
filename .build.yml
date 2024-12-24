@@ -4,7 +4,7 @@
 requires:
   debian:
     # Useful URL: https://github.com/cafe-desktop/debian-packages
-    # Useful URL: https://salsa.debian.org/debian-cafe-team/python-baul
+    # cafe B-D: libbaul-extension-dev cafe-common
     - aptitude
     - autoconf
     - autopoint
