@@ -172,6 +172,7 @@ baul_python_load_dir (GTypeModule *module,
 				{
 					g_warning("baul_python_init_python failed");
 					g_dir_close(dir);
+					g_free(modulename);
 					break;
 				}
 
@@ -182,6 +183,7 @@ baul_python_load_dir (GTypeModule *module,
 				Py_DECREF(py_path);
 			}
 			baul_python_load_file(module, modulename);
+			g_free(modulename);
 		}
 	}
 }
