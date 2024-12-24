@@ -191,7 +191,6 @@ baul_python_init_python (void)
 {
 	PyObject *gi, *require_version, *args, *baul, *descr;
 	GModule *libpython;
-	wchar_t *argv[] = { L"baul", NULL };
 
 	if (Py_IsInitialized())
 		return TRUE;
@@ -209,16 +208,10 @@ baul_python_init_python (void)
 		return FALSE;
 	}
 
-	debug("PySys_SetArgv");
-	PySys_SetArgv(1, argv);
-	if (PyErr_Occurred())
-	{
-		PyErr_Print();
-		return FALSE;
-	}
-
-	debug("Sanitize the python search path");
-	PyRun_SimpleString("import sys; sys.path = list(filter(None, sys.path))");
+	debug("Sanitize the python search path and set sys.argv");
+	PyRun_SimpleString("import sys; "
+			   "sys.path = list(filter(None, sys.path)); "
+			   "sys.argv = ['baul']");
 	if (PyErr_Occurred())
 	{
 		PyErr_Print();
