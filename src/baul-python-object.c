@@ -512,31 +512,31 @@ baul_python_object_get_type (GTypeModule *module,
 	GType gtype;
 
 	static const GInterfaceInfo property_page_provider_iface_info = {
-		(GInterfaceInitFunc) baul_python_object_property_page_provider_iface_init,
+		(GInterfaceInitFunc) (void *) baul_python_object_property_page_provider_iface_init,
 		NULL,
 		NULL
 	};
 
 	static const GInterfaceInfo location_widget_provider_iface_info = {
-		(GInterfaceInitFunc) baul_python_object_location_widget_provider_iface_init,
+		(GInterfaceInitFunc) (void *) baul_python_object_location_widget_provider_iface_init,
 		NULL,
 		NULL
 	};
 
 	static const GInterfaceInfo menu_provider_iface_info = {
-		(GInterfaceInitFunc) baul_python_object_menu_provider_iface_init,
+		(GInterfaceInitFunc) (void *) baul_python_object_menu_provider_iface_init,
 		NULL,
 		NULL
 	};
 
 	static const GInterfaceInfo column_provider_iface_info = {
-		(GInterfaceInitFunc) baul_python_object_column_provider_iface_init,
+		(GInterfaceInitFunc) (void *) baul_python_object_column_provider_iface_init,
 		NULL,
 		NULL
 	};
 
 	static const GInterfaceInfo info_provider_iface_info = {
-		(GInterfaceInitFunc) baul_python_object_info_provider_iface_init,
+		(GInterfaceInitFunc) (void *) baul_python_object_info_provider_iface_init,
 		NULL,
 		NULL
 	};
@@ -547,7 +547,7 @@ baul_python_object_get_type (GTypeModule *module,
 	info->class_size = sizeof (BaulPythonObjectClass);
 	info->class_init = (GClassInitFunc)baul_python_object_class_init;
 	info->instance_size = sizeof (BaulPythonObject);
-	info->instance_init = (GInstanceInitFunc)baul_python_object_instance_init;
+	info->instance_init = (GInstanceInitFunc) (void *) baul_python_object_instance_init;
 
 	info->class_data = type;
 	Py_INCREF(type);
