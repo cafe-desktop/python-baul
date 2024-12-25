@@ -173,8 +173,9 @@ baul_python_object_get_property_pages (BaulPropertyPageProvider *provider,
 
 
 static void
-baul_python_object_property_page_provider_iface_init (BaulPropertyPageProviderIface *iface)
+baul_python_object_property_page_provider_iface_init (GTypeInstance *instance G_GNUC_UNUSED, gpointer g_iface)
 {
+	BaulPropertyPageProviderIface *iface = (BaulPropertyPageProviderIface *) g_iface;
 	iface->get_pages = baul_python_object_get_property_pages;
 }
 
@@ -220,8 +221,9 @@ baul_python_object_get_widget (BaulLocationWidgetProvider *provider,
 #undef METHOD_NAME
 
 static void
-baul_python_object_location_widget_provider_iface_init (BaulLocationWidgetProviderIface *iface)
+baul_python_object_location_widget_provider_iface_init (GTypeInstance *instance G_GNUC_UNUSED, gpointer g_iface)
 {
+	BaulLocationWidgetProviderIface *iface = (BaulLocationWidgetProviderIface *) g_iface;
 	iface->get_widget = baul_python_object_get_widget;
 }
 
@@ -322,8 +324,9 @@ baul_python_object_get_background_items (BaulMenuProvider *provider,
 #undef METHOD_NAME
 
 static void
-baul_python_object_menu_provider_iface_init (BaulMenuProviderIface *iface)
+baul_python_object_menu_provider_iface_init (GTypeInstance *instance G_GNUC_UNUSED, gpointer g_iface)
 {
+	BaulMenuProviderIface *iface = (BaulMenuProviderIface *) g_iface;
 	iface->get_background_items = baul_python_object_get_background_items;
 	iface->get_file_items = baul_python_object_get_file_items;
 }
@@ -358,8 +361,9 @@ baul_python_object_get_columns (BaulColumnProvider *provider)
 #undef METHOD_NAME
 
 static void
-baul_python_object_column_provider_iface_init (BaulColumnProviderIface *iface)
+baul_python_object_column_provider_iface_init (GTypeInstance *instance G_GNUC_UNUSED, gpointer g_iface)
 {
+	BaulColumnProviderIface *iface = (BaulColumnProviderIface *) g_iface;
 	iface->get_columns = baul_python_object_get_columns;
 }
 
@@ -462,15 +466,17 @@ baul_python_object_update_file_info (BaulInfoProvider 		*provider,
 #undef METHOD_NAME
 
 static void
-baul_python_object_info_provider_iface_init (BaulInfoProviderIface *iface)
+baul_python_object_info_provider_iface_init (GTypeInstance *instance G_GNUC_UNUSED, gpointer g_iface)
 {
+	BaulInfoProviderIface *iface = (BaulInfoProviderIface *) g_iface;
 	iface->cancel_update = baul_python_object_cancel_update;
 	iface->update_file_info = baul_python_object_update_file_info;
 }
 
 static void
-baul_python_object_instance_init (BaulPythonObject *object)
+baul_python_object_instance_init (GTypeInstance *unused G_GNUC_UNUSED, gpointer g_object)
 {
+	BaulPythonObject *object = (BaulPythonObject *) g_object;
 	BaulPythonObjectClass *class;
   	debug_enter();
 
@@ -512,31 +518,31 @@ baul_python_object_get_type (GTypeModule *module,
 	GType gtype;
 
 	static const GInterfaceInfo property_page_provider_iface_info = {
-		(GInterfaceInitFunc) (void *) baul_python_object_property_page_provider_iface_init,
+		(GInterfaceInitFunc) baul_python_object_property_page_provider_iface_init,
 		NULL,
 		NULL
 	};
 
 	static const GInterfaceInfo location_widget_provider_iface_info = {
-		(GInterfaceInitFunc) (void *) baul_python_object_location_widget_provider_iface_init,
+		(GInterfaceInitFunc) baul_python_object_location_widget_provider_iface_init,
 		NULL,
 		NULL
 	};
 
 	static const GInterfaceInfo menu_provider_iface_info = {
-		(GInterfaceInitFunc) (void *) baul_python_object_menu_provider_iface_init,
+		(GInterfaceInitFunc) baul_python_object_menu_provider_iface_init,
 		NULL,
 		NULL
 	};
 
 	static const GInterfaceInfo column_provider_iface_info = {
-		(GInterfaceInitFunc) (void *) baul_python_object_column_provider_iface_init,
+		(GInterfaceInitFunc) baul_python_object_column_provider_iface_init,
 		NULL,
 		NULL
 	};
 
 	static const GInterfaceInfo info_provider_iface_info = {
-		(GInterfaceInitFunc) (void *) baul_python_object_info_provider_iface_init,
+		(GInterfaceInitFunc) baul_python_object_info_provider_iface_init,
 		NULL,
 		NULL
 	};
@@ -547,7 +553,7 @@ baul_python_object_get_type (GTypeModule *module,
 	info->class_size = sizeof (BaulPythonObjectClass);
 	info->class_init = (GClassInitFunc)baul_python_object_class_init;
 	info->instance_size = sizeof (BaulPythonObject);
-	info->instance_init = (GInstanceInitFunc) (void *) baul_python_object_instance_init;
+	info->instance_init = (GInstanceInitFunc) baul_python_object_instance_init;
 
 	info->class_data = type;
 	Py_INCREF(type);
