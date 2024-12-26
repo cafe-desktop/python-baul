@@ -1,0 +1,4 @@
+baul-python: Fix memory leak
+
+based in python-caja commit:
+https://github.com/mate-desktop/python-caja/commit/3ad9a5d5e71736632ad979557c6f687596d24992

@@ -1,0 +1,4 @@
+baul-python: avoid deprecated 'PySys_SetArgv'
+
+based in python-caja commit:
+https://github.com/mate-desktop/python-caja/commit/dac54a63e1aa623df411a6b8f8d4062ba9cd273e
