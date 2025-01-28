@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: python-baul 1.24.0\n"
+"Project-Id-Version: python-baul 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/python-baul/issues\n"
-"POT-Creation-Date: 2022-09-01 20:39+0200\n"
+"POT-Creation-Date: 2025-01-28 08:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
