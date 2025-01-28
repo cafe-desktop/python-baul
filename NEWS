@@ -1,3 +1,12 @@
+### python-baul 2.0.0
+
+  * ci: some improvements
+  * baul-python:
+    - avoid deprecated 'PySys_SetArgv'
+    - Fix memory leak
+  * add G_GNUC_UNUSED in unused parameters
+  * baul-python-object: Fix [-Wcast-function-type] warnings
+
 ### python-baul 1.25.0
 
   * initial commit: python-caja 1.24.0 fork
