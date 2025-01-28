@@ -1,0 +1,1239 @@
+Checking src/baul-python-object.c ...
+1/2 files checked 67% done
+Checking src/baul-python.c ...
+src/baul-python.c:200:4: error: There is an unknown macro here somewhere. Configuration is required. If PY_LIB_LOC is a macro then please configure it. [unknownMacro]
+   debug("g_module_open " PY_LIB_LOC "/libpython" PYTHON_VERSION PYTHON_ABIFLAGS "." G_MODULE_SUFFIX ".1.0");
+   ^
+Checking src/baul-python.c: HAVE_CONFIG_H...
+Checking src/baul-python.c: NO_IMPORT...
+2/2 files checked 100% done
+nofile:0:0: information: Unmatched suppression: missingInclude [unmatchedSuppression]
+
+nofile:0:0: information: Active checkers: There was critical errors (use --checkers-report=<filename> to see details) [checkersReport]
+
+/usr/bin/cafe-autogen
+checking for autoreconf >= 2.53...
+(B  testing autoreconf... found 2.72
+checking for pkg-config >= 0.14.0...
+(B  testing pkg-config... found 1.8.1
+checking for gtk-doc >= 1.0...
+(B  testing gtkdocize... found 1.34.0
+checking for cafe-common >= 0.0.1...
+(B  testing cafe-doc-common... found 1.25.0
+Checking for required M4 macros...
+(BChecking for forbidden M4 macros...
+(BProcessing ./configure.ac
+(BRunning gtkdocize...
+(BRunning cafe-doc-common...
+(BRunning autoreconf...
+(Bautoreconf: export WARNINGS=no-portability
+autoreconf: Entering directory '.'
+autoreconf: running: autopoint --force
+Copying file ABOUT-NLS
+Copying file config.rpath
+Copying file m4/codeset.m4
+Copying file m4/extern-inline.m4
+Copying file m4/fcntl-o.m4
+Copying file m4/gettext.m4
+Copying file m4/glibc2.m4
+Copying file m4/glibc21.m4
+Copying file m4/iconv.m4
+Copying file m4/intdiv0.m4
+Copying file m4/intl.m4
+Copying file m4/intldir.m4
+Copying file m4/intlmacosx.m4
+Copying file m4/intmax.m4
+Copying file m4/inttypes-pri.m4
+Copying file m4/inttypes_h.m4
+Copying file m4/lcmessage.m4
+Copying file m4/lib-ld.m4
+Copying file m4/lib-link.m4
+Copying file m4/lib-prefix.m4
+Copying file m4/lock.m4
+Copying file m4/longlong.m4
+Copying file m4/nls.m4
+Copying file m4/po.m4
+Copying file m4/printf-posix.m4
+Copying file m4/progtest.m4
+Copying file m4/size_max.m4
+Copying file m4/stdint_h.m4
+Copying file m4/threadlib.m4
+Copying file m4/uintmax_t.m4
+Copying file m4/visibility.m4
+Copying file m4/wchar_t.m4
+Copying file m4/wint_t.m4
+Copying file m4/xsize.m4
+Copying file po/Makefile.in.in
+Copying file po/Makevars.template
+Copying file po/Rules-quot
+Copying file po/boldquot.sed
+Copying file po/en@boldquot.header
+Copying file po/en@quot.header
+Copying file po/insert-header.sin
+Copying file po/quot.sed
+Copying file po/remove-potcdate.sin
+autoreconf: running: aclocal --force -I m4 -I . ${ACLOCAL_FLAGS}
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: running: gtkdocize --copy
+autoreconf: running: aclocal --force -I m4 -I . ${ACLOCAL_FLAGS}
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:15: installing './compile'
+configure.ac:17: installing './config.guess'
+configure.ac:17: installing './config.sub'
+configure.ac:8: installing './install-sh'
+configure.ac:8: installing './missing'
+Makefile.am: installing './INSTALL'
+src/Makefile.am: installing './depcomp'
+autoreconf: Leaving directory '.'
+Skipping configure process.
+scan-build: Using '/usr/lib/llvm-19/bin/clang' for static analysis
+configure: WARNING: unrecognized options: --enable-compile-warnings
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for gcc... /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer accepts -g... yes
+checking for /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer option to enable C11 features... none needed
+checking whether /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer understands -c and -o together... rm: cannot remove 'conftest.plist': Is a directory
+yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer... gcc3
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... rm: cannot remove 'conftest.plist': Is a directory
+BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 3145728
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... rm: cannot remove 'conftest.plist': Is a directory
+@
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer object... rm: cannot remove 'conftest.plist': Is a directory
+ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer supports -fno-rtti -fno-exceptions... no
+checking for /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer option to produce PIC... -fPIC -DPIC
+checking if /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer PIC flag -fPIC -DPIC works... yes
+checking if /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer static flag -static works... yes
+checking if /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer supports -c -o file.o... yes
+checking if /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer supports -c -o file.o... (cached) yes
+checking whether the /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking how to run the C preprocessor... /usr/share/clang/scan-build-19/bin/../libexec/ccc-analyzer -E
+checking for egrep -e... (cached) /usr/bin/grep -E
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for gtk-doc... yes
+checking for gtkdoc-check... gtkdoc-check.test
+checking for gtkdoc-check... /usr/bin/gtkdoc-check
+checking for gtkdoc-rebase... /usr/bin/gtkdoc-rebase
+checking for gtkdoc-mkpdf... /usr/bin/gtkdoc-mkpdf
+checking whether to build gtk-doc documentation... no
+checking for glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0... yes
+checking for a Python interpreter with version >= 3.6... python3
+checking for python3... /usr/bin/python3
+checking for python3 version... 3.12
+checking for python3 platform... linux
+checking for GNU default python3 prefix... ${prefix}
+checking for GNU default python3 exec_prefix... ${exec_prefix}
+checking for python3 script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.12/site-packages
+checking for python3 extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.12/site-packages
+checking for python-3.12-embed... yes
+checking for pygobject-3.0 >= 3.0.0
+                                gmodule-no-export-2.0
+                                libbaul-extension >= 1.17.1... yes
+configure: installing baul plugin in /usr/lib/x86_64-linux-gnu/baul/extensions-2.0
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libbaul-python.baul-extension.desktop.in
+config.status: creating examples/Makefile
+config.status: creating src/Makefile
+config.status: creating baul-python.pc
+config.status: creating docs/Makefile
+config.status: creating docs/reference/entities.docbook
+config.status: creating po/Makefile.in
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+configure: WARNING: unrecognized options: --enable-compile-warnings
+
+ baul-python 1.25.0
+
+      Baul Prefix:             /usr
+      Python version:          3.12
+      Python library location: /usr/lib/x86_64-linux-gnu
+      Documentation:           no
+
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2024-12-26-122034-44084-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-19/bin/clang' for static analysis
+make  all-recursive
+make[1]: Entering directory '/rootdir'
+Making all in po
+make[2]: Entering directory '/rootdir/po'
+make python-baul.pot-update
+make[3]: Entering directory '/rootdir/po'
+sed -e '/^#/d' remove-potcdate.sin > t-remove-potcdate.sed
+mv t-remove-potcdate.sed remove-potcdate.sed
+package_gnu=""; \
+test -n "$package_gnu" || { \
+  if { if (LC_ALL=C find --version) 2>/dev/null | grep GNU >/dev/null; then \
+	 LC_ALL=C find -L .. -maxdepth 1 -type f \
+		       -size -10000000c -exec grep 'GNU python-baul' \
+		       /dev/null '{}' ';' 2>/dev/null; \
+       else \
+	 LC_ALL=C grep 'GNU python-baul' ../* 2>/dev/null; \
+       fi; \
+     } | grep -v 'libtool:' >/dev/null; then \
+     package_gnu=yes; \
+   else \
+     package_gnu=no; \
+   fi; \
+}; \
+if test "$package_gnu" = "yes"; then \
+  package_prefix='GNU '; \
+else \
+  package_prefix=''; \
+fi; \
+if test -n '' || test 'https://github.com/cafe-desktop/python-baul/issues' = '@'PACKAGE_BUGREPORT'@'; then \
+  msgid_bugs_address=''; \
+else \
+  msgid_bugs_address='https://github.com/cafe-desktop/python-baul/issues'; \
+fi; \
+case `/usr/bin/xgettext --version | sed 1q | sed -e 's,^[^0-9]*,,'` in \
+  '' | 0.[0-9] | 0.[0-9].* | 0.1[0-5] | 0.1[0-5].* | 0.16 | 0.16.[0-1]*) \
+    /usr/bin/xgettext --default-domain=python-baul --directory=.. \
+      --add-comments=TRANSLATORS: --from-code=UTF-8 --keyword=_ --keyword=N_ --keyword=C_:1c,2 --keyword=NC_:1c,2 --keyword=g_dngettext:2,3 --keyword=Description --add-comments=Translators:  \
+      --files-from=./POTFILES.in \
+      --copyright-holder='CAFE Desktop Environment team' \
+      --msgid-bugs-address="$msgid_bugs_address" \
+    ;; \
+  *) \
+    /usr/bin/xgettext --default-domain=python-baul --directory=.. \
+      --add-comments=TRANSLATORS: --from-code=UTF-8 --keyword=_ --keyword=N_ --keyword=C_:1c,2 --keyword=NC_:1c,2 --keyword=g_dngettext:2,3 --keyword=Description --add-comments=Translators:  \
+      --files-from=./POTFILES.in \
+      --copyright-holder='CAFE Desktop Environment team' \
+      --package-name="${package_prefix}python-baul" \
+      --package-version='1.25.0' \
+      --msgid-bugs-address="$msgid_bugs_address" \
+    ;; \
+esac
+test ! -f python-baul.po || { \
+  if test -f ./python-baul.pot-header; then \
+    sed -e '1,/^#$/d' < python-baul.po > python-baul.1po && \
+    cat ./python-baul.pot-header python-baul.1po > python-baul.po; \
+    rm -f python-baul.1po; \
+  fi; \
+  if test -f ./python-baul.pot; then \
+    sed -f remove-potcdate.sed < ./python-baul.pot > python-baul.1po && \
+    sed -f remove-potcdate.sed < python-baul.po > python-baul.2po && \
+    if cmp python-baul.1po python-baul.2po >/dev/null 2>&1; then \
+      rm -f python-baul.1po python-baul.2po python-baul.po; \
+    else \
+      rm -f python-baul.1po python-baul.2po ./python-baul.pot && \
+      mv python-baul.po ./python-baul.pot; \
+    fi; \
+  else \
+    mv python-baul.po ./python-baul.pot; \
+  fi; \
+}
+make[3]: Leaving directory '/rootdir/po'
+test ! -f ./python-baul.pot || \
+  test -z "am.gmo ar.gmo ast.gmo be.gmo bg.gmo br.gmo bs.gmo ca.gmo ca@valencia.gmo cs.gmo cy.gmo da.gmo de.gmo el.gmo en_AU.gmo en_GB.gmo eo.gmo es.gmo es_AR.gmo es_CL.gmo es_CO.gmo es_ES.gmo et.gmo eu.gmo fa.gmo fi.gmo fr.gmo fr_CA.gmo frp.gmo fy.gmo gl.gmo gu.gmo he.gmo hi.gmo hr.gmo hu.gmo hy.gmo id.gmo ie.gmo is.gmo it.gmo ja.gmo jv.gmo kk.gmo ko.gmo ku_IQ.gmo la.gmo lt.gmo ms.gmo nb.gmo nds.gmo ne.gmo nl.gmo oc.gmo pl.gmo pms.gmo pt.gmo pt_BR.gmo ro.gmo ru.gmo sk.gmo sl.gmo sq.gmo sr.gmo sv.gmo th.gmo tr.gmo uk.gmo uz.gmo vi.gmo zh_CN.gmo zh_HK.gmo zh_TW.gmo" || make am.gmo ar.gmo ast.gmo be.gmo bg.gmo br.gmo bs.gmo ca.gmo ca@valencia.gmo cs.gmo cy.gmo da.gmo de.gmo el.gmo en_AU.gmo en_GB.gmo eo.gmo es.gmo es_AR.gmo es_CL.gmo es_CO.gmo es_ES.gmo et.gmo eu.gmo fa.gmo fi.gmo fr.gmo fr_CA.gmo frp.gmo fy.gmo gl.gmo gu.gmo he.gmo hi.gmo hr.gmo hu.gmo hy.gmo id.gmo ie.gmo is.gmo it.gmo ja.gmo jv.gmo kk.gmo ko.gmo ku_IQ.gmo la.gmo lt.gmo ms.gmo nb.gmo nds.gmo ne.gmo nl.gmo oc.gmo pl.gmo pms.gmo pt.gmo pt_BR.gmo ro.gmo ru.gmo sk.gmo sl.gmo sq.gmo sr.gmo sv.gmo th.gmo tr.gmo uk.gmo uz.gmo vi.gmo zh_CN.gmo zh_HK.gmo zh_TW.gmo
+make[3]: Entering directory '/rootdir/po'
+/usr/bin/msgmerge --update --quiet --lang=am am.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ar ar.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ast ast.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=be be.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=bg bg.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=br br.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ca ca.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ca@valencia ca@valencia.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=bs bs.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=cs cs.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=cy cy.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=da da.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=de de.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=el el.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=en_AU en_AU.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=en_GB en_GB.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=es_AR es_AR.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=eo eo.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=es es.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=es_CL es_CL.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=es_CO es_CO.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=es_ES es_ES.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=et et.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=eu eu.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=fa fa.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=fi fi.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=fr fr.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=fr_CA fr_CA.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=frp frp.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=fy fy.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=gu gu.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=he he.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=gl gl.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=hi hi.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=hr hr.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=hu hu.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=hy hy.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=id id.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ie ie.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=is is.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=it it.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ja ja.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=jv jv.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=kk kk.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ku_IQ ku_IQ.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ko ko.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=la la.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=lt lt.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ms ms.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=nb nb.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=nds nds.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ne ne.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=nl nl.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=pl pl.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=oc oc.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=pms pms.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=pt pt.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=pt_BR pt_BR.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ro ro.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=ru ru.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=sl sl.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=sk sk.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=sq sq.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=sr sr.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=sv sv.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=tr tr.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=th th.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=uk uk.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=uz uz.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=vi vi.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=zh_CN zh_CN.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=zh_TW zh_TW.po python-baul.pot
+/usr/bin/msgmerge --update --quiet --lang=zh_HK zh_HK.po python-baul.pot
+rm -f am.gmo && /usr/bin/msgfmt -c --statistics --verbose -o am.gmo am.po
+rm -f ar.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ar.gmo ar.po
+rm -f ast.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ast.gmo ast.po
+rm -f be.gmo && /usr/bin/msgfmt -c --statistics --verbose -o be.gmo be.po
+am.po: 2 translated messages.
+ar.po: ast.po: 2 translated messages.
+2 translated messages.
+be.po: 2 translated messages.
+rm -f bg.gmo && /usr/bin/msgfmt -c --statistics --verbose -o bg.gmo bg.po
+rm -f br.gmo && /usr/bin/msgfmt -c --statistics --verbose -o br.gmo br.po
+rm -f bs.gmo && /usr/bin/msgfmt -c --statistics --verbose -o bs.gmo bs.po
+br.po: 2 translated messages.
+bg.po: 2 translated messages.
+rm -f ca.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ca.gmo ca.po
+bs.po: 2 translated messages.
+rm -f ca@valencia.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ca@valencia.gmo ca@valencia.po
+rm -f cs.gmo && /usr/bin/msgfmt -c --statistics --verbose -o cs.gmo cs.po
+ca.po: 2 translated messages.
+rm -f cy.gmo && /usr/bin/msgfmt -c --statistics --verbose -o cy.gmo cy.po
+rm -f da.gmo && /usr/bin/msgfmt -c --statistics --verbose -o da.gmo da.po
+cs.po: 2 translated messages.
+ca@valencia.po: 2 translated messages.
+da.po: 2 translated messages.
+rm -f de.gmo && /usr/bin/msgfmt -c --statistics --verbose -o de.gmo de.po
+cy.po: 2 translated messages.
+de.po: 2 translated messages.
+rm -f el.gmo && /usr/bin/msgfmt -c --statistics --verbose -o el.gmo el.po
+rm -f en_AU.gmo && /usr/bin/msgfmt -c --statistics --verbose -o en_AU.gmo en_AU.po
+rm -f en_GB.gmo && /usr/bin/msgfmt -c --statistics --verbose -o en_GB.gmo en_GB.po
+rm -f eo.gmo && /usr/bin/msgfmt -c --statistics --verbose -o eo.gmo eo.po
+en_GB.po: 2 translated messages.
+el.po: 2 translated messages.
+en_AU.po: 2 translated messages.
+eo.po: 2 translated messages.
+rm -f es.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es.gmo es.po
+rm -f es_CL.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_CL.gmo es_CL.po
+rm -f es_AR.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_AR.gmo es_AR.po
+rm -f es_ES.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_ES.gmo es_ES.po
+rm -f es_CO.gmo && /usr/bin/msgfmt -c --statistics --verbose -o es_CO.gmo es_CO.po
+es.po: 2 translated messages.
+es_CL.po: 2 translated messages.
+es_ES.po: 2 translated messages.
+es_CO.po: 2 translated messages.
+es_AR.po: 2 translated messages.
+rm -f fa.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fa.gmo fa.po
+rm -f et.gmo && /usr/bin/msgfmt -c --statistics --verbose -o et.gmo et.po
+rm -f eu.gmo && /usr/bin/msgfmt -c --statistics --verbose -o eu.gmo eu.po
+rm -f fi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fi.gmo fi.po
+fa.po: 2 translated messages.
+rm -f fr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fr.gmo fr.po
+fi.po: 2 translated messages.
+eu.po: 2 translated messages.
+et.po: 2 translated messages.
+fr.po: 2 translated messages.
+rm -f frp.gmo && /usr/bin/msgfmt -c --statistics --verbose -o frp.gmo frp.po
+rm -f fr_CA.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fr_CA.gmo fr_CA.po
+rm -f fy.gmo && /usr/bin/msgfmt -c --statistics --verbose -o fy.gmo fy.po
+rm -f gl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o gl.gmo gl.po
+frp.po: 1 translated message, 1 untranslated message.
+fr_CA.po: 1 translated message, 1 untranslated message.
+gl.po: 2 translated messages.
+fy.po: 2 translated messages.
+rm -f gu.gmo && /usr/bin/msgfmt -c --statistics --verbose -o gu.gmo gu.po
+rm -f he.gmo && /usr/bin/msgfmt -c --statistics --verbose -o he.gmo he.po
+rm -f hr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hr.gmo hr.po
+rm -f hu.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hu.gmo hu.po
+gu.po: 2 translated messages.
+he.po: 2 translated messages.
+rm -f hi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hi.gmo hi.po
+hr.po: 2 translated messages.
+hu.po: 2 translated messages.
+hi.po: rm -f hy.gmo && /usr/bin/msgfmt -c --statistics --verbose -o hy.gmo hy.po
+2 translated messages.
+rm -f id.gmo && /usr/bin/msgfmt -c --statistics --verbose -o id.gmo id.po
+rm -f ie.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ie.gmo ie.po
+rm -f is.gmo && /usr/bin/msgfmt -c --statistics --verbose -o is.gmo is.po
+hy.po: 2 translated messages.
+id.po: 2 translated messagesrm -f it.gmo && /usr/bin/msgfmt -c --statistics --verbose -o it.gmo it.po
+.
+ie.po: 2 translated messages.
+it.po: 2 translated messages.
+rm -f ja.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ja.gmo ja.po
+rm -f jv.gmo && /usr/bin/msgfmt -c --statistics --verbose -o jv.gmo jv.po
+is.po: 2 translated messages.
+rm -f kk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o kk.gmo kk.po
+ja.po: 2 translated messages.
+rm -f ko.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ko.gmo ko.po
+kk.po: 2 translated messages.
+jv.po: 2 translated messages.
+rm -f ku_IQ.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ku_IQ.gmo ku_IQ.po
+rm -f la.gmo && /usr/bin/msgfmt -c --statistics --verbose -o la.gmo la.po
+ko.po: 2 translated messages.
+ku_IQ.po: 1 translated message, 1 untranslated message.
+la.po: 1 translated message, 1 untranslated message.
+rm -f lt.gmo && /usr/bin/msgfmt -c --statistics --verbose -o lt.gmo lt.po
+rm -f ms.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ms.gmo ms.po
+rm -f nb.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nb.gmo nb.po
+rm -f nds.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nds.gmo nds.po
+rm -f ne.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ne.gmo ne.po
+ms.po: 2 translated messages.
+nb.po: 2 translated messages.
+nds.po: 2 translated messages.
+lt.po: 2 translated messages.
+ne.po: 1 translated message, 1 untranslated message.
+rm -f nl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o nl.gmo nl.po
+rm -f oc.gmo && /usr/bin/msgfmt -c --statistics --verbose -o oc.gmo oc.po
+nl.po: rm -f pt.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pt.gmo pt.po
+2 translated messages.
+rm -f pms.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pms.gmo pms.po
+oc.po: 1 translated message, 1 untranslated message.
+rm -f pl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pl.gmo pl.po
+pms.po: 2 translated messages.
+pt.po: 2 translated messages.
+rm -f pt_BR.gmo && /usr/bin/msgfmt -c --statistics --verbose -o pt_BR.gmo pt_BR.po
+pl.po: 2 translated messages.
+rm -f ro.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ro.gmo ro.po
+pt_BR.po: 2 translated messages.
+rm -f ru.gmo && /usr/bin/msgfmt -c --statistics --verbose -o ru.gmo ru.po
+ro.po: 2 translated messages.
+rm -f sl.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sl.gmo sl.po
+rm -f sk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sk.gmo sk.po
+ru.po: 2 translated messages.
+sl.po: 2 translated messages.
+sk.po: 2 translated messages.
+rm -f sq.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sq.gmo sq.po
+rm -f sr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sr.gmo sr.po
+rm -f sv.gmo && /usr/bin/msgfmt -c --statistics --verbose -o sv.gmo sv.po
+sq.po: 2 translated messages.
+rm -f th.gmo && /usr/bin/msgfmt -c --statistics --verbose -o th.gmo th.po
+rm -f tr.gmo && /usr/bin/msgfmt -c --statistics --verbose -o tr.gmo tr.po
+sr.po: 2 translated messages.
+sv.po: 2 translated messages.
+rm -f uk.gmo && /usr/bin/msgfmt -c --statistics --verbose -o uk.gmo uk.po
+th.po: 2 translated messages.
+tr.po: 2 translated messages.
+rm -f uz.gmo && /usr/bin/msgfmt -c --statistics --verbose -o uz.gmo uz.po
+uk.po: rm -f vi.gmo && /usr/bin/msgfmt -c --statistics --verbose -o vi.gmo vi.po
+2 translated messages.
+rm -f zh_CN.gmo && /usr/bin/msgfmt -c --statistics --verbose -o zh_CN.gmo zh_CN.po
+rm -f zh_HK.gmo && /usr/bin/msgfmt -c --statistics --verbose -o zh_HK.gmo zh_HK.po
+uz.po: 2 translated messages.
+vi.po: 2 translated messages.
+zh_CN.po: 2 translated messages.
+rm -f zh_TW.gmo && /usr/bin/msgfmt -c --statistics --verbose -o zh_TW.gmo zh_TW.po
+zh_HK.po: 2 translated messages.
+zh_TW.po: 2 translated messages.
+make[3]: Leaving directory '/rootdir/po'
+touch stamp-po
+make[2]: Leaving directory '/rootdir/po'
+Making all in src
+make[2]: Entering directory '/rootdir/src'
+  CC       libbaul_python_la-baul-python.lo
+  CC       libbaul_python_la-baul-python-object.lo
+  CCLD     libbaul-python.la
+make[2]: Leaving directory '/rootdir/src'
+Making all in examples
+make[2]: Entering directory '/rootdir/examples'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/rootdir/examples'
+make[2]: Entering directory '/rootdir'
+  GEN      libbaul-python.baul-extension
+make[2]: Leaving directory '/rootdir'
+make[1]: Leaving directory '/rootdir'
+scan-build: Analysis run complete.
+scan-build: Removing directory '/rootdir/html-report/2024-12-26-122041-46170-1' because it contains no reports.
+scan-build: No bugs found.
+Making check in po
+make[1]: Entering directory '/rootdir/po'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/po'
+Making check in src
+make[1]: Entering directory '/rootdir/src'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/src'
+Making check in examples
+make[1]: Entering directory '/rootdir/examples'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/rootdir/examples'
+make[1]: Entering directory '/rootdir'
+make[1]: Leaving directory '/rootdir'
+Listing... 0%Listing... 0%Listing... 0%              adduser/testing,now 3.137 all [installed,automatic]
+advaita-icon-theme/unknown,now 3.25.0-1 all [installed,automatic]
+apt/testing,now 2.9.17 amd64 [installed,automatic]
+aptitude-common/testing,now 0.8.13-6.1 all [installed,automatic]
+aptitude/testing,now 0.8.13-6.1 amd64 [installed]
+at-spi2-common/testing,now 2.54.0-1 all [installed,automatic]
+at-spi2-core/testing,now 2.54.0-1 amd64 [installed,automatic]
+autoconf-archive/testing,now 20220903-3 all [installed]
+autoconf/testing,now 2.72-3 all [installed]
+automake/testing,now 1:1.16.5-1.3 all [installed,automatic]
+autopoint/testing,now 0.22.5-3 all [installed]
+autotools-dev/testing,now 20220109.1 all [installed,automatic]
+base-files/testing,now 13.6 amd64 [installed,automatic]
+base-passwd/testing,now 3.6.5 amd64 [installed,automatic]
+bash/testing,now 5.2.37-1 amd64 [installed,automatic]
+binfmt-support/testing,now 2.2.2-7 amd64 [installed,automatic]
+binutils-common/testing,now 2.43.50.20241215-1 amd64 [installed,automatic]
+binutils-x86-64-linux-gnu/testing,now 2.43.50.20241215-1 amd64 [installed,automatic]
+binutils/testing,now 2.43.50.20241215-1 amd64 [installed,automatic]
+bsdextrautils/testing,now 2.40.2-12 amd64 [installed,automatic]
+bsdutils/testing,now 1:2.40.2-12 amd64 [installed,automatic]
+build-essential/testing,now 12.12 amd64 [installed,automatic]
+bzip2-doc/testing,now 1.0.8-6 all [installed,automatic]
+bzip2/testing,now 1.0.8-6 amd64 [installed,automatic]
+ca-certificates/testing,now 20240203 all [installed,automatic]
+clang-19/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+clang-tools-19/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+clang-tools/testing,now 1:19.0-63 amd64 [installed]
+clang/testing,now 1:19.0-63 amd64 [installed]
+coreutils/testing,now 9.5-1+b1 amd64 [installed,automatic]
+cpp-14-x86-64-linux-gnu/testing,now 14.2.0-8 amd64 [installed,automatic]
+cpp-14/testing,now 14.2.0-8 amd64 [installed,automatic]
+cpp-x86-64-linux-gnu/testing,now 4:14.2.0-1 amd64 [installed,automatic]
+cpp/testing,now 4:14.2.0-1 amd64 [installed,automatic]
+cppcheck/testing,now 2.16.0-1 amd64 [installed]
+ctk-update-icon-cache/unknown,now 3.25.6-1 amd64 [installed]
+curl/testing,now 8.11.1-1 amd64 [installed,automatic]
+dash/testing,now 0.5.12-9 amd64 [installed,automatic]
+dbus-bin/testing,now 1.16.0-1 amd64 [installed,automatic]
+dbus-daemon/testing,now 1.16.0-1 amd64 [installed,automatic]
+dbus-session-bus-common/testing,now 1.16.0-1 all [installed,automatic]
+dbus-system-bus-common/testing,now 1.16.0-1 all [installed,automatic]
+dbus-user-session/testing,now 1.16.0-1 amd64 [installed,automatic]
+dbus/testing,now 1.16.0-1 amd64 [installed,automatic]
+dconf-gsettings-backend/testing,now 0.40.0-4+b3 amd64 [installed,automatic]
+dconf-service/testing,now 0.40.0-4+b3 amd64 [installed,automatic]
+debconf/testing,now 1.5.87 all [installed,automatic]
+debian-archive-keyring/testing,now 2023.4 all [installed,automatic]
+debianutils/testing,now 5.21 amd64 [installed,automatic]
+diffstat/testing,now 1.67-1 amd64 [installed,automatic]
+diffutils/testing,now 1:3.10-1 amd64 [installed,automatic]
+dirmngr/testing,now 2.2.45-2 amd64 [installed,automatic]
+dmsetup/testing,now 2:1.02.201-1 amd64 [installed,automatic]
+docbook-to-man/testing,now 1:2.0.0-47 amd64 [installed,automatic]
+docbook-xml/testing,now 4.5-13 all [installed,automatic]
+docbook-xsl/testing,now 1.79.2+dfsg-7 all [installed,automatic]
+docbook/testing,now 4.5-11 all [installed,automatic]
+dpkg-dev/testing,now 1.22.11 all [installed,automatic]
+dpkg/testing,now 1.22.11 amd64 [installed,automatic]
+e2fsprogs/testing,now 1.47.2~rc1-2 amd64 [installed,automatic]
+ed/testing,now 1.20.2-2 amd64 [installed,automatic]
+expect/testing,now 5.45.4-3+b1 amd64 [installed]
+fakeroot/testing,now 1.36.2-1 amd64 [installed,automatic]
+file/testing,now 1:5.45-3+b1 amd64 [installed,automatic]
+findutils/testing,now 4.10.0-3 amd64 [installed,automatic]
+fontconfig-config/testing,now 2.15.0-1.1+b1 amd64 [installed,automatic]
+fontconfig/testing,now 2.15.0-1.1+b1 amd64 [installed,automatic]
+fonts-dejavu-core/testing,now 2.37-8 all [installed,automatic]
+fonts-dejavu-mono/testing,now 2.37-8 all [installed,automatic]
+g++-14-x86-64-linux-gnu/testing,now 14.2.0-8 amd64 [installed,automatic]
+g++-14/testing,now 14.2.0-8 amd64 [installed,automatic]
+g++-x86-64-linux-gnu/testing,now 4:14.2.0-1 amd64 [installed,automatic]
+g++/testing,now 4:14.2.0-1 amd64 [installed,automatic]
+gcc-14-base/testing,now 14.2.0-8 amd64 [installed,automatic]
+gcc-14-x86-64-linux-gnu/testing,now 14.2.0-8 amd64 [installed,automatic]
+gcc-14/testing,now 14.2.0-8 amd64 [installed,automatic]
+gcc-x86-64-linux-gnu/testing,now 4:14.2.0-1 amd64 [installed,automatic]
+gcc/testing,now 4:14.2.0-1 amd64 [installed]
+gettext-base/testing,now 0.22.5-3 amd64 [installed,automatic]
+gettext/testing,now 0.22.5-3 amd64 [installed,automatic]
+gir1.2-atk-1.0/testing,now 2.54.0-1 amd64 [installed,automatic]
+gir1.2-atspi-2.0/testing,now 2.54.0-1 amd64 [installed,automatic]
+gir1.2-ctk-3.0/unknown,now 3.25.6-1 amd64 [installed]
+gir1.2-freedesktop-dev/testing,now 1.82.0-3 amd64 [installed,automatic]
+gir1.2-freedesktop/testing,now 1.82.0-3 amd64 [installed,automatic]
+gir1.2-gdkpixbuf-2.0/testing,now 2.42.12+dfsg-1+b1 amd64 [installed,automatic]
+gir1.2-girepository-2.0-dev/testing,now 1.82.0-3 amd64 [installed,automatic]
+gir1.2-girepository-2.0/testing,now 1.82.0-3 amd64 [installed,automatic]
+gir1.2-glib-2.0-dev/testing,now 2.82.4-1 amd64 [installed,automatic]
+gir1.2-glib-2.0/testing,now 2.82.4-1 amd64 [installed,automatic]
+gir1.2-harfbuzz-0.0/testing,now 10.1.0-1 amd64 [installed,automatic]
+gir1.2-notify-0.7/testing,now 0.8.3-1+b2 amd64 [installed,automatic]
+gir1.2-pango-1.0/testing,now 1.55.0+ds-3 amd64 [installed,automatic]
+girepository-tools/testing,now 2.82.4-1 amd64 [installed,automatic]
+git-man/testing,now 1:2.45.2-1 all [installed,automatic]
+git/testing,now 1:2.45.2-1 amd64 [installed]
+gla11y/testing,now 0.4-3 all [installed]
+gnupg-l10n/testing,now 2.2.45-2 all [installed,automatic]
+gnupg-utils/testing,now 2.2.45-2 amd64 [installed,automatic]
+gnupg/testing,now 2.2.45-2 all [installed,automatic]
+gobject-introspection-bin/testing,now 1.82.0-3 amd64 [installed,automatic]
+gobject-introspection/testing,now 1.82.0-3 amd64 [installed]
+gpg-agent/testing,now 2.2.45-2 amd64 [installed,automatic]
+gpg-wks-client/testing,now 2.2.45-2 amd64 [installed,automatic]
+gpg/testing,now 2.2.45-2 amd64 [installed,automatic]
+gpgconf/testing,now 2.2.45-2 amd64 [installed,automatic]
+gpgsm/testing,now 2.2.45-2 amd64 [installed,automatic]
+gpgv/testing,now 2.2.45-2 amd64 [installed,automatic]
+grep/testing,now 3.11-4 amd64 [installed,automatic]
+gsettings-desktop-schemas/testing,now 47.1-1 all [installed,automatic]
+gtk-doc-tools/testing,now 1.34.0-1 all [installed]
+gzip/testing,now 1.12-1.2 amd64 [installed,automatic]
+hicolor-icon-theme/testing,now 0.18-1 all [installed,automatic]
+hostname/testing,now 3.25 amd64 [installed,automatic]
+icu-devtools/testing,now 72.1-5+b1 amd64 [installed,automatic]
+init-system-helpers/testing,now 1.67 all [installed,automatic]
+intltool/testing,now 0.51.0-6 all [installed]
+iso-codes/testing,now 4.17.0-1 all [installed]
+javascript-common/testing,now 11+nmu1 all [installed,automatic]
+krb5-locales/testing,now 1.21.3-3 all [installed,automatic]
+less/testing,now 643-1 amd64 [installed,automatic]
+lib32gcc-s1/testing,now 14.2.0-8 amd64 [installed,automatic]
+lib32stdc++6/testing,now 14.2.0-8 amd64 [installed,automatic]
+libacl1/testing,now 2.3.2-2+b1 amd64 [installed,automatic]
+libalgorithm-diff-perl/testing,now 1.201-1 all [installed,automatic]
+libalgorithm-diff-xs-perl/testing,now 0.04-8+b4 amd64 [installed,automatic]
+libalgorithm-merge-perl/testing,now 0.08-5 all [installed,automatic]
+libapparmor1/testing,now 3.1.7-1+b3 amd64 [installed,automatic]
+libapt-pkg6.0t64/testing,now 2.9.17 amd64 [installed,automatic]
+libasan8/testing,now 14.2.0-8 amd64 [installed,automatic]
+libassuan9/testing,now 3.0.1-2 amd64 [installed,automatic]
+libatk-bridge2.0-0t64/testing,now 2.54.0-1 amd64 [installed,automatic]
+libatk-bridge2.0-dev/testing,now 2.54.0-1 amd64 [installed,automatic]
+libatk1.0-0t64/testing,now 2.54.0-1 amd64 [installed,automatic]
+libatk1.0-dev/testing,now 2.54.0-1 amd64 [installed,automatic]
+libatomic1/testing,now 14.2.0-8 amd64 [installed,automatic]
+libatspi2.0-0t64/testing,now 2.54.0-1 amd64 [installed,automatic]
+libatspi2.0-dev/testing,now 2.54.0-1 amd64 [installed,automatic]
+libattr1/testing,now 1:2.5.2-2 amd64 [installed,automatic]
+libaudit-common/testing,now 1:4.0.2-2 all [installed,automatic]
+libaudit1/testing,now 1:4.0.2-2 amd64 [installed,automatic]
+libauthen-sasl-perl/testing,now 2.1700-1 all [installed,automatic]
+libavahi-client3/testing,now 0.8-15 amd64 [installed,automatic]
+libavahi-common-data/testing,now 0.8-15 amd64 [installed,automatic]
+libavahi-common3/testing,now 0.8-15 amd64 [installed,automatic]
+libbinutils/testing,now 2.43.50.20241215-1 amd64 [installed,automatic]
+libblkid-dev/testing,now 2.40.2-12 amd64 [installed,automatic]
+libblkid1/testing,now 2.40.2-12 amd64 [installed,automatic]
+libboost-iostreams1.83.0/testing,now 1.83.0-3.2+b2 amd64 [installed,automatic]
+libbrotli-dev/testing,now 1.1.0-2+b6 amd64 [installed,automatic]
+libbrotli1/testing,now 1.1.0-2+b6 amd64 [installed,automatic]
+libbsd0/testing,now 0.12.2-2 amd64 [installed,automatic]
+libbz2-1.0/testing,now 1.0.8-6 amd64 [installed,automatic]
+libbz2-dev/testing,now 1.0.8-6 amd64 [installed,automatic]
+libc-bin/testing,now 2.40-4 amd64 [installed,automatic]
+libc-dev-bin/testing,now 2.40-4 amd64 [installed,automatic]
+libc6-dev/testing,now 2.40-4 amd64 [installed,automatic]
+libc6-i386/testing,now 2.40-4 amd64 [installed,automatic]
+libc6/testing,now 2.40-4 amd64 [installed,automatic]
+libcail-3-0/unknown,now 3.25.6-1 amd64 [installed]
+libcail-3-dev/unknown,now 3.25.6-1 amd64 [installed]
+libcairo-gobject2/testing,now 1.18.2-2 amd64 [installed,automatic]
+libcairo-script-interpreter2/testing,now 1.18.2-2 amd64 [installed,automatic]
+libcairo2-dev/testing,now 1.18.2-2 amd64 [installed,automatic]
+libcairo2/testing,now 1.18.2-2 amd64 [installed,automatic]
+libcap-ng0/testing,now 0.8.5-4 amd64 [installed,automatic]
+libcap2/testing,now 1:2.66-5+b1 amd64 [installed,automatic]
+libcbor0.10/testing,now 0.10.2-2 amd64 [installed,automatic]
+libcc1-0/testing,now 14.2.0-8 amd64 [installed,automatic]
+libclang-common-19-dev/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+libclang-cpp19/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+libclang-rt-19-dev/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+libclang1-19/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+libclone-perl/testing,now 0.47-1+b1 amd64 [installed,automatic]
+libcolord2/testing,now 1.4.7-1+b2 amd64 [installed,automatic]
+libcom-err2/testing,now 1.47.2~rc1-2 amd64 [installed,automatic]
+libcrypt-dev/testing,now 1:4.4.36-5 amd64 [installed,automatic]
+libcrypt1/testing,now 1:4.4.36-5 amd64 [installed,automatic]
+libcryptsetup12/testing,now 2:2.7.5-1 amd64 [installed,automatic]
+libctf-nobfd0/testing,now 2.43.50.20241215-1 amd64 [installed,automatic]
+libctf0/testing,now 2.43.50.20241215-1 amd64 [installed,automatic]
+libctk-3-0/unknown,now 3.25.6-1 amd64 [installed]
+libctk-3-bin/unknown,now 3.25.6-1 amd64 [installed,automatic]
+libctk-3-common/unknown,now 3.25.6-1 all [installed]
+libctk-3-dev/unknown,now 3.25.6-1 amd64 [installed]
+libcups2t64/testing,now 2.4.10-2+b1 amd64 [installed,automatic]
+libcurl3t64-gnutls/testing,now 8.11.1-1 amd64 [installed,automatic]
+libcurl4t64/testing,now 8.11.1-1 amd64 [installed,automatic]
+libcwidget4/testing,now 0.5.18-6+b2 amd64 [installed,automatic]
+libdata-dump-perl/testing,now 1.25-1 all [installed,automatic]
+libdatrie-dev/testing,now 0.2.13-3+b1 amd64 [installed,automatic]
+libdatrie1/testing,now 0.2.13-3+b1 amd64 [installed,automatic]
+libdav1d7/testing,now 1.5.0-1+b1 amd64 [installed,automatic]
+libdb5.3t64/testing,now 5.3.28+dfsg2-9 amd64 [installed,automatic]
+libdbus-1-3/testing,now 1.16.0-1 amd64 [installed,automatic]
+libdbus-1-dev/testing,now 1.16.0-1 amd64 [installed,automatic]
+libdconf-dev/testing,now 0.40.0-4+b3 amd64 [installed]
+libdconf-doc/testing,now 0.40.0-4 all [installed,automatic]
+libdconf1/testing,now 0.40.0-4+b3 amd64 [installed,automatic]
+libdebconfclient0/testing,now 0.274 amd64 [installed,automatic]
+libdeflate-dev/testing,now 1.22-1 amd64 [installed,automatic]
+libdeflate0/testing,now 1.22-1 amd64 [installed,automatic]
+libdevmapper1.02.1/testing,now 2:1.02.201-1 amd64 [installed,automatic]
+libdpkg-perl/testing,now 1.22.11 all [installed,automatic]
+libdrm-amdgpu1/testing,now 2.4.123-1 amd64 [installed,automatic]
+libdrm-common/testing,now 2.4.123-1 all [installed,automatic]
+libdrm-intel1/testing,now 2.4.123-1 amd64 [installed,automatic]
+libdrm-radeon1/testing,now 2.4.123-1 amd64 [installed,automatic]
+libdrm2/testing,now 2.4.123-1 amd64 [installed,automatic]
+libedit2/testing,now 3.1-20240808-1 amd64 [installed,automatic]
+libegl-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libegl-mesa0/testing,now 24.2.8-1 amd64 [installed,automatic]
+libegl1-mesa-dev/testing,now 24.2.8-1 amd64 [installed,automatic]
+libegl1/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libelf1t64/testing,now 0.192-4 amd64 [installed,automatic]
+libencode-locale-perl/testing,now 1.05-3 all [installed,automatic]
+libepoxy-dev/testing,now 1.5.10-2 amd64 [installed,automatic]
+libepoxy0/testing,now 1.5.10-2 amd64 [installed,automatic]
+liberror-perl/testing,now 0.17029-2 all [installed,automatic]
+libexempi-dev/testing,now 2.6.5-1+b1 amd64 [installed]
+libexempi8/testing,now 2.6.5-1+b1 amd64 [installed,automatic]
+libexif-dev/testing,now 0.6.24-1+b2 amd64 [installed]
+libexif12/testing,now 0.6.24-1+b2 amd64 [installed,automatic]
+libexpat1-dev/testing,now 2.6.4-1 amd64 [installed,automatic]
+libexpat1/testing,now 2.6.4-1 amd64 [installed,automatic]
+libext2fs2t64/testing,now 1.47.2~rc1-2 amd64 [installed,automatic]
+libfakeroot/testing,now 1.36.2-1 amd64 [installed,automatic]
+libffi-dev/testing,now 3.4.6-1 amd64 [installed,automatic]
+libffi8/testing,now 3.4.6-1 amd64 [installed,automatic]
+libfido2-1/testing,now 1.15.0-1+b1 amd64 [installed,automatic]
+libfile-fcntllock-perl/testing,now 0.22-4+b4 amd64 [installed,automatic]
+libfile-listing-perl/testing,now 6.16-1 all [installed,automatic]
+libfont-afm-perl/testing,now 1.20-4 all [installed,automatic]
+libfontconfig-dev/testing,now 2.15.0-1.1+b1 amd64 [installed,automatic]
+libfontconfig1/testing,now 2.15.0-1.1+b1 amd64 [installed,automatic]
+libfontenc1/testing,now 1:1.1.8-1+b1 amd64 [installed,automatic]
+libfreetype-dev/testing,now 2.13.3+dfsg-1 amd64 [installed,automatic]
+libfreetype6/testing,now 2.13.3+dfsg-1 amd64 [installed,automatic]
+libfribidi-dev/testing,now 1.0.16-1 amd64 [installed,automatic]
+libfribidi0/testing,now 1.0.16-1 amd64 [installed,automatic]
+libgbm1/testing,now 24.2.8-1 amd64 [installed,automatic]
+libgc1/testing,now 1:8.2.8-1 amd64 [installed,automatic]
+libgcc-14-dev/testing,now 14.2.0-8 amd64 [installed,automatic]
+libgcc-s1/testing,now 14.2.0-8 amd64 [installed,automatic]
+libgcrypt20/testing,now 1.11.0-6 amd64 [installed,automatic]
+libgdbm-compat4t64/testing,now 1.24-2 amd64 [installed,automatic]
+libgdbm6t64/testing,now 1.24-2 amd64 [installed,automatic]
+libgdk-pixbuf-2.0-0/testing,now 2.42.12+dfsg-1+b1 amd64 [installed,automatic]
+libgdk-pixbuf-2.0-dev/testing,now 2.42.12+dfsg-1+b1 amd64 [installed,automatic]
+libgdk-pixbuf2.0-bin/testing,now 2.42.12+dfsg-1+b1 amd64 [installed,automatic]
+libgdk-pixbuf2.0-common/testing,now 2.42.12+dfsg-1 all [installed,automatic]
+libgio-2.0-dev-bin/testing,now 2.82.4-1 amd64 [installed,automatic]
+libgio-2.0-dev/testing,now 2.82.4-1 amd64 [installed,automatic]
+libgirepository-1.0-1/testing,now 1.82.0-3 amd64 [installed,automatic]
+libgirepository-1.0-dev/testing,now 1.82.0-3 amd64 [installed,automatic]
+libgirepository-2.0-0/testing,now 2.82.4-1 amd64 [installed,automatic]
+libgirepository1.0-dev/testing,now 1.82.0-3 amd64 [installed]
+libgl-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libgl1-mesa-dri/testing,now 24.2.8-1 amd64 [installed,automatic]
+libgl1/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libglapi-mesa/testing,now 24.2.8-1 amd64 [installed,automatic]
+libgles-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libgles1/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libgles2/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libglib2.0-0t64/testing,now 2.82.4-1 amd64 [installed,automatic]
+libglib2.0-bin/testing,now 2.82.4-1 amd64 [installed,automatic]
+libglib2.0-data/testing,now 2.82.4-1 all [installed,automatic]
+libglib2.0-dev-bin/testing,now 2.82.4-1 amd64 [installed,automatic]
+libglib2.0-dev/testing,now 2.82.4-1 amd64 [installed,automatic]
+libglib2.0-doc/testing,now 2.82.4-1 all [installed]
+libglvnd-core-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libglvnd-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libglvnd0/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libglx-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libglx-mesa0/testing,now 24.2.8-1 amd64 [installed,automatic]
+libglx0/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libgmp10/testing,now 2:6.3.0+dfsg-3 amd64 [installed,automatic]
+libgnutls30t64/testing,now 3.8.8-2 amd64 [installed,automatic]
+libgomp1/testing,now 14.2.0-8 amd64 [installed,automatic]
+libgpg-error0/testing,now 1.51-2 amd64 [installed,automatic]
+libgpm2/testing,now 1.20.7-11+b1 amd64 [installed,automatic]
+libgprofng0/testing,now 2.43.50.20241215-1 amd64 [installed,automatic]
+libgraphite2-3/testing,now 1.3.14-2+b1 amd64 [installed,automatic]
+libgraphite2-dev/testing,now 1.3.14-2+b1 amd64 [installed,automatic]
+libgssapi-krb5-2/testing,now 1.21.3-3 amd64 [installed,automatic]
+libharfbuzz-cairo0/testing,now 10.1.0-1 amd64 [installed,automatic]
+libharfbuzz-dev/testing,now 10.1.0-1 amd64 [installed,automatic]
+libharfbuzz-gobject0/testing,now 10.1.0-1 amd64 [installed,automatic]
+libharfbuzz-icu0/testing,now 10.1.0-1 amd64 [installed,automatic]
+libharfbuzz-subset0/testing,now 10.1.0-1 amd64 [installed,automatic]
+libharfbuzz0b/testing,now 10.1.0-1 amd64 [installed,automatic]
+libhogweed6t64/testing,now 3.10-1+b1 amd64 [installed,automatic]
+libhtml-form-perl/testing,now 6.12-1 all [installed,automatic]
+libhtml-format-perl/testing,now 2.16-2 all [installed,automatic]
+libhtml-parser-perl/testing,now 3.83-1+b1 amd64 [installed,automatic]
+libhtml-tagset-perl/testing,now 3.24-1 all [installed,automatic]
+libhtml-tree-perl/testing,now 5.07-3 all [installed,automatic]
+libhttp-cookies-perl/testing,now 6.11-1 all [installed,automatic]
+libhttp-daemon-perl/testing,now 6.16-1 all [installed,automatic]
+libhttp-date-perl/testing,now 6.06-1 all [installed,automatic]
+libhttp-message-perl/testing,now 7.00-2 all [installed,automatic]
+libhttp-negotiate-perl/testing,now 6.01-2 all [installed,automatic]
+libhwasan0/testing,now 14.2.0-8 amd64 [installed,automatic]
+libice-dev/testing,now 2:1.1.1-1 amd64 [installed,automatic]
+libice6/testing,now 2:1.1.1-1 amd64 [installed,automatic]
+libicu-dev/testing,now 72.1-5+b1 amd64 [installed,automatic]
+libicu72/testing,now 72.1-5+b1 amd64 [installed,automatic]
+libidn2-0/testing,now 2.3.7-2+b1 amd64 [installed,automatic]
+libio-compress-brotli-perl/testing,now 0.004001-2+b3 amd64 [installed,automatic]
+libio-html-perl/testing,now 1.004-3 all [installed,automatic]
+libio-socket-ssl-perl/testing,now 2.089-1 all [installed,automatic]
+libisl23/testing,now 0.27-1 amd64 [installed,automatic]
+libitm1/testing,now 14.2.0-8 amd64 [installed,automatic]
+libjansson4/testing,now 2.14-2+b3 amd64 [installed,automatic]
+libjbig-dev/testing,now 2.1-6.1+b2 amd64 [installed,automatic]
+libjbig0/testing,now 2.1-6.1+b2 amd64 [installed,automatic]
+libjpeg-dev/testing,now 1:2.1.5-3+b1 amd64 [installed,automatic]
+libjpeg62-turbo-dev/testing,now 1:2.1.5-3+b1 amd64 [installed,automatic]
+libjpeg62-turbo/testing,now 1:2.1.5-3+b1 amd64 [installed,automatic]
+libjs-jquery/testing,now 3.6.1+dfsg+~3.5.14-1 all [installed,automatic]
+libjs-sphinxdoc/testing,now 8.1.3-3 all [installed,automatic]
+libjs-underscore/testing,now 1.13.4~dfsg+~1.11.4-3 all [installed,automatic]
+libjson-c5/testing,now 0.18+ds-1 amd64 [installed,automatic]
+libk5crypto3/testing,now 1.21.3-3 amd64 [installed,automatic]
+libkeyutils1/testing,now 1.6.3-4 amd64 [installed,automatic]
+libkmod2/testing,now 33+20240816-2 amd64 [installed,automatic]
+libkrb5-3/testing,now 1.21.3-3 amd64 [installed,automatic]
+libkrb5support0/testing,now 1.21.3-3 amd64 [installed,automatic]
+libksba8/testing,now 1.6.7-2+b1 amd64 [installed,automatic]
+liblcms2-2/testing,now 2.16-2 amd64 [installed,automatic]
+libldap-2.5-0/testing,now 2.5.18+dfsg-3+b1 amd64 [installed,automatic]
+libldap-common/testing,now 2.5.18+dfsg-3 all [installed,automatic]
+liblerc-dev/testing,now 4.0.0+ds-5 amd64 [installed,automatic]
+liblerc4/testing,now 4.0.0+ds-5 amd64 [installed,automatic]
+libllvm19/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+liblocale-gettext-perl/testing,now 1.07-7+b1 amd64 [installed,automatic]
+liblsan0/testing,now 14.2.0-8 amd64 [installed,automatic]
+libltdl-dev/testing,now 2.4.7-8 amd64 [installed,automatic]
+libltdl7/testing,now 2.4.7-8 amd64 [installed,automatic]
+liblwp-mediatypes-perl/testing,now 6.04-2 all [installed,automatic]
+liblwp-protocol-https-perl/testing,now 6.14-1 all [installed,automatic]
+liblz4-1/testing,now 1.9.4-3+b1 amd64 [installed,automatic]
+liblzma-dev/testing,now 5.6.3-1+b1 amd64 [installed,automatic]
+liblzma5/testing,now 5.6.3-1+b1 amd64 [installed,automatic]
+liblzo2-2/testing,now 2.10-3+b1 amd64 [installed,automatic]
+libmagic-mgc/testing,now 1:5.45-3+b1 amd64 [installed,automatic]
+libmagic1t64/testing,now 1:5.45-3+b1 amd64 [installed,automatic]
+libmailtools-perl/testing,now 2.22-1 all [installed,automatic]
+libmd0/testing,now 1.1.0-2+b1 amd64 [installed,automatic]
+libmount-dev/testing,now 2.40.2-12 amd64 [installed,automatic]
+libmount1/testing,now 2.40.2-12 amd64 [installed,automatic]
+libmpc3/testing,now 1.3.1-1+b3 amd64 [installed,automatic]
+libmpfr6/testing,now 4.2.1-1+b2 amd64 [installed,automatic]
+libncurses-dev/testing,now 6.5-2+b1 amd64 [installed,automatic]
+libncurses6/testing,now 6.5-2+b1 amd64 [installed,automatic]
+libncursesw6/testing,now 6.5-2+b1 amd64 [installed,automatic]
+libnet-http-perl/testing,now 6.23-1 all [installed,automatic]
+libnet-smtp-ssl-perl/testing,now 1.04-2 all [installed,automatic]
+libnet-ssleay-perl/testing,now 1.94-2 amd64 [installed,automatic]
+libnettle8t64/testing,now 3.10-1+b1 amd64 [installed,automatic]
+libnghttp2-14/testing,now 1.64.0-1 amd64 [installed,automatic]
+libnghttp3-9/testing,now 1.6.0-2 amd64 [installed,automatic]
+libngtcp2-16/testing,now 1.9.1-1 amd64 [installed,automatic]
+libngtcp2-crypto-gnutls8/testing,now 1.9.1-1 amd64 [installed,automatic]
+libnotify-dev/testing,now 0.8.3-1+b2 amd64 [installed]
+libnotify4/testing,now 0.8.3-1+b2 amd64 [installed,automatic]
+libnpth0t64/testing,now 1.8-2 amd64 [installed,automatic]
+libnsl2/testing,now 1.3.0-3+b3 amd64 [installed,automatic]
+libnss-systemd/testing,now 257.1-4 amd64 [installed,automatic]
+libobjc-14-dev/testing,now 14.2.0-8 amd64 [installed,automatic]
+libobjc4/testing,now 14.2.0-8 amd64 [installed,automatic]
+libopengl-dev/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libopengl0/testing,now 1.7.0-1+b2 amd64 [installed,automatic]
+libosp5/testing,now 1.5.2-15.1 amd64 [installed,automatic]
+libp11-kit0/testing,now 0.25.5-2+b1 amd64 [installed,automatic]
+libpam-modules-bin/testing,now 1.5.3-7+b1 amd64 [installed,automatic]
+libpam-modules/testing,now 1.5.3-7+b1 amd64 [installed,automatic]
+libpam-runtime/testing,now 1.5.3-7 all [installed,automatic]
+libpam-systemd/testing,now 257.1-4 amd64 [installed,automatic]
+libpam0g/testing,now 1.5.3-7+b1 amd64 [installed,automatic]
+libpango-1.0-0/testing,now 1.55.0+ds-3 amd64 [installed,automatic]
+libpango1.0-dev/testing,now 1.55.0+ds-3 amd64 [installed]
+libpangocairo-1.0-0/testing,now 1.55.0+ds-3 amd64 [installed,automatic]
+libpangoft2-1.0-0/testing,now 1.55.0+ds-3 amd64 [installed,automatic]
+libpangoxft-1.0-0/testing,now 1.55.0+ds-3 amd64 [installed,automatic]
+libpciaccess0/testing,now 0.17-3+b2 amd64 [installed,automatic]
+libpcre2-16-0/testing,now 10.44-5 amd64 [installed,automatic]
+libpcre2-32-0/testing,now 10.44-5 amd64 [installed,automatic]
+libpcre2-8-0/testing,now 10.44-5 amd64 [installed,automatic]
+libpcre2-dev/testing,now 10.44-5 amd64 [installed,automatic]
+libpcre2-posix3/testing,now 10.44-5 amd64 [installed,automatic]
+libperl5.40/testing,now 5.40.0-8 amd64 [installed,automatic]
+libpfm4/testing,now 4.13.0+git83-g91970fe-1 amd64 [installed,automatic]
+libpipeline1/testing,now 1.5.8-1 amd64 [installed,automatic]
+libpixman-1-0/testing,now 0.44.0-3 amd64 [installed,automatic]
+libpixman-1-dev/testing,now 0.44.0-3 amd64 [installed,automatic]
+libpkgconf3/testing,now 1.8.1-4 amd64 [installed,automatic]
+libpng-dev/testing,now 1.6.44-3 amd64 [installed,automatic]
+libpng-tools/testing,now 1.6.44-3 amd64 [installed,automatic]
+libpng16-16t64/testing,now 1.6.44-3 amd64 [installed,automatic]
+libproc2-0/testing,now 2:4.0.4-6 amd64 [installed,automatic]
+libpsl5t64/testing,now 0.21.2-1.1+b1 amd64 [installed,automatic]
+libpython3-dev/testing,now 3.12.7-1 amd64 [installed,automatic]
+libpython3-stdlib/testing,now 3.12.7-1 amd64 [installed,automatic]
+libpython3.12-dev/testing,now 3.12.8-3 amd64 [installed,automatic]
+libpython3.12-minimal/testing,now 3.12.8-3 amd64 [installed,automatic]
+libpython3.12-stdlib/testing,now 3.12.8-3 amd64 [installed,automatic]
+libpython3.12t64/testing,now 3.12.8-3 amd64 [installed,automatic]
+libquadmath0/testing,now 14.2.0-8 amd64 [installed,automatic]
+libreadline8t64/testing,now 8.2-6 amd64 [installed,automatic]
+librsvg2-2/testing,now 2.59.1+dfsg-1 amd64 [installed,automatic]
+librsvg2-common/testing,now 2.59.1+dfsg-1 amd64 [installed,automatic]
+librtmp1/testing,now 2.4+20151223.gitfa8646d.1-2+b5 amd64 [installed,automatic]
+libsasl2-2/testing,now 2.1.28+dfsg1-8 amd64 [installed,automatic]
+libsasl2-modules-db/testing,now 2.1.28+dfsg1-8 amd64 [installed,automatic]
+libsasl2-modules/testing,now 2.1.28+dfsg1-8 amd64 [installed,automatic]
+libseccomp2/testing,now 2.5.5-2 amd64 [installed,automatic]
+libselinux1-dev/testing,now 3.7-3+b1 amd64 [installed]
+libselinux1/testing,now 3.7-3+b1 amd64 [installed,automatic]
+libsemanage-common/testing,now 3.7-2 all [installed,automatic]
+libsemanage2/testing,now 3.7-2+b1 amd64 [installed,automatic]
+libsensors-config/testing,now 1:3.6.0-10 all [installed,automatic]
+libsensors5/testing,now 1:3.6.0-10+b1 amd64 [installed,automatic]
+libsepol-dev/testing,now 3.7-1 amd64 [installed,automatic]
+libsepol2/testing,now 3.7-1 amd64 [installed,automatic]
+libsframe1/testing,now 2.43.50.20241215-1 amd64 [installed,automatic]
+libsharpyuv-dev/testing,now 1.4.0-0.1+b1 amd64 [installed,automatic]
+libsharpyuv0/testing,now 1.4.0-0.1+b1 amd64 [installed,automatic]
+libsigc++-2.0-0v5/testing,now 2.12.1-2+b1 amd64 [installed,automatic]
+libsm-dev/testing,now 2:1.2.4-1 amd64 [installed,automatic]
+libsm6/testing,now 2:1.2.4-1 amd64 [installed,automatic]
+libsmartcols1/testing,now 2.40.2-12 amd64 [installed,automatic]
+libsqlite3-0/testing,now 3.46.1-1 amd64 [installed,automatic]
+libss2/testing,now 1.47.2~rc1-2 amd64 [installed,automatic]
+libssh2-1t64/testing,now 1.11.1-1 amd64 [installed,automatic]
+libssl3t64/testing,now 3.3.2-2 amd64 [installed,automatic]
+libstartup-notification0-dev/testing,now 0.12-7 amd64 [installed]
+libstartup-notification0/testing,now 0.12-7 amd64 [installed,automatic]
+libstdc++-14-dev/testing,now 14.2.0-8 amd64 [installed,automatic]
+libstdc++6/testing,now 14.2.0-8 amd64 [installed,automatic]
+libsysprof-capture-4-dev/testing,now 47.2-1 amd64 [installed,automatic]
+libsystemd-dev/testing,now 257.1-4 amd64 [installed,automatic]
+libsystemd-shared/testing,now 257.1-4 amd64 [installed,automatic]
+libsystemd0/testing,now 257.1-4 amd64 [installed,automatic]
+libtasn1-6/testing,now 4.19.0-3+b3 amd64 [installed,automatic]
+libtcl8.6/testing,now 8.6.15+dfsg-2 amd64 [installed,automatic]
+libthai-data/testing,now 0.1.29-2 all [installed,automatic]
+libthai-dev/testing,now 0.1.29-2+b1 amd64 [installed,automatic]
+libthai0/testing,now 0.1.29-2+b1 amd64 [installed,automatic]
+libtiff-dev/testing,now 4.5.1+git230720-5 amd64 [installed,automatic]
+libtiff6/testing,now 4.5.1+git230720-5 amd64 [installed,automatic]
+libtiffxx6/testing,now 4.5.1+git230720-5 amd64 [installed,automatic]
+libtimedate-perl/testing,now 2.3300-2 all [installed,automatic]
+libtinfo6/testing,now 6.5-2+b1 amd64 [installed,automatic]
+libtinyxml2-10/testing,now 10.0.0+dfsg-2+b2 amd64 [installed,automatic]
+libtirpc-common/testing,now 1.3.4+ds-1.3 all [installed,automatic]
+libtirpc3t64/testing,now 1.3.4+ds-1.3+b1 amd64 [installed,automatic]
+libtool/testing,now 2.4.7-8 all [installed]
+libtry-tiny-perl/testing,now 0.32-1 all [installed,automatic]
+libtsan2/testing,now 14.2.0-8 amd64 [installed,automatic]
+libubsan1/testing,now 14.2.0-8 amd64 [installed,automatic]
+libudev1/testing,now 257.1-4 amd64 [installed,automatic]
+libunistring5/testing,now 1.3-1 amd64 [installed,automatic]
+libunwind8/testing,now 1.6.2-3.1 amd64 [installed,automatic]
+liburi-perl/testing,now 5.30-1 all [installed,automatic]
+libuuid1/testing,now 2.40.2-12 amd64 [installed,automatic]
+libvulkan1/testing,now 1.3.296.0-1 amd64 [installed,automatic]
+libwayland-bin/testing,now 1.23.0-1+b1 amd64 [installed,automatic]
+libwayland-client0/testing,now 1.23.0-1+b1 amd64 [installed,automatic]
+libwayland-cursor0/testing,now 1.23.0-1+b1 amd64 [installed,automatic]
+libwayland-dev/testing,now 1.23.0-1+b1 amd64 [installed,automatic]
+libwayland-egl1/testing,now 1.23.0-1+b1 amd64 [installed,automatic]
+libwayland-server0/testing,now 1.23.0-1+b1 amd64 [installed,automatic]
+libwebp-dev/testing,now 1.4.0-0.1+b1 amd64 [installed,automatic]
+libwebp7/testing,now 1.4.0-0.1+b1 amd64 [installed,automatic]
+libwebpdecoder3/testing,now 1.4.0-0.1+b1 amd64 [installed,automatic]
+libwebpdemux2/testing,now 1.4.0-0.1+b1 amd64 [installed,automatic]
+libwebpmux3/testing,now 1.4.0-0.1+b1 amd64 [installed,automatic]
+libwww-perl/testing,now 6.77-1 all [installed,automatic]
+libwww-robotrules-perl/testing,now 6.02-1 all [installed,automatic]
+libx11-6/testing,now 2:1.8.10-2 amd64 [installed,automatic]
+libx11-data/testing,now 2:1.8.10-2 all [installed,automatic]
+libx11-dev/testing,now 2:1.8.10-2 amd64 [installed]
+libx11-xcb1/testing,now 2:1.8.10-2 amd64 [installed,automatic]
+libxapian30/testing,now 1.4.25-2 amd64 [installed,automatic]
+libxau-dev/testing,now 1:1.0.11-1 amd64 [installed,automatic]
+libxau6/testing,now 1:1.0.11-1 amd64 [installed,automatic]
+libxaw7/testing,now 2:1.0.16-1 amd64 [installed,automatic]
+libxcb-dri2-0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-dri3-0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-glx0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-present0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-randr0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-render0-dev/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-render0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-shm0-dev/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-shm0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-sync1/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb-util1/testing,now 0.4.0-1+b2 amd64 [installed,automatic]
+libxcb-xfixes0/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb1-dev/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcb1/testing,now 1.17.0-2+b1 amd64 [installed,automatic]
+libxcomposite-dev/testing,now 1:0.4.6-1 amd64 [installed,automatic]
+libxcomposite1/testing,now 1:0.4.6-1 amd64 [installed,automatic]
+libxcursor-dev/testing,now 1:1.2.2-1+b1 amd64 [installed,automatic]
+libxcursor1/testing,now 1:1.2.2-1+b1 amd64 [installed,automatic]
+libxdamage-dev/testing,now 1:1.1.6-1+b2 amd64 [installed,automatic]
+libxdamage1/testing,now 1:1.1.6-1+b2 amd64 [installed,automatic]
+libxdmcp-dev/testing,now 1:1.1.5-1 amd64 [installed,automatic]
+libxdmcp6/testing,now 1:1.1.5-1 amd64 [installed,automatic]
+libxext-dev/testing,now 2:1.3.4-1+b2 amd64 [installed,automatic]
+libxext6/testing,now 2:1.3.4-1+b2 amd64 [installed,automatic]
+libxfixes-dev/testing,now 1:6.0.0-2+b3 amd64 [installed,automatic]
+libxfixes3/testing,now 1:6.0.0-2+b3 amd64 [installed,automatic]
+libxfont2/testing,now 1:2.0.6-1+b2 amd64 [installed,automatic]
+libxft-dev/testing,now 2.3.6-1+b3 amd64 [installed,automatic]
+libxft2/testing,now 2.3.6-1+b3 amd64 [installed,automatic]
+libxi-dev/testing,now 2:1.8.2-1 amd64 [installed,automatic]
+libxi6/testing,now 2:1.8.2-1 amd64 [installed,automatic]
+libxinerama-dev/testing,now 2:1.1.4-3+b3 amd64 [installed,automatic]
+libxinerama1/testing,now 2:1.1.4-3+b3 amd64 [installed,automatic]
+libxkbcommon-dev/testing,now 1.7.0-2 amd64 [installed,automatic]
+libxkbcommon0/testing,now 1.7.0-2 amd64 [installed,automatic]
+libxkbfile1/testing,now 1:1.1.0-1+b3 amd64 [installed,automatic]
+libxml-parser-perl/testing,now 2.47-1+b3 amd64 [installed,automatic]
+libxml2-dev/testing,now 2.12.7+dfsg+really2.9.14-0.2+b1 amd64 [installed]
+libxml2/testing,now 2.12.7+dfsg+really2.9.14-0.2+b1 amd64 [installed,automatic]
+libxmu6/testing,now 2:1.1.3-3+b3 amd64 [installed,automatic]
+libxmuu1/testing,now 2:1.1.3-3+b3 amd64 [installed,automatic]
+libxpm4/testing,now 1:3.5.17-1+b2 amd64 [installed,automatic]
+libxrandr-dev/testing,now 2:1.5.4-1+b2 amd64 [installed,automatic]
+libxrandr2/testing,now 2:1.5.4-1+b2 amd64 [installed,automatic]
+libxrender-dev/testing,now 1:0.9.10-1.1+b3 amd64 [installed,automatic]
+libxrender1/testing,now 1:0.9.10-1.1+b3 amd64 [installed,automatic]
+libxshmfence1/testing,now 1.3-1+b2 amd64 [installed,automatic]
+libxslt1.1/testing,now 1.1.35-1.1+b1 amd64 [installed,automatic]
+libxt6t64/testing,now 1:1.2.1-1.2+b1 amd64 [installed,automatic]
+libxtst-dev/testing,now 2:1.2.3-1.1+b3 amd64 [installed,automatic]
+libxtst6/testing,now 2:1.2.3-1.1+b3 amd64 [installed,automatic]
+libxxf86vm1/testing,now 1:1.1.4-1+b3 amd64 [installed,automatic]
+libxxhash0/testing,now 0.8.2-2+b2 amd64 [installed,automatic]
+libyaml-0-2/testing,now 0.2.5-2 amd64 [installed,automatic]
+libz3-4/testing,now 4.13.3-1 amd64 [installed,automatic]
+libz3-dev/testing,now 4.13.3-1 amd64 [installed,automatic]
+libzstd-dev/testing,now 1.5.6+dfsg-1+b1 amd64 [installed,automatic]
+libzstd1/testing,now 1.5.6+dfsg-1+b1 amd64 [installed,automatic]
+linux-libc-dev/testing,now 6.12.6-1 all [installed,automatic]
+linux-sysctl-defaults/testing,now 4.10.1 all [installed,automatic]
+llvm-19-dev/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+llvm-19-linker-tools/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+llvm-19-runtime/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+llvm-19-tools/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+llvm-19/testing,now 1:19.1.6-1 amd64 [installed,automatic]
+login.defs/testing,now 1:4.16.0-7 all [installed,automatic]
+login/testing,now 1:4.16.0-2+really2.40.2-12 amd64 [installed,automatic]
+logsave/testing,now 1.47.2~rc1-2 amd64 [installed,automatic]
+m4/testing,now 1.4.19-4 amd64 [installed,automatic]
+make/testing,now 4.3-4.1 amd64 [installed]
+manpages-dev/testing,now 6.9.1-1 all [installed,automatic]
+manpages/testing,now 6.9.1-1 all [installed,automatic]
+mawk/testing,now 1.3.4.20240905-1 amd64 [installed,automatic]
+media-types/testing,now 10.1.0 all [installed,automatic]
+mesa-libgallium/testing,now 24.2.8-1 amd64 [installed,automatic]
+mesa-vulkan-drivers/testing,now 24.2.8-1 amd64 [installed,automatic]
+meson/testing,now 1.6.1-1 all [installed]
+mount/testing,now 2.40.2-12 amd64 [installed,automatic]
+native-architecture/testing,now 0.2.3 all [installed,automatic]
+ncurses-base/testing,now 6.5-2 all [installed,automatic]
+ncurses-bin/testing,now 6.5-2+b1 amd64 [installed,automatic]
+netbase/testing,now 6.4 all [installed,automatic]
+ninja-build/testing,now 1.12.1-1 amd64 [installed,automatic]
+opensp/testing,now 1.5.2-15.1 amd64 [installed,automatic]
+openssh-client/testing,now 1:9.9p1-3 amd64 [installed,automatic]
+openssl-provider-legacy/testing,now 3.3.2-2 amd64 [installed,automatic]
+openssl/testing,now 3.3.2-2 amd64 [installed,automatic]
+pango1.0-tools/testing,now 1.55.0+ds-3 amd64 [installed,automatic]
+passwd/testing,now 1:4.16.0-7 amd64 [installed,automatic]
+patch/testing,now 2.7.6-7 amd64 [installed,automatic]
+perl-base/testing,now 5.40.0-8 amd64 [installed,automatic]
+perl-modules-5.40/testing,now 5.40.0-8 all [installed,automatic]
+perl-openssl-defaults/testing,now 7+b2 amd64 [installed,automatic]
+perl/testing,now 5.40.0-8 amd64 [installed,automatic]
+pinentry-curses/testing,now 1.2.1-4+b1 amd64 [installed,automatic]
+pkgconf-bin/testing,now 1.8.1-4 amd64 [installed,automatic]
+pkgconf/testing,now 1.8.1-4 amd64 [installed,automatic]
+procps/testing,now 2:4.0.4-6 amd64 [installed,automatic]
+psmisc/testing,now 23.7-1 amd64 [installed,automatic]
+publicsuffix/testing,now 20241206.1516-0.1 all [installed,automatic]
+python-gi-dev/testing,now 3.50.0-3+b1 amd64 [installed]
+python3-autocommand/testing,now 2.2.2-3 all [installed,automatic]
+python3-bs4/testing,now 4.12.3-3 all [installed,automatic]
+python3-chardet/testing,now 5.2.0+dfsg-1 all [installed,automatic]
+python3-cssselect/testing,now 1.2.0-4 all [installed,automatic]
+python3-dev/testing,now 3.12.7-1 amd64 [installed]
+python3-gi/testing,now 3.50.0-3+b1 amd64 [installed,automatic]
+python3-html5lib/testing,now 1.2-1 all [installed,automatic]
+python3-inflect/testing,now 7.3.1-2 all [installed,automatic]
+python3-jaraco.context/testing,now 6.0.0-1 all [installed,automatic]
+python3-jaraco.functools/testing,now 4.1.0-1 all [installed,automatic]
+python3-jaraco.text/testing,now 4.0.0-1 all [installed,automatic]
+python3-lxml/testing,now 5.3.0-1+b1 amd64 [installed]
+python3-mako/testing,now 1.3.6-1 all [installed,automatic]
+python3-markdown/testing,now 3.7-2 all [installed,automatic]
+python3-markupsafe/testing,now 2.1.5-1+b2 amd64 [installed,automatic]
+python3-minimal/testing,now 3.12.7-1 amd64 [installed,automatic]
+python3-more-itertools/testing,now 10.5.0-1 all [installed,automatic]
+python3-packaging/testing,now 24.2-1 all [installed,automatic]
+python3-pkg-resources/testing,now 75.6.0-1 all [installed,automatic]
+python3-pygments/testing,now 2.18.0+dfsg-1 all [installed,automatic]
+python3-setuptools/testing,now 75.6.0-1 all [installed,automatic]
+python3-soupsieve/testing,now 2.6-1 all [installed,automatic]
+python3-typeguard/testing,now 4.4.1-1 all [installed,automatic]
+python3-typing-extensions/testing,now 4.12.2-2 all [installed,automatic]
+python3-webencodings/testing,now 0.5.1-5 all [installed,automatic]
+python3-yaml/testing,now 6.0.2-1+b1 amd64 [installed,automatic]
+python3-zipp/testing,now 3.21.0-1 all [installed,automatic]
+python3.12-dev/testing,now 3.12.8-3 amd64 [installed,automatic]
+python3.12-minimal/testing,now 3.12.8-3 amd64 [installed,automatic]
+python3.12/testing,now 3.12.8-3 amd64 [installed,automatic]
+python3/testing,now 3.12.7-1 amd64 [installed,automatic]
+quilt/testing,now 0.68-1 all [installed]
+readline-common/testing,now 8.2-6 all [installed,automatic]
+rpcsvc-proto/testing,now 1.4.3-1 amd64 [installed,automatic]
+sed/testing,now 4.9-2 amd64 [installed,automatic]
+sensible-utils/testing,now 0.0.24 all [installed,automatic]
+sgml-base/testing,now 1.31 all [installed,automatic]
+sgml-data/testing,now 2.0.11+nmu1 all [installed,automatic]
+shared-mime-info/testing,now 2.4-5+b1 amd64 [installed]
+systemd-cryptsetup/testing,now 257.1-4 amd64 [installed,automatic]
+systemd-sysv/testing,now 257.1-4 amd64 [installed,automatic]
+systemd-timesyncd/testing,now 257.1-4 amd64 [installed,automatic]
+systemd/testing,now 257.1-4 amd64 [installed,automatic]
+sysvinit-utils/testing,now 3.11-1 amd64 [installed,automatic]
+tar/now 1.35+dfsg-3 amd64 [installed,upgradable to: 1.35+dfsg-3.1]
+tcl-expect/testing,now 5.45.4-3+b1 amd64 [installed,automatic]
+tcl8.6/testing,now 8.6.15+dfsg-2 amd64 [installed,automatic]
+tzdata/testing,now 2024b-4 all [installed,automatic]
+usr-is-merged/testing,now 39 all [installed,automatic]
+util-linux/testing,now 2.40.2-12 amd64 [installed,automatic]
+uuid-dev/testing,now 2.40.2-12 amd64 [installed,automatic]
+wayland-protocols/testing,now 1.38-1 all [installed,automatic]
+x11-common/testing,now 1:7.7+23.1 all [installed,automatic]
+x11-xkb-utils/testing,now 7.7+9 amd64 [installed,automatic]
+x11proto-core-dev/testing,now 2024.1-1 all [installed,automatic]
+x11proto-dev/testing,now 2024.1-1 all [installed,automatic]
+xauth/testing,now 1:1.1.2-1.1 amd64 [installed,automatic]
+xdg-user-dirs/testing,now 0.18-2 amd64 [installed,automatic]
+xfonts-base/testing,now 1:1.0.5+nmu1 all [installed,automatic]
+xfonts-encodings/testing,now 1:1.0.4-2.2 all [installed,automatic]
+xfonts-utils/testing,now 1:7.7+7 amd64 [installed,automatic]
+xkb-data/testing,now 2.42-1 all [installed,automatic]
+xml-core/testing,now 0.19 all [installed,automatic]
+xorg-sgml-doctools/testing,now 1:1.11-1.1 all [installed,automatic]
+xserver-common/testing,now 2:21.1.15-2 all [installed,automatic]
+xsltproc/testing,now 1.1.35-1.1+b1 amd64 [installed,automatic]
+xtrans-dev/testing,now 1.4.0-1 all [installed,automatic]
+xvfb/testing,now 2:21.1.15-2 amd64 [installed]
+xz-utils/testing,now 5.6.3-1+b1 amd64 [installed,automatic]
+zlib1g-dev/testing,now 1:1.3.dfsg+really1.3.1-1+b1 amd64 [installed,automatic]
+zlib1g/testing,now 1:1.3.dfsg+really1.3.1-1+b1 amd64 [installed,automatic]
+Errors detected in the build 0
+Warnings detected in the logs 3
+cppcheck defects detected in the logs 3
+TOTAL warnings detected in the logs 6
