@@ -78,7 +78,7 @@ static PyGetSetDef baul_operationhandle_handle = {
 static inline gboolean
 np_init_pygobject(void)
 {
-    PyObject *gobject = pygobject_init (PYGOBJECT_MAJOR_VERSION, PYGOBJECT_MINOR_VERSION, PYGOBJECT_MICRO_VERSION);
+    const PyObject *gobject = pygobject_init (PYGOBJECT_MAJOR_VERSION, PYGOBJECT_MINOR_VERSION, PYGOBJECT_MICRO_VERSION);
 
     if (gobject == NULL) {
         PyErr_Print ();
@@ -192,7 +192,7 @@ static gboolean
 baul_python_init_python (void)
 {
 	PyObject *gi, *require_version, *args, *baul, *descr;
-	GModule *libpython = NULL;
+	const GModule *libpython = NULL;
 	gchar *libpython_name;
 
 	if (Py_IsInitialized())
@@ -329,6 +329,7 @@ baul_module_initialize(GTypeModule *module)
 	user_extensions_dir = g_build_filename(g_get_user_data_dir(),
 		"baul-python", "extensions", NULL);
 	baul_python_load_dir(module, user_extensions_dir);
+	g_free(user_extensions_dir);
 }
 
 void
