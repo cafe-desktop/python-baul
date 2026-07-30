@@ -192,13 +192,24 @@ static gboolean
 baul_python_init_python (void)
 {
 	PyObject *gi, *require_version, *args, *baul, *descr;
-	GModule *libpython;
+	GModule *libpython = NULL;
+	gchar *libpython_name;
 
 	if (Py_IsInitialized())
 		return TRUE;
 
-  	debug("g_module_open " PY_LIB_LOC "/libpython" PYTHON_VERSION PYTHON_ABIFLAGS "." G_MODULE_SUFFIX ".1.0");
-	libpython = g_module_open(PY_LIB_LOC "/libpython" PYTHON_VERSION PYTHON_ABIFLAGS "." G_MODULE_SUFFIX ".1.0", 0);
+	libpython_name = g_strdup_printf("libpython%s%s.%s.1", PYTHON_VERSION, PYTHON_ABIFLAGS, G_MODULE_SUFFIX);
+	debug("g_module_open libpython");
+	libpython = g_module_open(libpython_name, G_MODULE_BIND_LAZY);
+
+	if (!libpython) {
+		g_free(libpython_name);
+		libpython_name = g_strdup_printf("libpython%s%s.%s", PYTHON_VERSION, PYTHON_ABIFLAGS, G_MODULE_SUFFIX);
+		debug("g_module_open fallback libpython");
+		libpython = g_module_open(libpython_name, G_MODULE_BIND_LAZY);
+	}
+	g_free(libpython_name);
+
 	if (!libpython)
 		g_warning("g_module_open libpython failed: %s", g_module_error());
 
