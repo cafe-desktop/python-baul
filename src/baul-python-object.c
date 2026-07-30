@@ -1,4 +1,3 @@
-/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*- */
 /*
  *  Copyright (C) 2004 Novell, Inc.
  *
@@ -66,10 +65,13 @@ static GObjectClass *parent_class;
 #define CONVERT_LIST(py_files, files)                                  \
 	{                                                                  \
 		GList *l;                                                      \
+		PyObject *py_item;                                             \
         py_files = PyList_New(0);                                      \
 		for (l = files; l; l = l->next)                                \
 		{                                                              \
-			PyList_Append(py_files, pygobject_new((GObject*)l->data)); \
+			py_item = pygobject_new((GObject*)l->data);                \
+			PyList_Append(py_files, py_item);                          \
+			Py_DECREF(py_item);                                        \
 		}                                                              \
 	}
 
@@ -103,6 +105,7 @@ static GObjectClass *parent_class;
     							METHOD_NAME                            \
     							" must return a sequence of "          \
     							type_name);                            \
+			Py_DECREF(py_item);                                        \
     			goto beach;                                            \
     		}                                                          \
     		ret = g_list_append (ret, (type*) g_object_ref(py_item->obj));  \
@@ -493,6 +496,8 @@ baul_python_object_finalize (GObject *object)
 
 	if (((BaulPythonObject *)object)->instance != NULL)
 		Py_DECREF(((BaulPythonObject *)object)->instance);
+
+	G_OBJECT_CLASS (parent_class)->finalize (object);
 }
 
 static void
@@ -514,6 +519,8 @@ baul_python_object_get_type (GTypeModule *module,
 {
 	GTypeInfo *info;
 	const char *type_name;
+	const char *name_str;
+	PyObject *py_name;
 	GType gtype;
 
 	static const GInterfaceInfo property_page_provider_iface_info = {
@@ -536,7 +543,10 @@ baul_python_object_get_type (GTypeModule *module,
 		.interface_init = (GInterfaceInitFunc) baul_python_object_info_provider_iface_init,
 	};
 
-	debug_enter_args("type=%s", PyUnicode_AsUTF8(PyObject_GetAttrString(type, "__name__")));
+	py_name = PyObject_GetAttrString(type, "__name__");
+	name_str = py_name ? PyUnicode_AsUTF8(py_name) : "Unknown";
+
+	debug_enter_args("type=%s", name_str);
 	info = g_new0 (GTypeInfo, 1);
 
 	info->class_size = sizeof (BaulPythonObjectClass);
@@ -547,8 +557,10 @@ baul_python_object_get_type (GTypeModule *module,
 	info->class_data = type;
 	Py_INCREF(type);
 
-	type_name = g_strdup_printf("%s+BaulPython",
-								PyUnicode_AsUTF8(PyObject_GetAttrString(type, "__name__")));
+	type_name = g_strdup_printf("%s+BaulPython", name_str);
+
+	if (py_name)
+		Py_DECREF(py_name);
 
 	gtype = g_type_module_register_type (module,
 										 G_TYPE_OBJECT,
