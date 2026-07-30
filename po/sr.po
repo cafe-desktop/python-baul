@@ -8,9 +8,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: python-baul 2.0.0\n"
+"Project-Id-Version: python-baul 2.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/python-baul/issues\n"
-"POT-Creation-Date: 2022-09-01 20:39+0200\n"
+"POT-Creation-Date: 2026-07-30 11:06+0200\n"
 "PO-Revision-Date: 2018-03-12 10:42+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2018\n"
 "Language-Team: Serbian (https://www.transifex.com/cafe/teams/13566/sr/)\n"
@@ -21,10 +21,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: libbaul-python.baul-extension.desktop.in:5
+#: libbaul-python.baul-extension.desktop.in:4
 msgid "Python"
 msgstr "Питон"
 
-#: libbaul-python.baul-extension.desktop.in:6
+#: libbaul-python.baul-extension.desktop.in:5
 msgid "Allows to use Python extensions"
 msgstr "Омогућава коришћење Питонових проширења"

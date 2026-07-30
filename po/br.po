@@ -8,9 +8,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: python-baul 2.0.0\n"
+"Project-Id-Version: python-baul 2.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/cafe-desktop/python-baul/issues\n"
-"POT-Creation-Date: 2022-09-01 20:39+0200\n"
+"POT-Creation-Date: 2026-07-30 11:06+0200\n"
 "PO-Revision-Date: 2018-03-12 10:42+0000\n"
 "Last-Translator: Alan Monfort <alan.monfort@free.fr>, 2018\n"
 "Language-Team: Breton (https://www.transifex.com/cafe/teams/13566/br/)\n"
@@ -24,10 +24,10 @@ msgstr ""
 "> 19) && (n%100 < 70 || n%100 > 79) && (n%100 < 90 || n%100 > 99) ? 2 :(n != "
 "0 && n % 1000000 == 0) ? 3 : 4);\n"
 
-#: libbaul-python.baul-extension.desktop.in:5
+#: libbaul-python.baul-extension.desktop.in:4
 msgid "Python"
 msgstr "Python"
 
-#: libbaul-python.baul-extension.desktop.in:6
+#: libbaul-python.baul-extension.desktop.in:5
 msgid "Allows to use Python extensions"
 msgstr "Reiñ a ra an aotre da arverañ askouezhioù Python"
