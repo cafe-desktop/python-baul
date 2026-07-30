@@ -1,3 +1,11 @@
+### python-baul 2.1.0
+
+  * ci: add debian stable build
+  * build: Use WARN_CFLAGS variable
+  * baul-python-object: Fix memory leaks
+  * update translations
+
+
 ### python-baul 2.0.0
 
   * ci: some improvements
