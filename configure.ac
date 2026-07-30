@@ -1,4 +1,4 @@
-AC_INIT([python-baul], [2.1.0],
+AC_INIT([python-baul], [2.1.1],
 	[https://github.com/cafe-desktop/python-baul/issues],
 	[python-baul], [http://cafe-desktop.org])
 
