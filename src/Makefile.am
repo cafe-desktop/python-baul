@@ -18,7 +18,6 @@ libbaul_python_la_CPPFLAGS = \
 	-DLIBDIR=\"$(libdir)\" \
 	-DPYTHON_VERSION=\"$(PYTHON_VERSION)\" \
 	-DPYTHON_ABIFLAGS=\"$(PYTHON_ABIFLAGS)\" \
-	-DPY_LIB_LOC="\"$(PYTHON_LIB_LOC)\"" \
 	$(NULL)
 
 libbaul_python_la_CFLAGS = \

@@ -45,11 +45,10 @@ PKG_CHECK_MODULES([PYTHON], [${PYTHON_PKG}],,
 		PKG_CHECK_MODULES([PYTHON], [${PYTHON_PKG}])
 	]
 )
-PYTHON_LIB_LOC="`$PKG_CONFIG gobject-introspection-1.0 --variable=libdir`"
+PYTHON_LIB_LOC="`$PKG_CONFIG --variable=libdir ${PYTHON_PKG}`"
 PYTHON_ABIFLAGS=`$PYTHON -c 'import sys; exec("try: print (sys.abiflags)\nexcept: pass")'`
 AC_SUBST(PYTHON_LIBS)
 AC_SUBST(PYTHON_CFLAGS)
-AC_SUBST(PYTHON_LIB_LOC)
 AC_SUBST(PYTHON_ABIFLAGS)
 
 PYGOBJECT_MAJOR_VERSION=3
