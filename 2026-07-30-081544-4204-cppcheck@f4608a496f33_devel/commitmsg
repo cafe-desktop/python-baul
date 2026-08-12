@@ -1,0 +1,4 @@
+build: Use WARN_CFLAGS variable
+
+based in python-caja commit:
+https://github.com/mate-desktop/python-caja/commit/6ac6734752703631eab6fc5e0f25fe51cdc1f9f1

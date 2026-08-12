@@ -1,0 +1,1 @@
+build: Remove unused PY_LIB_LOC macro and fix python libdir
